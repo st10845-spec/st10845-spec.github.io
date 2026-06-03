@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Storia | Dettaglio Materia</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { theme: { extend: { colors: { techDark: '#0f172a', techLight: '#f8fafc', accent: '#0284c7' } } } }</script>
+</head>
+<body class="bg-techLight text-techDark font-sans min-h-screen flex flex-col">
+
+  <header class="bg-white border-b border-slate-200 py-4 px-8 flex justify-between items-center sticky top-0 z-50 shadow-sm">
+  <div class="font-bold"><a href="index.html" class="hover:text-accent">IIS Marconi Pieralisi</a></div>
+  <nav class="hidden md:flex space-x-6 text-sm font-medium">
+    <a href="index.html" class="text-slate-600 hover:text-accent">Home</a>
+    
+    <a href="materie.html" class="text-accent">Materie</a>
+    
+    <a href="educazione-civica.html" class="text-slate-600 hover:text-accent">Educazione Civica</a>
+    <a href="pcto.html" class="text-slate-600 hover:text-accent">PCTO</a>
+    <a href="contatti.html" class="text-slate-600 hover:text-accent">Contatti</a>
+  </nav>
+</header>
+
+  <div class="w-full bg-slate-100 border-b border-slate-200 sticky top-[53px] z-40 overflow-x-auto no-scrollbar">
+    <div class="max-w-6xl mx-auto px-4 flex items-center space-x-4 text-xs sm:text-sm font-medium h-12 whitespace-nowrap text-slate-600">
+      <a href="materie.html" class="hover:text-accent transition h-full flex items-center">Tutte</a>
+      <a href="materia-informatica.html" class="hover:text-accent transition h-full flex items-center">Informatica</a>
+      <a href="materia-sistemi-reti.html" class="hover:text-accent transition h-full flex items-center">Sistemi e Reti</a>
+      <a href="materia-tpsit.html" class="hover:text-accent transition h-full flex items-center">TPSIT</a>
+      <a href="materia-gpoi.html" class="hover:text-accent transition h-full flex items-center">GPOI</a>
+      <a href="materia-matematica.html" class="hover:text-accent transition h-full flex items-center">Matematica</a>
+      <a href="materia-ia.html" class="hover:text-accent transition h-full flex items-center">Intelligenza Artificiale</a>
+      <a href="materia-italiano.html" class="hover:text-accent transition h-full flex items-center">Italiano</a>
+      <a href="materia-storia.html" class="text-accent font-bold border-b-2 border-accent h-full flex items-center">Storia</a>
+      <a href="materia-inglese.html" class="hover:text-accent transition h-full flex items-center">Inglese</a>
+    </div>
+  </div>
+
+  <div class="w-full max-w-4xl mx-auto px-4 mt-8">
+    <div class="w-full h-64 bg-slate-200 rounded-xl overflow-hidden border border-slate-200 shadow-sm relative">
+      <img src="immagini/materia-storia.jpg" alt="Copertina Storia" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent flex items-end p-8">
+        <h2 class="text-white text-2xl font-bold">Storia</h2>
+      </div>
+    </div>
+  </div>
+
+  <main class="max-w-4xl mx-auto px-4 py-12 flex-grow space-y-8">
+    <h1 class="text-3xl font-bold">Storia contemporanea</h1>
+    <p class="text-slate-600 leading-relaxed">
+      Lo studio della storia contemporanea del Novecento analizza le trasformazioni sociali, le grandi rotture geopolitiche e le rivoluzioni industriali e tecnologiche che hanno ridefinito gli assetti istituzionali ed economici del mondo attuale.
+    </p>
+  </main>
+
+  <footer class="bg-white text-slate-500 py-8 border-t border-slate-200 text-center text-sm mt-auto">
+    <p>&copy; 2026 - IIS Marconi Pieralisi - Esame di Stato</p>
+  </footer>
+
+</body>
+</html>

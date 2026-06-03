@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intelligenza Artificiale | Dettaglio Materia</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+  <script>
+    tailwind.config = { 
+      theme: { 
+        extend: { 
+          colors: { 
+            techDark: '#0f172a', 
+            techLight: '#f8fafc', 
+            accent: '#0284c7' 
+          } 
+        } 
+      } 
+    }
+  </script>
+  
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="bg-techLight text-techDark font-sans min-h-screen flex flex-col">
+
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-xl font-bold text-slate-900 hover:text-accent transition">
+        IIS Marconi Pieralisi
+      </a>
+      <nav class="hidden md:flex space-x-6 text-sm font-medium text-slate-600">
+        <a href="index.html" class="hover:text-accent transition">Home</a>
+        <a href="materie.html" class="hover:text-accent transition">Materie</a>
+        <a href="educazione-civica.html" class="hover:text-accent transition">Educazione Civica</a>
+        <a href="pcto.html" class="hover:text-accent transition">PCTO</a>
+        <a href="contatti.html" class="hover:text-accent transition">Contatti</a>
+      </nav>
+      <button id="menu-btn" class="md:hidden text-slate-600 hover:text-accent">
+        <i class="fa-solid fa-bars text-xl"></i>
+      </button>
+    </div>
+  </header>
+
+  <div class="w-full bg-slate-100 border-b border-slate-200 sticky top-[53px] z-40 overflow-x-auto no-scrollbar">
+    <div class="max-w-6xl mx-auto px-4 flex items-center space-x-4 text-xs sm:text-sm font-medium h-12 whitespace-nowrap text-slate-600">
+      <a href="materie.html" class="hover:text-accent transition h-full flex items-center">Tutte</a>
+      <a href="materia-informatica.html" class="hover:text-accent transition h-full flex items-center">Informatica</a>
+      <a href="materia-sistemi-reti.html" class="hover:text-accent transition h-full flex items-center">Sistemi e Reti</a>
+      <a href="materia-tpsit.html" class="hover:text-accent transition h-full flex items-center">TPSIT</a>
+      <a href="materia-gpoi.html" class="hover:text-accent transition h-full flex items-center">GPOI</a>
+      <a href="materia-matematica.html" class="hover:text-accent transition h-full flex items-center">Matematica</a>
+      <a href="materia-ia.html" class="text-accent font-bold border-b-2 border-accent h-full flex items-center">Intelligenza Artificiale</a>
+      <a href="materia-italiano.html" class="hover:text-accent transition h-full flex items-center">Italiano</a>
+      <a href="materia-storia.html" class="hover:text-accent transition h-full flex items-center">Storia</a>
+      <a href="materia-inglese.html" class="hover:text-accent transition h-full flex items-center">Inglese</a>
+    </div>
+  </div>
+
+  <div class="w-full max-w-4xl mx-auto px-4 mt-8">
+    <div class="w-full h-64 bg-slate-200 rounded-xl overflow-hidden border border-slate-200 shadow-sm relative">
+      <img src="immagini/materia-ia.webp" alt="Intelligenza Artificiale" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent flex items-end p-8">
+        <h2 class="text-white text-2xl font-bold">Intelligenza Artificiale</h2>
+      </div>
+    </div>
+  </div>
+
+  <main class="max-w-4xl mx-auto px-4 py-12 flex-grow space-y-8">
+    
+    <h1 class="text-3xl font-bold">Intelligenza Artificiale</h1>
+    <p class="text-slate-600 leading-relaxed">Nel mio percorso di studi sulle nuove tecnologie, c'è un argomento che mi ha affascinato più di tutti: il legame tra la biologia del sistema nervoso e le reti neurali artificiali. È sorprendente vedere come la scienza sia riuscita a prendere qualcosa di così complesso e vivo come un neurone biologico e a trasformarlo in un modello matematico astratto, gettando le basi per i sistemi intelligenti che usiamo oggi.</p>
+
+    <div class="space-y-6">
+      <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+        <h2 class="text-xl font-bold mb-2 text-slate-900">Il punto di partenza: il neurone biologico</h2>
+        <p class="text-slate-600 leading-relaxed text-sm">Fino alla metà del Novecento, la fisiologia e la medicina avevano identificato le caratteristiche fondamentali dei neuroni biologici. Queste cellule sono composte da tre parti principali: i dendriti, che ricevono i segnali dall'esterno; il soma (o corpo cellulare), che elabora le informazioni; e l'assone, che trasmette il segnale in uscita. Organizzati in una fitta rete e caratterizzati da un'attività elettrica innata, i neuroni comunicano attraverso le sinapsi in risposta agli stimoli. L'intuizione rivoluzionaria dei pionieri dell'informatica è stata quella di isolare questa capacità di calcolo, ignorando temporaneamente le dinamiche biologiche minute per riprodurle in termini puramente logici.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+        <h2 class="text-xl font-bold mb-2 text-slate-900">Dai primi modelli logici al Percettrone (1943-1957)</h2>
+        <p class="text-slate-600 leading-relaxed text-sm">Il primo passo verso questa traduzione avvenne nel 1943, quando Warren McCulloch e Walter Pitts formularono un modello matematico in cui i segnali in ingresso venivano moltiplicati per dei pesi e sommati nel nucleo; l'output finale veniva poi determinato da una funzione di attivazione a gradino, che emulava il comportamento del "tutto o nulla" del neurone biologico. Su queste fondamenta teoriche, nel 1957 Frank Rosenblatt compì una svolta epocale realizzando il "Percettrone": ispirandosi alla corteccia visiva, creò la prima vera implementazione fisica e algoritmica capace di modificare i propri pesi in modo iterativo quando commetteva un errore. Il Percettrone dimostrò così che un circuito artificiale poteva apprendere autonomamente a reconocer stimoli visivi, ponendo le basi per il moderno machine learning.</p>
+        <div class="my-4 p-4 bg-slate-50 rounded-lg text-center font

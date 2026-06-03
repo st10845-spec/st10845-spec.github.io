@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inglese - Charles Dickens</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            techDark: '#0f172a',
+            techLight: '#f8fafc',
+            accent: '#0284c7'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #0f172a; }
+    
+    /* STILE DELLA BARRA DI SCORRIMENTO PER LA PELLICOLA */
+    .cinema-scroll::-webkit-scrollbar {
+      height: 10px; /* Altezza della barra */
+    }
+    .cinema-scroll::-webkit-scrollbar-track {
+      background: #e2e8f0; /* Colore del binario sotto */
+      border-radius: 8px;
+    }
+    .cinema-scroll::-webkit-scrollbar-thumb {
+      background: #0284c7; /* Colore della barra trascinabile (Azzurro come il tuo brand) */
+      border-radius: 8px;
+    }
+    .cinema-scroll::-webkit-scrollbar-thumb:hover {
+      background: #0369a1; /* Colore quando ci passi sopra con il mouse */
+    }
+  </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-xl font-bold text-slate-900 hover:text-accent transition">
+        IIS Marconi Pieralisi
+      </a>
+      
+      <nav class="hidden md:flex space-x-6 text-sm font-medium text-slate-600">
+        <a href="index.html" class="hover:text-accent transition">Home</a>
+        <a href="index.html#chi-sono" class="hover:text-accent transition">Chi Sono</a>
+        <a href="index.html#passioni" class="hover:text-accent transition">Passioni</a>
+        <a href="materie.html" class="hover:text-accent transition">Materie</a>
+        <a href="educazione-civica.html" class="hover:text-accent transition">Educazione Civica</a>
+        <a href="pcto.html" class="hover:text-accent transition">PCTO</a>
+        <a href="contatti.html" class="hover:text-accent transition">Contatti</a>
+      </nav>
+
+      <button id="menu-btn" class="md:hidden text-slate-600 hover:text-accent focus:outline-none">
+        <i class="fa-solid fa-bars text-xl"></i>
+      </button>
+    </div>
+
+    <nav id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-200 px-4 py-3 space-y-3">
+      <a href="index.html" class="block text-sm text-slate-600 hover:text-accent">Home</a>
+      <a href="index.html#chi-sono" class="block text-sm text-slate-600 hover:text-accent">Chi Sono</a>
+      <a href="index.html#passioni" class="block text-sm text-slate-600 hover:text-accent">Passioni</a>
+      <a href="materie.html" class="block text-sm text-slate-600 hover:text-accent">Materie</a>
+      <a href="educazione-civica.html" class="block text-sm text-slate-600 hover:text-accent">Educazione Civica</a>
+      <a href="pcto.html" class="block text-sm text-slate-600 hover:text-accent">PCTO</a>
+      <a href="contatti.html" class="block text-sm text-slate-600 hover:text-accent">Contatti</a>
+    </nav>
+  </header>
+
+  <div class="w-full bg-slate-100 border-b border-slate-200 sticky top-[53px] z-40 overflow-x-auto no-scrollbar">
+    <div class="max-w-6xl mx-auto px-4 flex items-center space-x-4 text-xs sm:text-sm font-medium h-12 whitespace-nowrap text-slate-600">
+      <a href="materie.html" class="hover:text-accent transition h-full flex items-center">Tutte</a>
+      <a href="materia-informatica.html" class="hover:text-accent transition h-full flex items-center">Informatica</a>
+      <a href="materia-sistemi-reti.html" class="hover:text-accent transition h-full flex items-center">Sistemi e Reti</a>
+      <a href="materia-tpsit.html" class="hover:text-accent transition h-full flex items-center">TPSIT</a>
+      <a href="materia-gpoi.html" class="hover:text-accent transition h-full flex items-center">GPOI</a>
+      <a href="materia-matematica.html" class="hover:text-accent transition h-full flex items-center">Matematica</a>
+      <a href="materia-ia.html" class="hover:text-accent transition h-full flex items-center">Intelligenza Artificiale</a>
+      <a href="materia-italiano.html" class="hover:text-accent transition h-full flex items-center">Italiano</a>
+      <a href="materia-storia.html" class="hover:text-accent transition h-full flex items-center">Storia</a>
+      <a href="materia-inglese.html" class="text-accent font-bold border-b-2 border-accent h-full flex items-center">Inglese</a>
+      <a href="materia-scienze-motorie.html" class="hover:text-accent transition h-full flex items-center">Scienze Motorie</a>
+    </div>
+  </div>
+
+  <div class="w-full max-w-4xl mx-auto px-4 mt-8">
+    <div class="w-full h-64 overflow-hidden rounded-xl shadow-sm">
+      <img src="immagini/Cover_inglese.jpg" alt="Cover Inglese" class="w-full h-full object-cover">
+    </div>
+  </div>
+
+  <main class="flex-grow max-w-4xl mx-auto px-4 py-12 w-full">
+    
+    <div class="mb-10">
+      <span class="text-xs font-bold uppercase tracking-wider text-accent">Lingua e Letteratura Straniera</span>
+      <h1 class="text-3xl font-bold text-techDark mt-1">English Language</h1>
+    </div>
+
+    <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 mb-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+        <div class="md:col-span-2">
+          <h2 class="text-xl font-bold text-techDark mb-4">Charles Dickens and His Literary Vision</h2>
+          <p class="text-slate-600 leading-relaxed text-sm">
+            Charles Dickens is one of the most prolific writers of the early Victorian era. His childhood poverty had a profound effect on him and his writing, giving him an acute sensitivity towards his environment, his age, and its people. This difficult upbringing provided him with first-hand knowledge of the darker side of the Victorian age, which he later transformed into material for his work. Through his novels, he created unforgettable characters and blatantly exposed the inhumanities of his day, ensuring that in his tales, good would always overcome evil.
+          </p>
+        </div>
+       <div class="w-full h-52 overflow-hidden rounded-lg shadow-sm">
+  	<img src="immagini/dickens-portrait.jpg" alt="Charles Dickens" class="w-full h-full object-cover">
+      </div>
+      </div>
+    </section>
+
+    <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 mb-8">
+      <h2 class="text-xl font-bold text-techDark mb-4">Early Life and Hardships</h2>
+      <div class="text-slate-600 leading-relaxed text-sm space-y-4">
+        <p>
+          Charles Dickens was born in Hampshire, in the south of England. At the age of 12, he was sent to work twelve hours a day in a factory. His education up to this moment had been scarce, but the factory owner, a friend of his father, took pity on him and gave him some private tuition.
+        </p>
+        <p>
+          Soon after, his father's financial situation deteriorated so much that the family was sent to prison due to unpaid debts. The situation improved only when Dickens's grandmother died and left the family a small inheritance, which helped clear their debts and secure their release.
+        </p>
+      </div>
+    </section>
+
+    <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 mb-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+        <div class="md:col-span-2">
+          <h2 class="text-xl font-bold text-techDark mb-4">The Significance of Oliver Twist</h2>
+          <p class="text-slate-600 leading-relaxed text-sm">
+            The most important work of the writer is Oliver Twist. It is highly significant because it is the first novel in the English language to focus on a child protagonist. The novel exposes the grim reality of workhouses and the exploitation of children, both as a cheap form of labour and as criminals. Extreme poverty, hunger, and blackmail are all major elements in this tale, intertwined with the constant fear that accompanies Oliver right to the end.
+          </p>
+        </div>
+        <div class="w-full h-52 overflow-hidden rounded-lg shadow-sm">
+  		<img src="immagini/oliver-twist.jpg" alt="The Significance of Oliver Twist" class="w-full h-full object-cover">
+	</div>
+      </div>
+    </section>
+
+    <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 mb-8">
+      <h2 class="text-xl font-bold text-techDark mb-2">The story of Oliver Twist</h2>
+      <p class="text-xs text-slate-400 mb-4 italic">Trascina la barra azzurra qui sotto o scorri per vedere tutti i fotogrammi della storia</p>
+      
+      <div class="w-full overflow-x-auto pb-6 cinema-scroll">
+        <div class="flex space-x-6 min-w-max px-2">
+          
+          <div class="w-72 bg-slate-950 text-white rounded-md p-4 shadow-md relative border-y-8 border-dashed border-slate-800">
+            <div class="h-36 w-full overflow-hidden rounded mb-3">
+    <img src="immagini/The Workhouse.jpg" alt="The Workhouse" class="w-full h-full object-cover">
+  </div>
+            <p class="text-xs leading-relaxed">
+              <strong class="text-sky-400">The Workhouse:</strong> Oliver is born in a parish workhouse where orphans are mistreated and starved.
+            </p>
+          </div>
+
+          <div class="w-72 bg-slate-950 text-white rounded-md p-4 shadow-md relative border-y-8 border-dashed border-slate-800">
+	<div class="h-36 w-full overflow-hidden rounded mb-3">
+    		<img src="immagini/The Famous Request.jpg" alt=">The Famous Request" class="w-full h-full object-cover">
+  	</div>
+              <p class="text-xs leading-relaxed">
+              <strong class="text-sky-400">The Famous Request:</strong> After drawing straws with the other hungry boys, Oliver famously asks the cook for more food: "Please, sir, I want some more."
+            </p>
+          </div>
+
+          <div class="w-72 bg-slate-950 text-white rounded-md p-4 shadow-md relative border-y-8 border-dashed border-slate-800">
+		<div class="h-36 w-full overflow-hidden rounded mb-3">
+    <img src="immagini/The Escape.jpg" alt="The Escape" class="w-full h-full object-cover">
+  </div>
+                        <p class="text-xs leading-relaxed">
+              <strong class="text-sky-400">The Escape:</strong> Punished for his rebellion, he is sold to an undertaker. After being bullied and mistreated, Oliver runs away and walks all the way to London.
+            </p>
+          </div>
+
+          <div class="w-72 bg-slate-950 text-white rounded-md p-4 shadow-md relative border-y-8 border-dashed border-slate-800">
+           <div class="h-36 w-full overflow-hidden rounded mb-3">
+    <img src="immagini/The London Gang.jpg" alt="The London Gang" class="w-full h-full object-cover">
+  </div>
+            <p class="text-xs leading-relaxed">
+              <strong class="text-sky-400">The London Gang:</strong> He runs away to London, where he is tricked into joining a gang of young pickpockets led by the criminal Fagin and the Artful Dodger.
+            </p>
+          </div>
+
+          <div class="w-72 bg-slate-950 text-white rounded-md p-4 shadow-md relative border-y-8 border-dashed border-slate-800">
+           <div class="h-36 w-full overflow-hidden rounded mb-3">
+    		<img src="immagini/Rescue and Recapture.jpg" alt="Rescue and Recapture" class="w-full h-full object-cover">
+  	   </div>
+            <p class="text-xs leading-relaxed">
+              <strong class="text-sky-400">Rescue and Recapture:</strong> A wealthy man named Mr. Brownlow rescues Oliver from the streets, but Fagin’s gang kidnaps him back to protect their secrets.
+            </p>
+          </div>
+
+          <div class="w-72 bg-slate-950 text-white rounded-md p-4 shadow-md relative border-y-8 border-dashed border-slate-800">
+            <div class="h-36 w-full overflow-hidden rounded mb-3">
+    		<img src="immagini/The Plot Thickens.jpg" alt="The Plot Thickens" class="w-full h-full object-cover">
+  	   </div>
+            <p class="text-xs leading-relaxed">
+              <strong class="text-sky-400">The Plot Thickens:</strong> Oliver is forced into a burglary where he is wounded. A kind family, the Maylies, takes him in, while a mysterious man named Monks plots with Fagin to ruin Oliver.
+            </p>
+          </div>
+
+          <div class="w-72 bg-slate-950 text-white rounded-md p-4 shadow-md relative border-y-8 border-dashed border-slate-800">
+            <div class="h-36 w-full overflow-hidden rounded mb-3">
+    <img src="immagini/The Truth and Justice.jpg" alt="The Truth and Justice" class="w-full h-full object-cover">
+  </div>
+            <p class="text-xs leading-relaxed">
+              <strong class="text-sky-400">The Truth and Justice:</strong> It is revealed that Monks is Oliver's half-brother trying to steal his inheritance. The criminals are caught or killed, and Oliver is happily adopted by Mr. Brownlow.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-white text-slate-500 py-6 border-t border-slate-200 text-center text-sm mt-auto">
+    <div class="max-w-6xl mx-auto px-4">
+      <p>&copy; 2026 - IIS Marconi Pieralisi - Esame di Stato.</p>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Informatica | Dettaglio Materia</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <script>
+    tailwind.config = { 
+      theme: { 
+        extend: { 
+          colors: { 
+            techDark: '#0f172a', 
+            techLight: '#f8fafc', 
+            accent: '#0284c7' 
+          } 
+        } 
+      } 
+    }
+  </script>
+  
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="bg-techLight text-techDark min-h-screen flex flex-col">
+
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-xl font-bold text-slate-900 hover:text-accent transition">
+        IIS Marconi Pieralisi
+      </a>
+      <nav class="hidden md:flex space-x-6 text-sm font-medium text-slate-600">
+        <a href="index.html" class="hover:text-accent transition">Home</a>
+        <a href="materie.html" class="hover:text-accent transition">Materie</a>
+        <a href="educazione-civica.html" class="hover:text-accent transition">Educazione Civica</a>
+        <a href="pcto.html" class="hover:text-accent transition">PCTO</a>
+        <a href="contatti.html" class="hover:text-accent transition">Contatti</a>
+      </nav>
+      <button id="menu-btn" class="md:hidden text-slate-600 hover:text-accent">
+        <i class="fa-solid fa-bars text-xl"></i>
+      </button>
+    </div>
+  </header>
+
+  <div class="w-full bg-slate-100 border-b border-slate-200 sticky top-[53px] z-40 overflow-x-auto no-scrollbar">
+    <div class="max-w-6xl mx-auto px-4 flex items-center space-x-4 text-xs sm:text-sm font-medium h-12 whitespace-nowrap text-slate-600">
+      <a href="materie.html" class="hover:text-accent transition h-full flex items-center">Tutte</a>
+      <a href="materia-informatica.html" class="text-accent font-bold border-b-2 border-accent h-full flex items-center">Informatica</a>
+      <a href="materia-sistemi-reti.html" class="hover:text-accent transition h-full flex items-center">Sistemi e Reti</a>
+      <a href="materia-tpsit.html" class="hover:text-accent transition h-full flex items-center">TPSIT</a>
+      <a href="materia-gpoi.html" class="hover:text-accent transition h-full flex items-center">GPOI</a>
+      <a href="materia-matematica.html" class="hover:text-accent transition h-full flex items-center">Matematica</a>
+      <a href="materia-ia.html" class="hover:text-accent transition h-full flex items-center">Intelligenza Artificiale</a>
+      <a href="materia-italiano.html" class="hover:text-accent transition h-full flex items-center">Italiano</a>
+      <a href="materia-storia.html" class="hover:text-accent transition h-full flex items-center">Storia</a>
+      <a href="materia-inglese.html" class="hover:text-accent transition h-full flex items-center">Inglese</a>
+    </div>
+  </div>
+
+  <div class="w-full max-w-4xl mx-auto px-4 mt-8">
+    <div class="w-full h-64 bg-slate-200 rounded-xl overflow-hidden border border-slate-200 shadow-sm relative">
+      <img src="immagini/materia-informatica.png" alt="Copertina Informatica" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent flex items-end p-8">
+        <h2 class="text-white text-2xl font-bold">Informatica</h2>
+      </div>
+    </div>
+  </div>
+
+  <main class="max-w-4xl mx-auto px-4 py-8 flex-grow space-y-12">
+    
+    <section class="space-y-6">
+      <div class="mb-4">
+        <span class="text-xs font-bold uppercase tracking-wider text-accent">Area Tecnica</span>
+        <h1 class="text-3xl font-bold text-techDark mt-1">Informatica</h1>
+        <h2 class="text-xl font-semibold text-slate-700 mt-1">Il binomio del Web: Frontend e Backend</h2>
+      </div>
+
+      <p class="text-slate-600 leading-relaxed text-sm">
+        L'Informatica è la materia cardine del mio percorso e quest'anno mi ha permesso di comprendere a fondo l'architettura e il funzionamento dei siti web, strumenti che oggi fanno parte della vita quotidiana di chiunque. La parte che mi ha appassionato di più è stata proprio scoprire come cooperano le due anime di un'applicazione:
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-lg bg-sky-100 flex items-center justify-center text-accent mb-4">
+              <i class="fa-solid fa-code text-lg"></i>
+            </div>
+            <h3 class="text-lg font-bold mb-2 text-slate-900">Il Frontend</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Rappresenta l'interfaccia utente (UI) ed è strutturato per garantire un'esperienza d'uso dinamica, interattiva e pienamente responsive.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-lg bg-slate-900 flex items-center justify-center text-white mb-4">
+              <i class="fa-solid fa-server text-lg"></i>
+            </div>
+            <h3 class="text-lg font-bold mb-2 text-slate-900">Il Backend</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Costituisce la logica di business e l'infrastruttura di persistenza dell'applicazione. Gestisce l'elaborazione delle richieste dei client, l'autenticazione degli utenti, il routing dei flussi applicativi e il dialogo con il database relazionale per una manipolazione dei dati sicura ed efficiente.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-slate-600 leading-relaxed text-sm">
+        A coronare questo percorso è stato il progetto di classe. Lavorare in un team strutturato simulando una vera software house, dividendo i compiti e gestendo il codice tramite Git, ha permesso di unire queste competenze e di sperimentare da vicino le reali dinamiche del mondo del lavoro.
+      </p>
+
+      <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm mt-8">
+        <h3 class="text-xl font-bold text-techDark mb-4">L'Obiettivo: Scout Admin e la digitalizzazione</h3>
+        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+          È da questa sinergia che è nato Scout Admin, una piattaforma web concepita per risolvere un problema concreto: la complessa gestione amministrativa e burocratica dei gruppi scout. L'applicazione nasce con l'obiettivo di centralizzare le informazioni e connettere i tre pilastri fondamentali dell'associazione:
+        </p>
+
+        <div class="space-y-3">
+          <div class="flex items-start gap-3">
+            <span class="w-2 h-2 rounded-full bg-accent mt-2 shrink-0"></span>
+            <p class="text-sm text-slate-600"><strong class="text-slate-900">La Direzione di Gruppo (Segreteria):</strong> per la supervisione dei censimenti e della contabilità.</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="w-2 h-2 rounded-full bg-accent mt-2 shrink-0"></span>
+            <p class="text-sm text-slate-600"><strong class="text-slate-900">Gli Staff di Unità (Educatori):</strong> per avere sempre a portata di mano anagrafiche, progressioni educative e dati di emergenza dei ragazzi.</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="w-2 h-2 rounded-full bg-accent mt-2 shrink-0"></span>
+            <p class="text-sm text-slate-600"><strong class="text-slate-900">Le Famiglie:</strong> per permettere ai genitori di iscrivere i figli e aggiornare i dati in totale autonomia.</p>
+          </div>
+        </div>
+
+        <div class="mt-6 p-4 bg-sky-50 border border-sky-100 rounded-lg flex items-center gap-3 text-accent">
+          <i class="fa-solid fa-chart-line text-lg"></i>
+          <p class="text-sm font-medium text-slate-700">L'impatto stimato di questa soluzione è una riduzione del 70% del tempo speso dai capi in attività burocratiche, tempo restituito alla progettazione pedagogica e al rapporto diretto con i ragazzi.</p>
+        </div>
+      </div>
+
+      <div class="w-full bg-white border border-slate-200 rounded-xl p-4 shadow-sm my-6">
+        <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-2 text-center">Schema ER Scout Admin</span>
+        <div class="w-full h-[450px] overflow-hidden rounded-lg border border-slate-100 bg-slate-50">
+          <img src="immagini/schema-er.jpg" alt="Schema ER Scout Admin" class="w-full h-full object-contain bg-white">
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
+        <p class="text-slate-600 text-sm leading-relaxed">
+          Sviluppare Scout Admin ha significato anche scontrarsi con vincoli normativi e tecnici di alto livello. Trattandosi di un applicativo che gestisce dati personali e sanitari (come allergie e patologie) di soggetti in larga parte minorenni, la sicurezza è stata la nostra priorità.
+        </p>
+        <p class="text-slate-600 text-sm leading-relaxed">
+          Il database relazionale è stato progettato seguendo i principi di privacy by design imposti dal GDPR. Abbiamo implementato un sistema di controllo degli accessi basato sui ruoli (RBAC), assicurando che ogni utente possa visualizzare solo i dati di sua stretta competenza, e tecniche di cifratura per proteggere le informazioni sensibili.
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm mt-6">
+        <h3 class="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
+          <i class="fa-solid fa-list-check text-accent"></i>
+          Argomenti principali del programma
+        </h3>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-slate-600">
+          <li class="flex items-center gap-2 bg-slate-50 p-3 rounded-lg border border-slate-100">
+            <i class="fa-solid fa-database text-accent shrink-0"></i>
+            <span>Linguaggio SQL e Gestione Dati</span>
+          </li>
+          <li class="flex items-center gap-2 bg-slate-50 p-3 rounded-lg border border-slate-100">
+            <i class="fa-solid fa-layer-group text-accent shrink-0"></i>
+            <span>Applicazioni Web e Architettura</span>
+          </li>
+          <li class="flex items-center gap-2 bg-slate-50 p-3 rounded-lg border border-slate-100">
+            <i class="fa-solid fa-brands fa-php text-accent shrink-0 text-base"></i>
+            <span>Sviluppo Backend con il Linguaggio PHP</span>
+          </li>
+          <li class="flex items-center gap-2 bg-slate-50 p-3 rounded-lg border border-slate-100">
+            <i class="fa-solid fa-network-wired text-accent shrink-0"></i>
+            <span>Webservice ed Architettura API</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-white text-slate-500 py-8 border-t border-slate-200 text-center text-sm mt-auto">
+    <p>&copy; 2026 - IIS Marconi Pieralisi - Esame di Stato</p>
+  </footer>
+
+</body>
+</html>

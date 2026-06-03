@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presentazione Personale | IIS Marconi Pieralisi</title>
+  <meta name="description" content="Sito personale ed esame di Stato di una studentessa di Informatica e Telecomunicazioni presso l'IIS Marconi Pieralisi di Jesi.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: { techDark: '#0f172a', techLight: '#f8fafc', accent: '#0284c7', accentHover: '#0369a1' } } }
+    }
+  </script>
+  <style> a:focus, button:focus { outline: 3px solid #0284c7; outline-offset: 2px; } </style>
+</head>
+<body class="bg-techLight text-techDark font-sans flex flex-col min-h-screen">
+
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur shadow-sm border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="text-xl font-bold tracking-tight text-techDark">
+        <a href="index.html" class="hover:text-accent transition">IIS Marconi Pieralisi</a>
+      </div>
+      <nav class="hidden md:flex space-x-8 text-sm font-medium">
+        <a href="index.html#home" class="text-accent transition">Home</a>
+        <a href="index.html#chi-sono" class="text-slate-600 hover:text-accent transition">Chi Sono</a>
+        <a href="index.html#passioni" class="text-slate-600 hover:text-accent transition">Passioni</a>
+        <a href="materie.html" class="text-slate-600 hover:text-accent transition">Materie</a>
+        <a href="educazione-civica.html" class="text-slate-600 hover:text-accent transition">Educazione Civica</a>
+        <a href="pcto.html" class="text-slate-600 hover:text-accent transition">FSL</a>
+        <a href="contatti.html" class="text-slate-600 hover:text-accent transition">Contatti</a>
+      </nav>
+      <button id="menu-btn" class="md:hidden p-2 text-slate-600 hover:text-accent focus:outline-none" aria-label="Apri menu">
+        <i class="fa-solid fa-bars text-xl"></i>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-4 space-y-2 shadow-lg">
+      <a href="index.html#home" class="block py-2 text-accent font-medium">Home</a>
+      <a href="index.html#chi-sono" class="block py-2 text-slate-600 hover:text-accent">Chi Sono</a>
+      <a href="index.html#passioni" class="block py-2 text-slate-600 hover:text-accent">Passioni</a>
+      <a href="materie.html" class="block py-2 text-slate-600 hover:text-accent">Materie</a>
+      <a href="educazione-civica.html" class="block py-2 text-slate-600 hover:text-accent">Educazione Civica</a>
+      <a href="pcto.html" class="block py-2 text-slate-600 hover:text-accent">PCTO</a>
+      <a href="contatti.html" class="block py-2 text-slate-600 hover:text-accent">Contatti</a>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    <section id="home" class="relative bg-slate-900 text-white min-h-[70vh] flex items-center justify-center py-16 px-4" style="background-image: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), url('immagini/home-hero.jpg'); background-size: cover; background-position: center;">
+      <div class="max-w-4xl text-center space-y-6">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">La mia presentazione</h1>
+        <p class="text-xl sm:text-2xl text-slate-300 font-light">Studentessa di Informatica — IIS "Marconi Pieralisi", Jesi</p>
+        <p class="text-base sm:text-lg text-slate-400 max-w-2xl mx-auto">Cinque anni all’indirizzo Informatica, tra codice, progetti e passioni che continuano a crescere.</p>
+        <div class="pt-4 flex flex-col sm:flex-row justify-center gap-4">
+          <a href="#chi-sono" class="bg-accent hover:bg-accentHover text-white px-8 py-3 rounded-lg font-medium shadow-md transition-all text-center">Scopri di più</a>
+          <a href="materie.html" class="bg-white/10 hover:bg-white/20 border border-white/20 text-white px-8 py-3 rounded-lg font-medium transition-all text-center">Le mie materie</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="chi-sono" class="py-20 px-4 max-w-7xl mx-auto sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <div class="lg:col-span-5 space-y-6 sticky top-24">
+          <img src="immagini/profilo.jpg" alt="Foto profilo dello studente" class="w-full h-auto object-cover rounded-2xl shadow-lg border border-slate-200" loading="lazy">
+          <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 space-y-3">
+            <h3 class="text-lg font-bold text-techDark uppercase tracking-wider text-xs text-slate-400">Dati Identificativi</h3>
+	    <p class="text-sm text-slate-600"><strong>Nome e Cognome:</strong> Ada Ugo Praise Ezeala</p>
+            <p class="text-sm text-slate-600"><strong>Età:</strong> 19 anni</p>
+            <p class="text-sm text-slate-600"><strong>Residenza:</strong> Jesi (AN)</p>
+            <p class="text-sm text-slate-600"><strong>Classe:</strong> 5ª CM — A.S. 2025/2026</p>
+            <p class="text-sm text-slate-600"><strong>Scuola:</strong> IIS "Marconi Pieralisi" di Jesi</p>
+            <p class="text-sm text-slate-600"><strong>Indirizzo:</strong> Informatica e Telecomunicazioni</p>
+          </div>
+        </div>
+        <div class="lg:col-span-7 space-y-8">
+          <div>
+            <h2 class="text-3xl font-bold tracking-tight text-techDark mb-4">Chi sono</h2>
+            <div class="text-slate-600 space-y-4 leading-relaxed">
+              <p>Vivo a Jesi e sono una persona curiosa, costantemente motivata a mettermi in gioco: mi appassiona comprendere il funzionamento delle cose e trovare soluzioni per migliorarle. Il mio percorso è iniziato con una forte passione per la grafica, dalla cura dei dettagli visivi all'editing di immagini,che nel tempo si è evoluta in un interesse strutturato per l'informatica e lo sviluppo di applicazioni web responsive. In questo ambito riesco a unire perfettamente creatività e tecnologia.
+</p>
+              <p>Questa passione è cresciuta costantemente, spingendomi a progettare un futuro professionale nel settore IT e nell'innovazione tecnologica. Fondamentale in questo percorso è stato il supporto delle persone che mi circondano: la mia famiglia, gli amici e i compagni di studi.</p>
+            </div>
+          </div>
+
+          <div class="border-t border-slate-200 pt-8">
+            <h3 class="text-2xl font-bold text-techDark mb-4">Il mio percorso di studi</h3>
+            <div class="text-slate-600 space-y-4 leading-relaxed">
+              <p>Ho frequentato la scuola primaria e media a Jesi, poi ho scelto l’IIS Marconi Pieralisi perché sentivo già da tempo un forte interesse per il mondo digitale e desideravo una scuola che mi permettesse di acquisire competenze pratiche oltre alla preparazione teorica. Nel triennio ho approfondito programmazione, basi di dati, reti e progettazione software, scoprendo ambiti che mi affascinano particolarmente, come l’intelligenza artificiale e la cybersecurity.</p>
+              <p>Dopo il diploma sono sicura di voler proseguire gli studi universitari, anche se sono ancora indecisa tra Informatica e Giurisprudenza. L’ambito legale mi ha sempre affascinato e ho avuto modo di approfondirlo soprattutto nei primi due anni del mio percorso scolastico. Allo stesso tempo, la passione per la tecnologia e per l’informatica continua a essere una parte importante del mio futuro.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+              <img src="immagini/scuola-marconi.jpeg" alt="Istituto Marconi Pieralisi" class="rounded-xl shadow-sm h-48 w-full object-cover" loading="lazy">
+              <img src="immagini/uni-camerino.jpg" alt="Universita Politecnica delle Marche" class="rounded-xl shadow-sm h-48 w-full object-cover" loading="lazy">
+            </div>
+          </div>
+
+          <div class="border-t border-slate-200 pt-8">
+            <h3 class="text-2xl font-bold text-techDark mb-4">Uno sguardo al futuro</h3>
+            <p class="text-slate-600 leading-relaxed">Guardando al domani, il mio obiettivo è traccie un percorso unico che possa fondere la logica della giurisprudenza, la protezione della cybersecurity e la forza comunicativa della grafica. Mi affascina l'idea di applicare queste competenze in ambiti apparentemente distanti ma fortemente interconnessi: dalle indagini di polizia nell'informatica forense — dove l'analisi visiva e la sicurezza dei dati sono fondamentali per la giustizia — fino al settore dell'intretruzioni e dei media, come le aziende di cartoni animati per bambini, dove la tutela del diritto d'autore e la blindatura dei server grafici contro la pirateria sono oggi cruciali. Che si tratti di difendere la proprietà intellettuale di una storia animata o di ricostruire una prova digitale, voglio che la mia tecnologia sia uno strumento sicuro, etico e visivamente accessibile.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="passioni" class="bg-slate-50 py-20 border-t border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl font-bold tracking-tight text-techDark mb-4">Le mie passioni</h2>
+          <p class="text-slate-600 italic">La scuola occupa una parte importante delle mie giornate, ma non è tutto. Ci sono alcune attività che, fuori dall'aula, mi aiutano a ricaricare le energie e raccontano la mia personalità: il video editing, la lettura e il cinema.</p>
+        </div>
+
+        <div class="space-y-16">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div class="space-y-4">
+              <div class="flex items-center space-x-3 text-accent text-xl font-bold">
+                <i class="fa-solid fa-video"></i>
+                <h3>3.1 Video Editing e Creatività</h3>
+              </div>
+              <p class="text-slate-600 leading-relaxed">Fin da piccola sono rimasta affascinata dal potere delle immagini. Mi piace raccogliere clip, tagliare, montare e curare la post-produzione per dare ritmo e struttura a un racconto visivo. È una passione che unisce la precisione tecnica nell'uso dei software alla creatività pura, e mi dà molta soddisfazione vedere come file separati possano trasformarsi in una storia fluida e Coinvolgente.</p>
+            </div>
+            <div>
+              <img src="immagini/passione-Editing.jpg" alt="Postazione video editing" class="rounded-xl shadow-md w-full h-64 object-cover" loading="lazy">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center md:flex-row-reverse">
+            <div class="md:order-2 space-y-4">
+              <div class="flex items-center space-x-3 text-accent text-xl font-bold">
+                <i class="fa-solid fa-book"></i>
+                <h3>3.2 Lettura — Romanzi</h3>
+              </div>
+              <p class="text-slate-600 leading-relaxed">Leggere è per me il modo migliore per esplorare mondi diversi e staccare dalla routine quotidiana. Amo in particolare i romanzi, che mi permettono di immergermi in narrazioni profonde e di sviluppare empatia verso i personaggi. Credo che una buona lettura sia un ottimo allenamento non solo per l'immaginazione, ma anche per la capacità di concentrazione e di attenzione ai dettagli.</p>
+            </div>
+            <div class="md:order-1">
+              <img src="immagini/passione-Lettura.jpg" alt="Libri e romanzi da leggere" class="rounded-xl shadow-md w-full h-64 object-cover" loading="lazy">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div class="space-y-4">
+              <div class="flex items-center space-x-3 text-accent text-xl font-bold">
+                <i class="fa-solid fa-film"></i>
+                <h3>3.3 Cinema e Film d'Investigazione</h3>
+              </div>
+              <p class="text-slate-600 leading-relaxed">Mi piace guardare film di qualunque genere, ma ho una forte preferenza per le storie d'investigazione e i gialli. Trovo estremamente stimolante seguire la logica delle indagini, raccogliere gli indizi disseminati nella trama e cercare di risolvere il mistero prima che venga rivelato il finale. In un certo senso, trovo una forte analogia tra il lavoro di un detective e il "debugging" del codice informatico: in entrambi i casi serve unire i pezzi del puzzle con logica, intuito e spirito di osservazione.</p>
+            </div>
+            <div>
+              <img src="immagini/passione-CinemaInvestigazione.png" alt="Scena di un film d'investigazione" class="rounded-xl shadow-md w-full h-64 object-cover" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-slate-900 text-slate-400 py-12 mt-auto border-t border-slate-800 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <p class="font-bold text-white text-base mb-3">Sito Personale</p>
+        <p>© 2026 Esame di Stato. Sviluppato in HTML5, CSS3 e Tailwind.</p>
+      </div>
+      <div>
+        <p class="font-bold text-white text-base mb-3">Link Rapidi</p>
+        <div class="space-y-2">
+          <a href="index.html#home" class="block hover:text-white transition">Home</a>
+          <a href="materie.html" class="block hover:text-white transition">Materie</a>
+          <a href="pcto.html" class="block hover:text-white transition">PCTO</a>
+        </div>
+      </div>
+      <div>
+        <p class="font-bold text-white text-base mb-3">Contatti</p>
+        <p>Email: adaugopraiseezeala@gmail.com</p>
+        <p>Istituto: IIS Marconi Pieralisi, Jesi (AN)</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (menuBtn && mobileMenu) { menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden')); }
+  </script>
+</body>
+</html>

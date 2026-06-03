@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le mie Materie - Esame di Stato 2026</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            techDark: '#0f172a',
+            techLight: '#f8fafc',
+            accent: '#0284c7'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #0f172a; }
+    a:focus, button:focus { outline: 3px solid #0284c7; }
+  </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur shadow-sm border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="text-xl font-bold tracking-tight text-techDark">
+        <a href="index.html" class="hover:text-accent transition">IIS Marconi Pieralisi</a>
+      </div>
+      <nav class="hidden md:flex space-x-8 text-sm font-medium">
+        <a href="index.html#home" class="text-accent transition">Home</a>
+        <a href="index.html#chi-sono" class="text-slate-600 hover:text-accent transition">Chi Sono</a>
+        <a href="index.html#passioni" class="text-slate-600 hover:text-accent transition">Passioni</a>
+        <a href="materie.html" class="text-slate-600 hover:text-accent transition">Materie</a>
+        <a href="educazione-civica.html" class="text-slate-600 hover:text-accent transition">Educazione Civica</a>
+        <a href="pcto.html" class="text-slate-600 hover:text-accent transition">FSL</a>
+        <a href="contatti.html" class="text-slate-600 hover:text-accent transition">Contatti</a>
+      </nav>
+      <button id="menu-btn" class="md:hidden p-2 text-slate-600 hover:text-accent focus:outline-none" aria-label="Apri menu">
+        <i class="fa-solid fa-bars text-xl"></i>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-4 space-y-2 shadow-lg">
+      <a href="index.html#home" class="block py-2 text-accent font-medium">Home</a>
+      <a href="index.html#chi-sono" class="block py-2 text-slate-600 hover:text-accent">Chi Sono</a>
+      <a href="index.html#passioni" class="block py-2 text-slate-600 hover:text-accent">Passioni</a>
+      <a href="materie.html" class="block py-2 text-slate-600 hover:text-accent">Materie</a>
+      <a href="educazione-civica.html" class="block py-2 text-slate-600 hover:text-accent">Educazione Civica</a>
+      <a href="pcto.html" class="block py-2 text-slate-600 hover:text-accent">PCTO</a>
+      <a href="contatti.html" class="block py-2 text-slate-600 hover:text-accent">Contatti</a>
+    </div>
+  </header>
+
+
+  <main class="flex-grow max-w-6xl mx-auto px-4 py-12 w-full">
+    
+    <div class="text-center mb-16">
+      <h1 class="text-4xl font-extrabold text-slate-900 tracking-tight sm:text-5xl">
+        Il Programma di Studio
+      </h1>
+      <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
+        Le materie del 5° anno dell'IIS "Marconi Pieralisi" organizzate in area scientifico-tecnica e area umanistica, con i relativi approfondimenti interdisciplinari.
+      </p>
+    </div>
+
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold text-techDark border-b border-slate-200 pb-3 mb-6 flex items-center gap-3">
+        <i class="fa-solid fa-microchip text-accent"></i> Area Scientifica / Tecnica
+      </h2>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <a href="materia-informatica.html" class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-all">
+          <img src="immagini/materia-informatica.png" alt="Informatica" class="w-full h-40 object-cover group-hover:scale-105 transition-all duration-300">
+          <div class="p-5">
+            <h3 class="font-bold text-lg group-hover:text-accent transition">Informatica</h3>
+            <p class="text-sm text-slate-500 mt-2 line-clamp-2">L'architettura, lo sviluppo frontend e backend e il lavoro in una vera software house.</p>
+          </div>
+        </a>
+
+        <a href="materia-sistemi-reti.html" class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-all">
+          <img src="immagini/copertina_sistemi.png" alt="Sistemi e Reti" class="w-full h-40 object-cover group-hover:scale-105 transition-all duration-300">
+          <div class="p-5">
+            <h3 class="font-bold text-lg group-hover:text-accent transition">Sistemi e Reti</h3>
+            <p class="text-sm text-slate-500 mt-2 line-clamp-2">Studio dell'architettura di rete, protocolli e algoritmi di crittografia per la cybersecurity.</p>
+          </div>
+        </a>
+
+        <a href="materia-tpsit.html" class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-all">
+          <img src="immagini/materia-tpsit.jpg" alt="TPSIT" class="w-full h-40 object-cover group-hover:scale-105 transition-all duration-300">
+          <div class="p-5">
+            <h3 class="font-bold text-lg group-hover:text-accent transition">TPSIT</h3>
+            <p class="text-sm text-slate-500 mt-2 line-clamp-2">La programmazione concorrente, la gestione dei Thread in Java e l'ottimizzazione delle risorse della CPU.</p>
+          </div>
+        </a>
+
+        <a href="materia-gpoi.html" class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-all">
+          <img src="immagini/materia-gpoi.png" alt="GPOI" class="w-full h-40 object-cover group-hover:scale-105 transition-all duration-300">
+          <div class="p-5">
+            <h3 class="font-bold text-lg group-hover:text-accent transition">GPOI</h3>
+            <p class="text-sm text-slate-500 mt-2 line-clamp-2">Modelli economici d'impresa, la grande crisi del 1929, le teorie di Keynes e la nascita dell'IRI.</p>
+          </div>
+        </a>
+
+        <a href="materia-matematica.html" class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-all">
+          <img src="immagini/materia-matematica.gif" alt="Matematica" class="w-full h-40 object-cover group-hover:scale-105 transition-all duration-300">
+          <div class="p-5">
+            <h3 class="font-bold text-lg group-hover:text-accent transition">Matematica</h3>
+            <p class="text-sm text-slate-500 mt-2 line-clamp-2">Strumenti matematici avanzati, analisi di funzioni e legami con i modelli di computazione artificiale.</p>
+          </div>
+        </a>
+
+        <a href="materia-ia.html" class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-all">
+          <img src="immagini/materia-ia.webp" alt="Intelligenza Artificiale" class="w-full h-40 object-cover group-hover:scale-105 transition-all duration-300">
+          <div class="p-5">
+            <h3 class="font-bold text-lg group-hover:text-accent transition">Intelligenza Artificiale</h3>
+            <p class="text-sm text-slate-500 mt-2 line-clamp-2">Il legame tra biologia e reti neurali artificiali, dal Percettrone alla Backpropagation.</p>
+          </div>
+
+        </a>
+
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold text-techDark border-b border-slate-200 pb-3 mb-6 flex items-center gap-3">
+        <i class="fa-solid fa-book-open text-accent"></i> Area Umanistica &amp; Scienze Motorie
+      </h2>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <a href="materia-italiano.html" class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-all">
+          <img src="immagini/materia-italiano.jpg" alt="Italiano" class="w-full h-40 object-cover group-hover:scale-105 transition-all duration-300">
+          <div class="p-5">
+            <h3 class="font-bold text-lg group-hover:text-accent transition">Italiano</h3>
+            <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+  Lo studio della psiche umana e della modernità. Un percorso incentrato sull'inettitudine attraverso i capolavori di Italo Svevo.</p>
+          </div>
+        </a>
+
+        <a href="materia-storia.html" class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-all">
+          <img src="immagini/materia-storia.jpg" alt="Storia" class="w-full h-40 object-cover group-hover:scale-105 transition-all duration-300">
+          <div class="p-5">
+            <h3 class="font-bold text-lg group-hover:text-accent transition">Storia</h3>
+            <p class="text-sm text-slate-500 mt-2 line-clamp-2">I grandi eventi e le trasformazioni politiche, sociali ed economiche del Novecento.</p>
+          </div>
+        </a>
+
+        <a href="materia-inglese.html" class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-all">
+          <img src="immagini/Cover_inglese.jpg" alt="Inglese" class="w-full h-40 object-cover group-hover:scale-105 transition-all duration-300">
+          <div class="p-5">
+            <h3 class="font-bold text-lg group-hover:text-accent transition">Inglese</h3>
+            <p class="text-sm text-slate-500 mt-2 line-clamp-2">Lo studio della letteratura dell'Ottocento, focalizzato sull'opera "Oliver Twist" di Charles Dickens.</p>
+          </div>
+        </a>
+
+        <a href="materia-scienze-motorie.html" class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-all">
+          <img src="immagini/materia-scienze-motorie.jpeg" alt="Scienze Motorie" class="w-full h-40 object-cover group-hover:scale-105 transition-all duration-300">
+          <div class="p-5">
+            <h3 class="font-bold text-lg group-hover:text-accent transition">Scienze Motorie</h3>
+            <p class="text-sm text-slate-500 mt-2 line-clamp-2">Studio dell'anatomia e della fisiologia cardiaca, la doppia circolazione e la compatibilità ematica.</p>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-slate-900 text-slate-400 py-6 border-t border-slate-800 text-center text-sm">
+    <div class="max-w-6xl mx-auto px-4">
+      <p>&copy; 2026 - Sito Personale Esame di Stato. Sviluppato con Tailwind CSS.</p>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  </script>
+
+</body>
+</html>

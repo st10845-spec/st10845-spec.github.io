@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contatti | Recapiti Ufficiali</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>tailwind.config = { theme: { extend: { colors: { techDark: '#0f172a', techLight: '#f8fafc', accent: '#0284c7' } } } }</script>
+</head>
+<body class="bg-techLight text-techDark font-sans min-h-screen flex flex-col" style="background-image: linear-gradient(rgba(248, 250, 252, 0.9), rgba(248, 250, 252, 0.95)), url('immagini/contatti-bg.jpg'); background-size: cover; background-position: center;">
+  
+  <header class="bg-white border-b border-slate-200 py-4 px-8 flex justify-between items-center shadow-sm">
+    <div class="font-bold"><a href="index.html" class="hover:text-accent">IIS Marconi Pieralisi</a></div>
+    <a href="index.html" class="text-sm font-medium text-slate-600 hover:text-accent">Torna alla Home</a>
+  </header>
+
+  <main class="max-w-xl mx-auto px-4 py-16 flex-grow flex flex-col justify-center w-full">
+    <div class="bg-white border border-slate-200 rounded-2xl p-8 shadow-lg space-y-8">
+      <div class="text-center">
+        <h1 class="text-3xl font-bold tracking-tight mb-2">Canali di Contatto</h1>
+        <p class="text-sm text-slate-500">Recapiti e profili per collaborazioni e chiarimenti sul progetto esame</p>
+      </div>
+
+      <div class="space-y-4">
+        <div class="flex items-center gap-4 p-4 bg-slate-50 border border-slate-200 rounded-xl">
+          <div class="w-10 h-10 bg-accent/10 text-accent rounded-lg flex items-center justify-center text-lg"><i class="fa-solid fa-envelope"></i></div>
+          <div>
+            <p class="text-xs text-slate-400 font-bold uppercase tracking-wider">Email Personale</p>
+            <a href="mailto:adaugopraiseezeala@gmail.com" class="text-sm font-medium text-slate-700 hover:text-accent break-all">adaugopraiseezeala@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4 p-4 bg-slate-50 border border-slate-200 rounded-xl">
+          <div class="w-10 h-10 bg-accent/10 text-accent rounded-lg flex items-center justify-center text-lg"><i class="fa-solid fa-phone"></i></div>
+          <div>
+            <p class="text-xs text-slate-400 font-bold uppercase tracking-wider">Telefono / Mobile</p>
+            <a href="tel:+393512613329" class="text-sm font-medium text-slate-700 hover:text-accent">+39 3512613329</a>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4 p-4 bg-slate-50 border border-slate-200 rounded-xl">
+          <div class="w-10 h-10 bg-slate-900 text-white rounded-lg flex items-center justify-center text-lg"><i class="fa-brands fa-github"></i></div>
+          <div>
+            <p class="text-xs text-slate-400 font-bold uppercase tracking-wider">Piattaforma di Sviluppo</p>
+            <a href="https://github.com/st10845-spec" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-slate-700 hover:text-accent">github.com/st10845-spec</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="text-center py-6 text-xs text-slate-400">
+    <p>IIS Marconi Pieralisi Jesi (AN) — A.S. 2025/2026</p>
+  </footer>
+</body>
+</html>

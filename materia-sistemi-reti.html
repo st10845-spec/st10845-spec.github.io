@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistemi e Reti | Dettaglio Materia</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <script>
+    tailwind.config = { 
+      theme: { 
+        extend: { 
+          colors: { 
+            techDark: '#0f172a', 
+            techLight: '#f8fafc', 
+            accent: '#0284c7' 
+          } 
+        } 
+      } 
+    }
+  </script>
+  
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="bg-techLight text-techDark min-h-screen flex flex-col">
+
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-xl font-bold text-slate-900 hover:text-accent transition">
+        IIS Marconi Pieralisi
+      </a>
+      <nav class="hidden md:flex space-x-6 text-sm font-medium text-slate-600">
+        <a href="index.html" class="hover:text-accent transition">Home</a>
+        <a href="materie.html" class="hover:text-accent transition">Materie</a>
+        <a href="educazione-civica.html" class="hover:text-accent transition">Educazione Civica</a>
+        <a href="pcto.html" class="hover:text-accent transition">PCTO</a>
+        <a href="contatti.html" class="hover:text-accent transition">Contatti</a>
+      </nav>
+      <button id="menu-btn" class="md:hidden text-slate-600 hover:text-accent">
+        <i class="fa-solid fa-bars text-xl"></i>
+      </button>
+    </div>
+  </header>
+
+  <div class="w-full bg-slate-100 border-b border-slate-200 sticky top-[53px] z-40 overflow-x-auto no-scrollbar">
+    <div class="max-w-6xl mx-auto px-4 flex items-center space-x-4 text-xs sm:text-sm font-medium h-12 whitespace-nowrap text-slate-600">
+      <a href="materie.html" class="hover:text-accent transition h-full flex items-center">Tutte</a>
+      <a href="materia-informatica.html" class="hover:text-accent transition h-full flex items-center">Informatica</a>
+      <a href="materia-sistemi-reti.html" class="text-accent font-bold border-b-2 border-accent h-full flex items-center">Sistemi e Reti</a>
+      <a href="materia-tpsit.html" class="hover:text-accent transition h-full flex items-center">TPSIT</a>
+      <a href="materia-gpoi.html" class="hover:text-accent transition h-full flex items-center">GPOI</a>
+      <a href="materia-matematica.html" class="hover:text-accent transition h-full flex items-center">Matematica</a>
+      <a href="materia-ia.html" class="hover:text-accent transition h-full flex items-center">Intelligenza Artificiale</a>
+      <a href="materia-italiano.html" class="hover:text-accent transition h-full flex items-center">Italiano</a>
+      <a href="materia-storia.html" class="hover:text-accent transition h-full flex items-center">Storia</a>
+      <a href="materia-inglese.html" class="hover:text-accent transition h-full flex items-center">Inglese</a>
+    </div>
+  </div>
+
+  <div class="w-full max-w-4xl mx-auto px-4 mt-8">
+    <div class="w-full h-64 bg-slate-200 rounded-xl overflow-hidden border border-slate-200 shadow-sm relative">
+      <img src="immagini/copertina_sistemi.png" alt="Copertina Sistemi e Reti" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent flex items-end p-8">
+        <h2 class="text-white text-2xl font-bold">Sistemi e Reti</h2>
+      </div>
+    </div>
+  </div>
+
+  <main class="max-w-4xl mx-auto px-4 py-8 flex-grow space-y-12">
+    
+    <section class="space-y-6">
+      <div class="mb-4">
+        <span class="text-xs font-bold uppercase tracking-wider text-accent">Area Tecnica</span>
+        <h1 class="text-3xl font-bold text-techDark mt-1">4.2 Sistemi e Reti</h1>
+        <h2 class="text-xl font-semibold text-slate-700 mt-1">Sicurezza Online e Protocolli Crittografici</h2>
+      </div>
+
+      <p class="text-slate-600 leading-relaxed text-sm">
+        Sistemi e Reti è stata una materia fondamentale in questo quinto anno, un percorso che mi ha permesso di acquisire una profonda consapevolezza tecnica e metodologica. Ciò che mi ha maggiormente appassionato è stato lo studio dell'architettura e del funzionamento delle reti, grazie al quale ho potuto comprendere nel dettaglio i meccanismi e i protocolli che governano il viaggio dei dati nel mondo, trasformando l'uso quotidiano di Internet in un ambito di studio incredibilmente affascinante. <br><br>
+        In questo contesto, l'argomento che mi ha maggiormente colpito è la sicurezza informatica, con particolare riferimento al protocollo SSL/TLS. La sicurezza nelle comunicazioni online è fondamentale per protectggere dati sensibili come password e carte di credito da intercettazioni e attacchi informatici. Per garantire la riservatezza e l'integrità delle informazioni tra client e server, sono stati sviluppati i protocolli crittografici SSL e TLS. Oggi, TLS rappresenta lo standard moderno e sicuro, mentre il vecchio SSL è considerato obsoleto e non viene più utilizzato dai browser.
+      </p>
+
+      <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm mt-8">
+        <h3 class="text-xl font-bold text-techDark mb-4">Da SSL a TLS: L'Evoluzione dello Standard</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="space-y-2">
+            <h4 class="text-base font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-red-500"></span>
+              SSL (Secure Sockets Layer)
+            </h4>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Sviluppato da Netscape negli anni '90 (con le versioni pubbliche 2.0 e 3.0), è stato il pioniere della sicurezza sul web. Tuttavia, a causa di gravi vulnerabilità storiche (come gli attacchi POODLE e BEAST), è stato progressivamente abbandonato.
+            </p>
+          </div>
+
+          <div class="space-y-2">
+            <h4 class="text-base font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+              TLS (Transport Layer Security)
+            </h4>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Rappresenta l'evoluzione diretta di SSL, standardizzato dalla Internet Engineering Task Force (IETF). Le versioni moderne like TLS 1.2 e TLS 1.3 eliminano i cifrari obsoleti e offrono connessioni molto più veloci e resistenti agli attacchi informatici.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch mt-8">
+        
+        <div class="md:col-span-7 bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <h3 class="text-xl font-bold text-techDark mb-4">Come Funziona l'Handshake TLS</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              Prima di scambiare qualsiasi dato, il client (browser) e il server stabiliscono una connessione sicura attraverso un processo chiamato TLS Handshake:
+            </p>
+
+            <div class="space-y-3">
+              <div class="flex items-start gap-3">
+                <span class="w-5 h-5 rounded-full bg-sky-100 text-accent flex items-center justify-center text-xs font-bold mt-0.5 shrink-0">1</span>
+                <p class="text-sm text-slate-600"><strong class="text-slate-900">Client Hello & Server Hello:</strong> Le due parti concordano la versione del protocollo e gli algoritmi da usare.</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="w-5 h-5 rounded-full bg-sky-100 text-accent flex items-center justify-center text-xs font-bold mt-0.5 shrink-0">2</span>
+                <p class="text-sm text-slate-600"><strong class="text-slate-900">Certificato Digitale:</strong> Il server invia la sua identità digitale per dimostrare l'autenticità.</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="w-5 h-5 rounded-full bg-sky-100 text-accent flex items-center justify-center text-xs font-bold mt-0.5 shrink-0">3</span>
+                <p class="text-sm text-slate-600"><strong class="text-slate-900">Scambio delle Chiavi:</strong> Client e server generano una chiave segreta condivisa.</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="w-5 h-5 rounded-full bg-sky-100 text-accent flex items-center justify-center text-xs font-bold mt-0.5 shrink-0">4</span>
+                <p class="text-sm text-slate-600"><strong class="text-slate-900">Connessione Sicura:</strong> La comunicazione viene completamente cifrata con la chiave simmetrica.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="md:col-span-5 bg-slate-50 border border-slate-200 rounded-xl p-2 shadow-sm flex flex-col h-full justify-center min-h-[320px]">
+          <div class="w-full h-full overflow-hidden rounded-lg">
+            <img src="immagini/schema-handshake-tls.png" alt="Schema Handshake TLS" class="w-full h-full object-contain bg-white">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+        <h3 class="text-xl font-bold text-techDark mb-4">Certificati Digitali e Catena di Fiducia (Trust Chain)</h3>
+        <p class="text-slate-600 text-sm leading-relaxed">
+          Un certificato digitale associa un dominio web a una chiave pubblica ed è emesso da enti terzi fidati chiamati Autorità di Certificazione (CA), come Let's Encrypt. <br><br>
+          La sicurezza del sistema si basa sulla Catena di Fiducia (Trust Chain): il certificato del sito è firmato da una CA intermedia, a sua volta convalidata da una CA radice (Root CA) pre-installata e ritenuta sicura dal browser. Se un solo anello della catena è invalido, il browser blocca la navigazione mostrando un avviso visibile di errore.
+        </p>
+      </div>
+
+      <div class="w-full bg-white border border-slate-200 rounded-xl p-4 shadow-sm my-6">
+        <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-2 text-center">Gerarchia della Catena di Fiducia</span>
+        <div class="w-full h-[250px] overflow-hidden rounded-lg border border-slate-100 bg-slate-50">
+          <img src="immagini/schema-trust-chain.png" alt="Schema Catena di Fiducia Certificati" class="w-full h-full object-contain bg-white">
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch">
+        
+        <div class="md:col-span-7 bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <h3 class="text-xl font-bold text-techDark mb-4">Applicazioni Pratiche e Attacchi Comuni</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Il protocollo TLS protegge le nostre attività quotidiane attraverso l'uso di **HTTPS** nei browser, la crittografia delle **Email** e la creazione di tunnel sicuri nelle **VPN**. Nonostante la sua robustezza, una configurazione errata o l'uso di sistemi obsoleti può esporre il sistema ad attacchi come:
+            </p>
+            <div class="space-y-3 pt-4">
+              <div class="p-3 bg-red-50/50 border border-red-100 rounded-lg">
+                <p class="text-xs text-slate-700"><strong class="text-red-700 block mb-0.5">Man-in-the-Middle (MITM):</strong> Un malintenzionato si interpone silente tra client e server per intercettare o modificare i dati in transito.</p>
+              </div>
+              <div class="p-3 bg-red-50/50 border border-red-100 rounded-lg">
+                <p class="text-xs text-slate-700"><strong class="text-red-700 block mb-0.5">Downgrade Attack:</strong> L'attaccante forza i dispositivi a comunicare usando vecchie versioni vulnerabili (es. SSL 3.0) per eludere le difese.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="md:col-span-5 bg-slate-50 border border-slate-200 rounded-xl p-2 shadow-sm flex flex-col h-full justify-center min-h-[320px]">
+          <div class="w-full h-full overflow-hidden rounded-lg">
+            <img src="immagini/schema-attacchi-rete.png" alt="Schema Attacchi di Rete MITM" class="w-full h-full object-contain bg-white">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm mt-6">
+        <h3 class="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
+          <i class="fa-solid fa-list-check text-accent"></i>
+          Argomenti principali del programma
+        </h3>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-slate-600">
+          <li class="flex items-center gap-2 bg-slate-50 p-3 rounded-lg border border-slate-100">
+            <i class="fa-solid fa-network-wired text-accent shrink-0"></i>
+            <span>Livello Trasporto</span>
+          </li>
+          <li class="flex items-center gap-2 bg-slate-50 p-3 rounded-lg border border-slate-100">
+            <i class="fa-solid fa-globe text-accent shrink-0"></i>
+            <span>Livello Applicazione ed i suoi protocolli</span>
+          </li>
+          <li class="flex items-center gap-2 bg-slate-50 p-3 rounded-lg border border-slate-100">
+            <i class="fa-solid fa-folder-tree text-accent shrink-0"></i>
+            <span>VLAN (Virtual Local Area Network)</span>
+          </li>
+          <li class="flex items-center gap-2 bg-slate-50 p-3 rounded-lg border border-slate-100">
+            <i class="fa-solid fa-key text-accent shrink-0"></i>
+            <span>Crittografia per la protezione dei dati</span>
+          </li>
+          <li class="flex items-center gap-2 bg-slate-50 p-3 rounded-lg border border-slate-100">
+            <i class="fa-solid fa-ethernet text-accent shrink-0"></i>
+            <span>Cablaggio Strutturato</span>
+          </li>
+          <li class="flex items-center gap-2 bg-slate-50 p-3 rounded-lg border border-slate-100">
+            <i class="fa-solid fa-wifi text-accent shrink-0"></i>
+            <span>Wireless, reti mobili e reti cellulari</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-white text-slate-500 py-8 border-t border-slate-200 text-center text-sm mt-auto">
+    <p>&copy; 2026 - IIS Marconi Pieralisi - Esame di Stato</p>
+  </footer>
+
+</body>
+</html>

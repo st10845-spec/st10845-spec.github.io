@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Italiano - Italo Svevo</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            techDark: '#0f172a',
+            techLight: '#f8fafc',
+            accent: '#0284c7'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #0f172a; }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-xl font-bold text-slate-900 hover:text-accent transition">
+        IIS Marconi Pieralisi
+      </a>
+      
+      <nav class="hidden md:flex space-x-6 text-sm font-medium text-slate-600">
+        <a href="index.html" class="hover:text-accent transition">Home</a>
+        <a href="index.html#chi-sono" class="hover:text-accent transition">Chi Sono</a>
+        <a href="index.html#passioni" class="hover:text-accent transition">Passioni</a>
+        <a href="materie.html" class="hover:text-accent transition">Materie</a>
+        <a href="educazione-civica.html" class="hover:text-accent transition">Educazione Civica</a>
+        <a href="pcto.html" class="hover:text-accent transition">PCTO</a>
+        <a href="contatti.html" class="hover:text-accent transition">Contatti</a>
+      </nav>
+
+      <button id="menu-btn" class="md:hidden text-slate-600 hover:text-accent focus:outline-none">
+        <i class="fa-solid fa-bars text-xl"></i>
+      </button>
+    </div>
+
+    <nav id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-200 px-4 py-3 space-y-3">
+      <a href="index.html" class="block text-sm text-slate-600 hover:text-accent">Home</a>
+      <a href="index.html#chi-sono" class="block text-sm text-slate-600 hover:text-accent">Chi Sono</a>
+      <a href="index.html#passioni" class="block text-sm text-slate-600 hover:text-accent">Passioni</a>
+      <a href="materie.html" class="block text-sm text-slate-600 hover:text-accent">Materie</a>
+      <a href="educazione-civica.html" class="block text-sm text-slate-600 hover:text-accent">Educazione Civica</a>
+      <a href="pcto.html" class="block text-sm text-slate-600 hover:text-accent">PCTO</a>
+      <a href="contatti.html" class="block text-sm text-slate-600 hover:text-accent">Contatti</a>
+    </nav>
+  </header>
+
+  <div class="w-full bg-slate-100 border-b border-slate-200 sticky top-[53px] z-40 overflow-x-auto no-scrollbar">
+    <div class="max-w-6xl mx-auto px-4 flex items-center space-x-4 text-xs sm:text-sm font-medium h-12 whitespace-nowrap text-slate-600">
+      <a href="materie.html" class="hover:text-accent transition h-full flex items-center">Tutte</a>
+      <a href="materia-informatica.html" class="hover:text-accent transition h-full flex items-center">Informatica</a>
+      <a href="materia-sistemi-reti.html" class="hover:text-accent transition h-full flex items-center">Sistemi e Reti</a>
+      <a href="materia-tpsit.html" class="hover:text-accent transition h-full flex items-center">TPSIT</a>
+      <a href="materia-gpoi.html" class="hover:text-accent transition h-full flex items-center">GPOI</a>
+      <a href="materia-matematica.html" class="hover:text-accent transition h-full flex items-center">Matematica</a>
+      <a href="materia-ia.html" class="hover:text-accent transition h-full flex items-center">Intelligenza Artificiale</a>
+      <a href="materia-italiano.html" class="text-accent font-bold border-b-2 border-accent h-full flex items-center">Italiano</a>
+      <a href="materia-storia.html" class="hover:text-accent transition h-full flex items-center">Storia</a>
+      <a href="materia-inglese.html" class="hover:text-accent transition h-full flex items-center">Inglese</a>
+      <a href="materia-scienze-motorie.html" class="hover:text-accent transition h-full flex items-center">Scienze Motorie</a>
+    </div>
+  </div>
+
+  <div class="w-full max-w-4xl mx-auto px-4 mt-8">
+    <div class="w-full h-64 bg-slate-200 rounded-xl overflow-hidden border border-slate-200 shadow-sm relative">
+      <img src="immagini/materia-italiano.jpg" alt="Copertina Italiano" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent flex items-end p-8">
+        <h2 class="text-white text-2xl font-bold">Lingua e Letteratura Italiana</h2>
+      </div>
+    </div>
+  </div>
+
+  <main class="flex-grow max-w-4xl mx-auto px-4 py-8 w-full">
+    
+    <div class="mb-10">
+      <h1 class="text-3xl font-bold text-techDark">Il mio rapporto con la letteratura</h1>
+      <p class="text-slate-600 mt-4 leading-relaxed">
+        L'italiano è una disciplina che ci accompagna fin da quando siamo piccoli, attraverso le prime storie che ci venivano raccontate. Nel corso del tempo e con il progredire dei miei studi, ho imparato ad apprezzarla sempre di più, scoprendo come le grandi opere letterarie non siano soltanto racconti del passato, ma racchiudano metafore profonde capaci di parlarci ancora oggi, anche di fronte alle sfide tecnologiche più moderne.
+      </p>
+    </div>
+
+    <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 mb-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+        <div class="md:col-span-1">
+          <div class="aspect-[3/4] bg-slate-100 rounded-lg overflow-hidden border border-slate-200">
+             <img src="immagini/italo-svevo.jpg" alt="Italo Svevo" class="w-full h-full object-cover">
+          </div>
+          <p class="text-[10px] text-center text-slate-400 mt-2 italic">Ritratto di Italo Svevo</p>
+        </div>
+        <div class="md:col-span-2">
+          <h2 class="text-xl font-bold text-techDark mb-4">Italo Svevo: un autore sospeso tra due culture</h2>
+          <p class="text-slate-600 leading-relaxed text-sm">
+            Nato nel 1861 a Trieste, all'epoca parte dell'Impero Austro-Ungarico, l'autore riflette profondamente la natura mitteleuropea della sua città natale, un vero e proprio crocevia culturale ed economico dell'Europa di mezzo. Questa identità "ibrida", sospesa tra la cultura italiana e quella tedesca, si manifesta chiaramente fin dal suo pseudonimo letterario, Italo Svevo, scelto per fondere la sua radice italiana con quella germanica (da "Svevia"), in contrasto con il suo nome anagrafico, Aron Hector Schmitz (Ettore Schmitz).<br><br>
+            La sua vita fu segnata da una complessa dinamica tra dovere e passione: costretto a interrompere gli studi commerciali, lavorò inizialmente in banca e, successivamente, entrò nell'azienda di vernici del suocero, diventando a tutti gli effetti un uomo d'affari. Nonostante gli impegni commerciali, Svevo non abbandonò mai la scrittura, vivendo appieno la transizione e il passaggio dalla letteratura dell'Ottocento a quella contemporanea.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 mb-8">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+        <div class="md:col-span-8">
+          <h2 class="text-xl font-bold text-techDark mb-4">Il contesto europeo: l'influenza di Joyce e la Psicoanalisi</h2>
+          <p class="text-slate-600 leading-relaxed text-sm">
+            Svevo è un intellettuale profondamente influenzato dal panorama culturale europeo del suo tempo. Fondamentale per la sua maturazione fu l'incontro a Trieste con lo scrittore irlandese James Joyce, che ne riconobbe il talento e lo spronò a proseguire l'attività letteraria.<br><br>
+            Parallelamente, Svevo si impose come uno dei primi autori in Italia a esplorare e assimilare la psicoanalisi di Sigmund Freud. La nuova scienza medica non viene vista da Svevo come una terapia per guarire, bensì como uno straordinario strumento narrativo per esplorare il mondo della psiche, della mente e dell'inconscio. I suoi romanzi diventano così lo specchio in cui si riflettono i pensieri profondi, i dubbi e le insicurezze umane, segnando il definitivo tramonto del romanzo ottocentesco a favore di una narrazione focalizzata sulla complessa psiche dei personaggi.
+          </p>
+        </div>
+        <div class="md:col-span-4 flex flex-col gap-4">
+          <div class="h-40 bg-slate-100 rounded-lg overflow-hidden border border-slate-200 shadow-sm">
+            <img src="immagini/sigmund-freud.jpg" alt="Sigmund Freud" class="w-full h-full object-cover">
+          </div>
+          <div class="h-40 bg-slate-100 rounded-lg overflow-hidden border border-slate-200 shadow-sm translate-x-[-10px]">
+             <img src="immagini/james-joyce.jpeg" alt="James Joyce" class="w-full h-full object-cover">
+          </div>
+          <p class="text-[10px] text-right text-slate-400 italic">Freud e Joyce</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 mb-8">
+      <h2 class="text-xl font-bold text-techDark mb-4">I grandi temi sveviani: l'Inettitudine e l'Uomo Moderno</h2>
+      <p class="text-slate-600 leading-relaxed text-sm">
+        Il nucleo tematico della produzione sveviana ruota attorno al concetto di inettitudine. L'inetto è un uomo incapace di trovare il proprio posto nel mondo, intrappolato in una specie di blocco psicologico ed emotivo che gli impedisce di prendere decisioni e di agire in modo sicuro. I personaggi di Svevo sono strutturalmente indecisi e insicuri.<br><br>
+        Tuttavia, l'inettitudine non rappresenta un mero limite individual o patologico; al contrario, essa si configura come lo specchio delle contraddizioni della vita moderna. L'inetto, nella sua incapacità di adattarsi a una società borghese basata sul profitto e sull'efficienza, diventa paradossalmente l'unico individuo lucido, capace di analizzare la realtà senza le maschere e le ipocrisie del suo tempo.
+      </p>
+    </section>
+
+    <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 mb-8">
+      <h2 class="text-xl font-bold text-techDark mb-8 text-center">Le Opere: l'evoluzione dell'Eroe Sveviano</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch">
+        <div class="md:col-span-8 flex flex-col justify-between">
+          
+          <div class="flex items-start group relative pb-8">
+            <div class="absolute left-[7px] top-4 bottom-0 w-[2px] bg-slate-200 group-last:hidden"></div>
+            <div class="w-4 h-4 rounded-full bg-accent border-4 border-white shadow-sm shrink-0 mt-1.5 z-10"></div>
+            <div class="pl-6">
+              <h3 class="font-bold text-slate-800 text-lg leading-none">Una Vita (1892)</h3>
+              <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+                Il romanzo d'esordio introduce il personaggio di Alfonso Nitti, un impiegato bancario che sogna il riscatto sociale e intellettuale, ma finisce per sentirsi costantemente bloccato dalla propria insicurezza. Alfonso incarna il prototipo dell'inetto, un vero e proprio alter ego dell'autore.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start group relative pb-8">
+            <div class="absolute left-[7px] top-4 bottom-0 w-[2px] bg-slate-200 group-last:hidden"></div>
+            <div class="w-4 h-4 rounded-full bg-accent border-4 border-white shadow-sm shrink-0 mt-1.5 z-10"></div>
+            <div class="pl-6">
+              <h3 class="font-bold text-slate-800 text-lg leading-none">Senilità (1898)</h3>
+              <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+                Il secondo romanzo ha per protagonista Emilio Brentani, un uomo anch'egli bloccato dall'inettitudine, che si innamora di una donna idealizzandola eccessivamente e non riuscendo più a liberarsi da questa ossessione. Il titolo stesso, "Senilità", non indica l'età anagrafica, bensì una conditione di stanchezza, delusione e "vecchiaia interiore" che paralizza la vita di Emilio.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start group relative">
+            <div class="absolute left-[7px] top-4 bottom-0 w-[2px] bg-slate-200 group-last:hidden"></div>
+            <div class="w-4 h-4 rounded-full bg-accent border-4 border-white shadow-sm shrink-0 mt-1.5 z-10"></div>
+            <div class="pl-6">
+              <h3 class="font-bold text-slate-800 text-lg leading-none">La Coscienza di Zeno (1923)</h3>
+              <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+                Considerato il capolavoro assoluto di Svevo, il romanzo ha come protagonista Zeno Cosini, un inetto ricco di insicurezze. L'opera è strutturata in modo rivoluzionario come una sorta di diario scritto da Zeno su consiglio del suo psicoanalista, il Dottor S. Il romanzo adotta una narrazione in prima persona. Al centro del testo emerge il conflitto interiore e le contraddizioni dell'animo umano. Un tema chiave è quello dell'ultima sigaretta: il vizio del fumo e il continuo, fallimentare tentativo di smettere diventano il simbolo perfetto dell'incapacità dell'uomo moderno di cambiare la propria vita, anche quando lo desidera ardentemente. Sebbene l'opera fosse stata inizialmente accolta con freddezza e definita "strana" dalla critica italiana, il romanzo ottenne il meritato successo solo grazie al fondamentale intervento di James Joyce, che ne colse il valore e lo lanciò sulla scena culturale europea.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="md:col-span-4 flex flex-col mt-6 md:mt-0">
+          <div class="flex-grow bg-slate-50 border border-slate-200 rounded-lg p-2 shadow-sm flex flex-col justify-between h-full">
+            <div class="w-full h-full min-h-[350px] overflow-hidden rounded">
+              <img src="immagini/la-coscienza-di-zeno.jpg" alt="La coscienza di Zeno" class="w-full h-full object-cover shadow-inner">
+            </div>
+            <p class="text-[9px] text-slate-400 mt-2 text-center uppercase tracking-widest font-bold shrink-0">Edizione Storica delle Opere</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-white text-slate-500 py-6 border-t border-slate-200 text-center text-sm mt-auto">
+    <div class="max-w-6xl mx-auto px-4">
+      <p>&copy; 2026 - IIS Marconi Pieralisi - Esame di Stato.</p>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  </script>
+
+</body>
+</html>
