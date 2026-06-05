@@ -3,43 +3,122 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Educazione Civica | Percorso Interdisciplinare</title>
+  <title>Educazione Civica | Il Tribunale di Ancona</title>
+
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <script>tailwind.config = { theme: { extend: { colors: { techDark: '#0f172a', techLight: '#f8fafc', accent: '#0284c7' } } } }</script>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            techDark: '#0f172a',
+            techLight: '#f8fafc',
+            accent: '#0284c7'
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #0f172a; }
+  </style>
+
+  <script src="header.js" defer></script>
 </head>
-<body class="bg-techLight text-techDark font-sans min-h-screen flex flex-col">
-  <header class="bg-white border-b border-slate-200 py-4 px-8 flex justify-between items-center sticky top-0 z-50 shadow-sm">
-  <div class="font-bold"><a href="index.html" class="hover:text-accent">Ada Ugo Praise Ezeala/a></div>
-  <nav class="hidden md:flex space-x-6 text-sm font-medium">
-    <a href="index.html" class="text-slate-600 hover:text-accent">Home</a>
-    
-    <a href="materie.html" class="text-accent">Materie</a>
-    
-    <a href="educazione-civica.html" class="text-slate-600 hover:text-accent">Educazione Civica</a>
-    <a href="pcto.html" class="text-slate-600 hover:text-accent">FSL</a>
-    <a href="contatti.html" class="text-slate-600 hover:text-accent">Contatti</a>
-  </nav>
-</header>
+<body class="flex flex-col min-h-screen"
+      data-materia="Educazione Civica" 
+      data-copertina="immagini/tribunale-ancona.jpg">
 
-  <main class="max-w-4xl mx-auto px-4 py-12 flex-grow space-y-12">
-    <div class="text-center">
-      <h1 class="text-4xl font-extrabold tracking-tight mb-4">Educazione Civica</h1>
-      <p class="text-xl text-slate-600">Percorso interdisciplinare sulla Cittadinanza Digitale e Consapevolezza di Rete</p>
+  <main class="flex-grow max-w-4xl mx-auto px-4 py-12 w-full">
+    
+    <div class="mb-10 text-center md:text-left">
+      <span class="text-xs font-bold uppercase tracking-wider text-accent border border-accent/20 bg-accent/5 px-3 py-1 rounded-full">Percorso Trasversale</span>
+      <h1 class="text-3xl font-bold text-techDark mt-3">
+        Il giorno in cui il diritto è diventato realtà: la mia esperienza al Tribunale di Ancona
+      </h1>
     </div>
 
-    <div class="relative rounded-2xl overflow-hidden shadow-sm border border-slate-200">
-      <img src="immagini/edcivica-cittadinanza-digitale.jpg" alt="Apertura del percorso educazione civica" class="w-full h-64 object-cover">
-    </div>
+    <div class="space-y-8">
+      
+      <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 md:p-8">
+        <div class="flex items-start gap-4">
+          <div class="hidden sm:flex p-3 bg-sky-50 rounded-lg text-accent">
+            <i class="fa-solid fa-building-columns text-2xl"></i>
+          </div>
+          <div>
+            <h2 class="text-xl font-bold text-techDark mb-3">La teoria che prende forma</h2>
+            <p class="text-slate-600 leading-relaxed text-sm md:text-base">
+              All’interno del percorso di Educazione Civica, ho avuto l'opportunità di vivere un'esperienza che ha letteralmente dato forma e voce alle pagine dei nostri libri di testo: la visita di classe al Tribunale di Ancona. Spesso consideriamo la legge come un insieme astratto di regole o formule burocratiche da memorizzare, ma varcare la soglia di quel palazzo mi ha permesso di capire quanto il mondo legale sia dinamico, concreto e profondamente umano. Vedere giudici, avvocati e magistrati confrontarsi dal vivo mi ha trasmesso una nuova consapevolezza: la legalità non è solo un concetto teorico, ma una responsabilità collettiva che impatta direttamente sulla vita e sulla libertà di tutti noi.
+            </p>
+          </div>
+        </div>
+      </section>
 
-    <section class="space-y-6">
-      <div class="bg-white p-8 rounded-xl border border-slate-200 space-y-4">
-      </div>
-    </section>
+      <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 md:p-8 border-l-4 border-l-accent">
+        <div class="flex items-start gap-4">
+          <div class="hidden sm:flex p-3 bg-amber-50 rounded-lg text-amber-600">
+            <i class="fa-solid fa-scale-unbalanced text-2xl"></i>
+          </div>
+          <div>
+            <h2 class="text-xl font-bold text-techDark mb-3">L'udienza: un incredibile scambio di identità</h2>
+            <p class="text-slate-600 leading-relaxed text-sm md:text-base">
+              Durante la mattinata abbiamo assistito da vicino allo svolgimento di diverse udienze, ma c’è stato un caso specifico che mi ha spinto a riflettere profondamente: un incredibile scambio di identità. Una persona era stata confusa con un ricercato a causa di una perfetta omonimia, un errore apparentemente banale dovuto a un controllo superficiale, ma dalle conseguenze potenzialmente drammatiche. Gli unici elementi a favore dell'imputato erano la testimonianza di chi aveva visto il vero ricercato e un dettaglio burocratico fondamentale: una data di nascita diversa. Questo caso mi ha fatto toccare con mano quanto sia sottile il filo della giustizia e quanto un piccolo errore possa stravolgere la vita di un cittadino innocente.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 md:p-8">
+        <div class="flex items-start gap-4">
+          <div class="hidden sm:flex p-3 bg-emerald-50 rounded-lg text-emerald-600">
+            <i class="fa-solid fa-shield-halved text-2xl"></i>
+          </div>
+          <div>
+            <h2 class="text-xl font-bold text-techDark mb-3">Il valore delle garanzie costituzionali</h2>
+            <p class="text-slate-600 leading-relaxed text-sm md:text-base">
+              Proprio questa vicenda mi ha fatto comprendere l’importance cruciale del diritto alla difesa, della presunzione di innocenza e, soprattutto, del valore inestimabile delle prove e delle garanzie costituzionali. Ho capito che i dettagli, in un’aula di tribunale, non sono semplici formalità, ma lo scudo che protegge l'individuo dagli errori giudiziari. Torno da questa esperienza con uno sguardo molto più maturo e consapevole: la macchina della giustizia è complessa perché complessa è la natura umana, e questa visita mi ha insegnato che tutelare i diritti di ciascuno è il pilastro fondamentale su cui si regge l'intera nostra società.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 md:p-8">
+        <h2 class="text-xl font-bold text-techDark mb-8 flex items-center gap-2">
+          <i class="fa-solid fa-camera text-accent"></i>
+          Immagini dell'esperienza
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10">
+          
+          <div class="group relative overflow-hidden rounded-xl border border-slate-100 bg-slate-50 aspect-[4/3] flex flex-col justify-between p-3 shadow-sm">
+            <img src="immagini/foto1.jpg" alt="Palazzo di Giustizia" class="absolute inset-0 w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'">
+            <div class="mt-auto relative z-10 bg-slate-900/85 backdrop-blur-sm text-white text-sm px-4 py-2.5 rounded-lg w-full font-medium shadow-md">
+              Il Palazzo di Giustizia di Ancona
+            </div>
+          </div>
+
+          <div class="group relative overflow-hidden rounded-xl border border-slate-100 bg-slate-50 aspect-[4/3] flex flex-col justify-between p-3 shadow-sm">
+            <img src="immagini/foto2.jpg" alt="L'aula delle udienze penali" class="absolute inset-0 w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'">
+            <div class="mt-auto relative z-10 bg-slate-900/85 backdrop-blur-sm text-white text-sm px-4 py-2.5 rounded-lg w-full font-medium shadow-md">
+              L'aula delle udienze penali
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
   </main>
 
-  <footer class="bg-slate-900 text-slate-400 py-6 text-center text-sm">
-    <p>© 2026 IIS Marconi Pieralisi Jesi - Esame di Stato</p>
+  <footer class="bg-white text-slate-500 py-6 border-t border-slate-200 text-center text-sm mt-auto">
+    <div class="max-w-6xl mx-auto px-4">
+      <p>&copy; 2026 - IIS Marconi Pieralisi - Esame di Stato.</p>
+    </div>
   </footer>
+
 </body>
 </html>

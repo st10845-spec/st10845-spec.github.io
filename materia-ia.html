@@ -19,7 +19,7 @@
             accent: '#0284c7' 
           } 
         } 
-      } 
+      }
     }
   </script>
   
@@ -29,45 +29,16 @@
     .no-scrollbar::-webkit-scrollbar { display: none; }
     .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
   </style>
+
+  <script src="header.js" defer></script>
 </head>
-<body class="bg-techLight text-techDark font-sans min-h-screen flex flex-col">
-
-  <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-      <a href="index.html" class="text-xl font-bold text-slate-900 hover:text-accent transition">
-        Ada Ugo Praise Ezeala
-      </a>
-      <nav class="hidden md:flex space-x-6 text-sm font-medium text-slate-600">
-        <a href="index.html" class="hover:text-accent transition">Home</a>
-        <a href="materie.html" class="hover:text-accent transition">Materie</a>
-        <a href="educazione-civica.html" class="hover:text-accent transition">Educazione Civica</a>
-        <a href="pcto.html" class="hover:text-accent transition">PCTO</a>
-        <a href="contatti.html" class="hover:text-accent transition">Contatti</a>
-      </nav>
-      <button id="menu-btn" class="md:hidden text-slate-600 hover:text-accent">
-        <i class="fa-solid fa-bars text-xl"></i>
-      </button>
-    </div>
-  </header>
-
-  <div class="w-full bg-slate-100 border-b border-slate-200 sticky top-[53px] z-40 overflow-x-auto no-scrollbar">
-    <div class="max-w-6xl mx-auto px-4 flex items-center space-x-4 text-xs sm:text-sm font-medium h-12 whitespace-nowrap text-slate-600">
-      <a href="materie.html" class="hover:text-accent transition h-full flex items-center">Tutte</a>
-      <a href="materia-informatica.html" class="hover:text-accent transition h-full flex items-center">Informatica</a>
-      <a href="materia-sistemi-reti.html" class="hover:text-accent transition h-full flex items-center">Sistemi e Reti</a>
-      <a href="materia-tpsit.html" class="hover:text-accent transition h-full flex items-center">TPSIT</a>
-      <a href="materia-gpoi.html" class="hover:text-accent transition h-full flex items-center">GPOI</a>
-      <a href="materia-matematica.html" class="hover:text-accent transition h-full flex items-center">Matematica</a>
-      <a href="materia-ia.html" class="text-accent font-bold border-b-2 border-accent h-full flex items-center">Intelligenza Artificiale</a>
-      <a href="materia-italiano.html" class="hover:text-accent transition h-full flex items-center">Italiano</a>
-      <a href="materia-storia.html" class="hover:text-accent transition h-full flex items-center">Storia</a>
-      <a href="materia-inglese.html" class="hover:text-accent transition h-full flex items-center">Inglese</a>
-    </div>
-  </div>
+<body class="bg-techLight text-techDark font-sans min-h-screen flex flex-col"
+      data-materia="Intelligenza Artificiale" 
+      data-copertina="immagini/materia-ia.webp">
 
   <div class="w-full max-w-4xl mx-auto px-4 mt-8">
     <div class="w-full h-64 bg-slate-200 rounded-xl overflow-hidden border border-slate-200 shadow-sm relative">
-      <img src="immagini/materia-ia.webp" alt="Intelligenza Artificiale" class="w-full h-full object-cover">
+      <img src="immagini/materia-ia.webp" alt="Copertina Intelligenza Artificiale" class="w-full h-full object-cover">
       <div class="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent flex items-end p-8">
         <h2 class="text-white text-2xl font-bold">Intelligenza Artificiale</h2>
       </div>
@@ -76,16 +47,90 @@
 
   <main class="max-w-4xl mx-auto px-4 py-12 flex-grow space-y-8">
     
-    <h1 class="text-3xl font-bold">Intelligenza Artificiale</h1>
-    <p class="text-slate-600 leading-relaxed">Nel mio percorso di studi sulle nuove tecnologie, c'è un argomento che mi ha affascinato più di tutti: il legame tra la biologia del sistema nervoso e le reti neurali artificiali. È sorprendente vedere come la scienza sia riuscita a prendere qualcosa di così complesso e vivo come un neurone biologico e a trasformarlo in un modello matematico astratto, gettando le basi per i sistemi intelligenti che usiamo oggi.</p>
+    <h1 class="text-3xl font-bold">Il legame tra Biologia e Modelli Matematici</h1>
+    <p class="text-slate-600 leading-relaxed">
+      Nel mio percorso di studi sulle nuove tecnologie, c'è un argomento che mi ha affascinato più di tutti: il legame tra la biologia del sistema nervoso e le reti neurali artificiali. È sorprendente vedere come la scienza sia riuscita a prendere qualcosa di così complesso e vivo come un neurone biologico e a trasformarlo in un modello matematico astratto, gettando le basi per i sistemi intelligenti che usiamo oggi.
+    </p>
 
     <div class="space-y-6">
-      <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
-        <h2 class="text-xl font-bold mb-2 text-slate-900">Il punto di partenza: il neurone biologico</h2>
-        <p class="text-slate-600 leading-relaxed text-sm">Fino alla metà del Novecento, la fisiologia e la medicina avevano identificato le caratteristiche fondamentali dei neuroni biologici. Queste cellule sono composte da tre parti principali: i dendriti, che ricevono i segnali dall'esterno; il soma (o corpo cellulare), che elabora le informazioni; e l'assone, che trasmette il segnale in uscita. Organizzati in una fitta rete e caratterizzati da un'attività elettrica innata, i neuroni comunicano attraverso le sinapsi in risposta agli stimoli. L'intuizione rivoluzionaria dei pionieri dell'informatica è stata quella di isolare questa capacità di calcolo, ignorando temporaneamente le dinamiche biologiche minute per riprodurle in termini puramente logici.</p>
+      
+      <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+        <div class="md:col-span-2 space-y-2">
+          <h2 class="text-xl font-bold text-slate-900">Il punto di partenza: il neurone biologico</h2>
+          <p class="text-slate-600 leading-relaxed text-sm">
+            Fino alla metà del Novecento, la fisiologia e la medicina avevano identificato le caratteristiche fondamentali dei neuroni biologici. Queste cellule sono composte da tre parti principali: i <strong>dendriti</strong>, che ricevono i segnali dall'esterno; il <strong>soma</strong> (o corpo cellulare), che elabora le informazioni; e l'<strong>assone</strong>, che trasmette il segnale in uscita. Organizzati in una fitta rete e caratterizzati da un'attività elettrica innata, i neuroni comunicano attraverso le sinapsi in risposta agli stimoli. L'intuizione rivoluzionaria dei pionieri dell'informatica è stata quella di isolare questa capacità di calcolo, ignorando temporaneamente le dinamiche biologiche minute per riprodurle in termini puramente logici.
+          </p>
+        </div>
+        <div class="w-full h-full min-h-[160px] flex items-center">
+          <img src="immagini/neurone-biologico.jpg" alt="Struttura del Neurone Biologico" class="w-full h-40 object-cover rounded-lg border border-slate-100 shadow-sm">
+        </div>
       </div>
 
-      <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
-        <h2 class="text-xl font-bold mb-2 text-slate-900">Dai primi modelli logici al Percettrone (1943-1957)</h2>
-        <p class="text-slate-600 leading-relaxed text-sm">Il primo passo verso questa traduzione avvenne nel 1943, quando Warren McCulloch e Walter Pitts formularono un modello matematico in cui i segnali in ingresso venivano moltiplicati per dei pesi e sommati nel nucleo; l'output finale veniva poi determinato da una funzione di attivazione a gradino, che emulava il comportamento del "tutto o nulla" del neurone biologico. Su queste fondamenta teoriche, nel 1957 Frank Rosenblatt compì una svolta epocale realizzando il "Percettrone": ispirandosi alla corteccia visiva, creò la prima vera implementazione fisica e algoritmica capace di modificare i propri pesi in modo iterativo quando commetteva un errore. Il Percettrone dimostrò così che un circuito artificiale poteva apprendere autonomamente a reconocer stimoli visivi, ponendo le basi per il moderno machine learning.</p>
-        <div class="my-4 p-4 bg-slate-50 rounded-lg text-center font
+      <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
+        <h2 class="text-xl font-bold text-slate-900">Dai primi modelli logici al Percettrone (1943-1957)</h2>
+        <p class="text-slate-600 leading-relaxed text-sm">
+          Il primo passo verso questa traduzione avvenne nel 1943, when Warren McCulloch e Walter Pitts formularono un modello matematico in cui i segnali in ingresso venivano moltiplicati per dei pesi e sommati nel nucleo; l'output finale veniva poi determinato da una funzione di attivazione a gradino, che emulava il comportamento del "tutto o nulla" del neurone biologico. Su queste fondamenta teoriche, nel 1957 Frank Rosenblatt compì una svolta epocale realizzando il <strong>"Percettrone"</strong>: ispirandosi alla corteccia visiva, creò la prima vera implementazione fisica e algoritmica capace di modificare i propri pesi in modo iterativo quando commetteva un errore. Il Percettrone dimostrò così che un circuito artificiale poteva apprendere autonomamente a riconoscere stimoli visivi, ponendo le basi per il moderno machine learning.
+        </p>
+        
+        <div class="my-4 p-4 bg-slate-50 rounded-lg text-center font-mono border border-slate-100 shadow-sm">
+          Modello del Percettrone: $$y = f\left(\sum_{i=1}^{n} w_i x_i + b\right)$$
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+        <div class="w-full h-full min-h-[140px] flex items-center order-last md:order-first">
+          <img src="immagini/problema-xor.jpg" alt="Grafico della separabilità lineare e problema XOR" class="w-full h-36 object-cover rounded-lg border border-slate-100 shadow-sm">
+        </div>
+        <div class="md:col-span-2 space-y-2">
+          <h2 class="text-xl font-bold text-slate-900">Il limite del Percettrone e il problema dello XOR</h2>
+          <p class="text-slate-600 leading-relaxed text-sm">
+            Nonostante l'entusiasmo iniziale, nel 1969 gli scienziati Marvin Minsky e Seymour Papert dimostrarono matematicamente un limite invalicabile del Percettrone singolo: esso era in grado di risolvere solo problemi <strong>linearmente separabili</strong> (come le funzioni logiche AND e OR), dove una retta nello spazio può dividere nettamente le classi di output. Dimostrarono che il Percettrone non era assolutamente in grado di calcolare la funzione logica dello <strong>XOR (OR esclusivo)</strong>. Questa rivelazione portò a una drastica riduzione dei finanziamenti alla ricerca, periodo noto come il primo "Inverno dell'Intelligenza Artificiale", poiché divenne chiaro che per risolvere problemi complessi e non lineari era necessario unire più neuroni su più livelli.
+          </p>
+        </div>
+      </div>
+
+<div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
+        <h2 class="text-xl font-bold text-slate-900">L'architettura del Percettrone Multistrato (MLP)</h2>
+        <p class="text-slate-600 leading-relaxed text-sm">
+          La risposta al problema dello XOR arrivò strutturando i neuroni artificiali in reti più complesse composte da tre tipologie di livelli (Layer):
+        </p>
+        <ul class="list-disc pl-5 text-slate-600 text-sm space-y-2">
+          <li><strong>Input Layer (Livello di Ingresso):</strong> Riceve i dati grezzi dall'esterno (es. i pixel di un'immagine o i parametri di un dataset).</li>
+          <li><strong>Hidden Layers (Livelli Nascosti):</strong> Uno o più livelli intermedi in cui avviene la vera estrazione delle caratteristiche (<em>feature extraction</em>). Più la rete è profonda (da cui il termine <strong>Deep Learning</strong>), più questi livelli riescono a elaborare concetti astratti.</li>
+          <li><strong>Output Layer (Livello di Uscita):</strong> Fornisce la risposta finale del sistema (es. una classificazione o una predizione numerica).</li>
+        </ul>
+        <p class="text-slate-600 leading-relaxed text-sm">
+          In questa struttura, le funzioni di attivazione non lineari (come la <strong>ReLU</strong> o la <strong>Sigmoide</strong>) sostituiscono la vecchia funzione a gradino, permettendo alla rete di curvare lo spazio matematico e mappare relazioni non lineari.
+        </p>
+        
+        <div class="w-full flex justify-center pt-4">
+          <img src="immagini/architettura-mlp.webp" alt="Schema di una rete neurale Multistrato MLP" class="max-w-2xl w-full h-auto object-contain rounded-lg border border-slate-100 shadow-sm p-2">
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-3">
+        <h2 class="text-xl font-bold text-slate-900">L'evoluzione moderna: la Backpropagation</h2>
+        <p class="text-slate-600 leading-relaxed text-sm">
+          Nelle reti neurali multilivello contemporanee, i limiti dei primi modelli sono stati superati grazie all'algoritmo di <strong>Backpropagation</strong> (retropropagazione dell'errore). Per far sì che una rete complessa impari correttamente, l'errore commesso nella fase di output (quantificato da una funzione di costo) viene mappato a ritroso su tutti i parametri e i pesi responsabili di quella deviazione.
+        </p>
+        <p class="text-slate-600 leading-relaxed text-sm">
+          Attraverso l'algoritmo di discesa del gradiente, che sfrutta gli strumenti matematici delle <strong>derivate parziali</strong> e la regola della catena (<strong>chain rule</strong>), il sistema calcola l'impatto di ogni singola connessione sull'errore finale. I pesi vengono così aggiornati in modo millimetrico, dal fondo verso l'inizio della rete, ottimizzando le prestazioni del modello. Questo meccanismo rappresenta la perfetta sintesi di come la logica rigorosa della matematica possa dare vita all'Intelligenza Artificiale, traendo una continua e proficua ispirazione dalle strutture della natura.
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-2">
+        <h2 class="text-xl font-bold text-slate-900">Un cambio di paradigma: Software Tradizionale vs Machine Learning</h2>
+        <p class="text-slate-600 leading-relaxed text-sm">
+          Per un informatico, l'aspetto più rivoluzionario di questo percorso biologico-matematico risiede nel cambio di paradigma della programmazione. Nella programmazione tradizionale , lo sviluppatore scrive le regole algoritmiche logiche e fornisce i dati di input per ottenere un risultato. Nel Machine Learning, invertiamo completamente il processo: diamo in pasto all'algoritmo i dati di addestramento e i risultati attesi (label), e l'architettura neurale, attraverso i continui cicli di <em>feed-forward</em> e <em>backpropagation</em>, genera autonomamente le regole ottimali e mappa i suoi pesi interni. L'IA non viene programmata riga per riga, viene addestrata.
+        </p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="bg-white text-slate-500 py-8 border-t border-slate-200 text-center text-sm mt-auto">
+    <p>&copy; 2026 - IIS Marconi Pieralisi - Esame di Stato</p>
+  </footer>
+
+</body>
+</html>

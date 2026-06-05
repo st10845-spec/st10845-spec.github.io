@@ -8,36 +8,115 @@
   <script>tailwind.config = { theme: { extend: { colors: { techDark: '#0f172a', techLight: '#f8fafc', accent: '#0284c7' } } } }</script>
 </head>
 <body class="bg-techLight text-techDark font-sans min-h-screen flex flex-col">
+
   <header class="bg-white border-b border-slate-200 py-4 px-8 flex justify-between items-center">
-    <span class="font-bold">Scienze Motorie</span>
+    <span class="font-bold">Ada Ugo Praise Ezeala</span>
     <a href="materie.html" class="text-accent hover:underline">← Torna alle materie</a>
   </header>
+
   <main class="max-w-4xl mx-auto px-4 py-12 flex-grow space-y-8">
     <img src="immagini/materia-scienze-motorie.jpeg" alt="Scienze Motorie" class="w-full h-64 object-cover rounded-xl shadow-sm">
+    
     <h1 class="text-3xl font-bold">Scienze Motorie</h1>
-    <p class="text-slate-600 leading-relaxed">Il percorso di Scienze Motorie svolto quest'anno è stato lo stimolo per far nascere in me un profondo e inaspettato interesse verso l'anatomia e la fisiologia umana. Gli argomenti trattati in classe mi hanno spinto a voler approfondire i meccanismi complessi e precisi che regolano la vita e il funzionamento del nostro organismo.</p>
+    <p class="text-slate-600 leading-relaxed">
+      Il percorso di Scienze Motorie svolto quest'anno è stato lo stimolo per far nascere in me un profondo e inaspettato interesse verso l'anatomia e la fisiologia umana. Gli argomenti trattati in classe mi hanno spinto a voler approfondire i meccanismi complessi e precisi che regolano la vita e il funzionamento del nostro organismo.
+    </p>
 
     <div class="space-y-6">
+      
       <div class="bg-white p-6 rounded-xl border border-slate-200">
         <h2 class="text-xl font-bold text-slate-900 mb-2">Il cuore e il sistema cardiocircolatorio</h2>
-        <p class="text-slate-600">L'attenzione si è concentrata principalmente sul cuore e sul sistema cardiocircolatorio, una macchina biologica straordinaria. Lo studio del ciclo cardiaco, del percorso del flusso sanguigno e del ruolo fondamentale delle valvole mi ha permesso di comprendere la precisione millimetrica che si cela dietro a ogni singolo battito cardiaco.</p>
+        <p class="text-slate-600 leading-relaxed text-sm">
+          L'attenzione si è concentrata principalmente sul cuore e sul sistema cardiocircolatorio, una macchina biologica straordinaria. Lo studio del ciclo cardiaco, del percorso del flusso sanguigno e del ruolo fondamentale delle valvole mi ha permesso di comprendere la precisione millimetrica che si cela dietro a ogni singolo battito cardiaco.
+        </p>
       </div>
 
       <div class="bg-white p-6 rounded-xl border border-slate-200">
         <h2 class="text-xl font-bold text-slate-900 mb-2">L'anatomia cardiaca e la doppia circolazione</h2>
-        <p class="text-slate-600">Dal punto di vista strutturale, il cuore è diviso dal setto in due metà (destra e sinistra), ciascuna formata da un atrio e un ventricolo. Questa anatomia supporta una doppia circolazione: la parte destra riceve il sangue deossigenato dal corpo e lo indirizza ai polmoni, mentre la parte sinistra accoglie il sangue ossigenato di ritorno dai polmoni e lo pompa nell'intero organismo. Le valvole cardiache assicurano l'unidirezionalità di questo flusso.</p>
+        <p class="text-slate-600 leading-relaxed text-sm">
+          Dal punto di vista strutturale, il cuore è diviso dal setto in due metà (destra e sinistra), ciascuna formata da un atrio e un ventricolo. Questa anatomia supporta una doppia circolazione: la parte destra riceve il sangue deossigenato dal corpo e lo indirizza ai polmoni, mentre la parte sinistra accoglie il sangue ossigenato di ritorno dai polmoni e lo pompa nell'intero organismo. Le valvole cardiache assicurano l'unidirezionalità di questo flusso.
+        </p>
       </div>
 
-      <div class="bg-white p-6 rounded-xl border border-slate-200">
-        <h2 class="text-xl font-bold text-slate-900 mb-2">L'composizione del sangue e le sue funzioni</h2>
-        <p class="text-slate-600">L'analisi si è poi estesa alla composizione del sangue e alle funzioni specifiche dei suoi elementi cellulari. Ho approfondito il ruolo dei globuli rossi, responsabili del trasporto dell'ossigeno tramite l'emoglobina; dei globuli bianchi, pilastri della difesa immunitaria contro i patogeni; e delle piastrine, essenziali nel processo di coagulazione.</p>
+      <div class="bg-white p-6 rounded-xl border border-slate-200 grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+        <div class="md:col-span-2 space-y-3">
+          <h2 class="text-xl font-bold text-slate-900">La rete di trasporto: I Vasi Sanguigni</h2>
+          <p class="text-slate-600 leading-relaxed text-sm">
+            Il sangue si muove nel corpo attraverso una fitta rete stradale divisa in tre tipologie di vasi, ciascuna specializzata per sostenere anche lo sforzo fisico e sportivo:
+          </p>
+          <ul class="list-disc pl-5 text-slate-600 text-sm space-y-1.5">
+            <li><strong>Arterie:</strong> Trasportano il sangue ricco di ossigeno dal cuore ai muscoli. Hanno pareti spesse ed elastiche per resistere alla forte pressione cardiaca.</li>
+            <li><strong>Vene:</strong> Riportano al cuore il sangue carico di scarti. Avendo una pressione bassa, sfruttano la contrazione dei muscoli motori (pompa muscolare) e speciali valvole a nido d'ape per far risalire il sangue contro la gravità.</li>
+            <li><strong>Capillari:</strong> Vasi microscopici con pareti sottilissime dove avviene lo scambio effettivo: cedono ossigeno e nutrimento alle cellule muscolari e ne prelevano l'anidride carbonica.</li>
+          </ul>
+        </div>
+        <div class="w-full h-full min-h-[160px] flex items-center">
+          <img src="immagini/anatomia-vasi-sanguigni.jpg" alt="Struttura di Arterie, Vene e Capillari" class="w-full h-40 object-cover rounded-lg border border-slate-100 shadow-sm">
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl border border-slate-200 space-y-6">
+        <div>
+          <h2 class="text-xl font-bold text-slate-900 mb-2">La composizione del sangue e le sue funzioni</h2>
+          <p class="text-slate-600 leading-relaxed text-sm">
+            L'analisi si è poi estesa alla composizione del sangue, un tessuto fluido composto da plasma e da elementi cellulari fondamentali per l'equilibrio dell'organismo e per le prestazioni atletiche:
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          
+          <div class="bg-slate-50 border-2 border-rose-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col">
+            <div class="h-36 bg-rose-100 overflow-hidden border-b border-rose-200">
+              <img src="immagini/globuli-rossi.jpg" alt="Globuli Rossi" class="w-full h-full object-cover">
+            </div>
+            <div class="p-4 flex-grow flex flex-col justify-between space-y-2">
+              <h3 class="font-bold text-rose-700 text-base text-center border-b border-rose-100 pb-1">Globuli Rossi</h3>
+              <p class="text-slate-600 text-xs leading-relaxed">
+                Sono le cellule più numerose, ricche di <strong>emoglobina</strong>. Legano e trasportano l'<strong>ossigeno</strong> dai polmoni ai muscoli sotto sforzo, determinando la nostra capacità di <strong>resistenza alla fatica</strong>.
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-slate-50 border-2 border-sky-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col">
+            <div class="h-36 bg-sky-100 overflow-hidden border-b border-sky-200">
+              <img src="immagini/globuli-bianchi.jpeg" alt="Globuli Bianchi" class="w-full h-full object-cover">
+            </div>
+            <div class="p-4 flex-grow flex flex-col justify-between space-y-2">
+              <h3 class="font-bold text-sky-700 text-base text-center border-b border-sky-100 pb-1">Globuli Bianchi</h3>
+              <p class="text-slate-600 text-xs leading-relaxed">
+                Costituiscono la nostra <strong>difesa immunitaria</strong>. Combattono le infezioni distruggendo <strong>virus e batteri</strong>; l'attività fisica regolare ne stimola e ne migliora l'efficienza generale.
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-slate-50 border-2 border-amber-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col">
+            <div class="h-36 bg-amber-100 overflow-hidden border-b border-amber-200">
+              <img src="immagini/piastrine.jpg" alt="Piastrine" class="w-full h-full object-cover">
+            </div>
+            <div class="p-4 flex-grow flex flex-col justify-between space-y-2">
+              <h3 class="font-bold text-amber-700 text-base text-center border-b border-amber-100 pb-1">Piastrine</h3>
+              <p class="text-slate-600 text-xs leading-relaxed">
+                Frammenti di cellule vitali per la <strong>coagulazione</strong>. In caso di ferite o escoriazioni durante il movimento, si accumulano per <strong>bloccare l'emorragia</strong> e avviare la cicatrizzazione.
+              </p>
+            </div>
+          </div>
+
+        </div>
       </div>
 
       <div class="bg-white p-6 rounded-xl border border-slate-200">
         <h2 class="text-xl font-bold text-slate-900 mb-2">Trasfusioni, compatibilità e agglutinazione</h2>
-        <p class="text-slate-600">Enfin, di grande impatto è stato lo studio della compatibilità ematica nelle trasfusioni. L'introduzione di sangue non compatibile scatena l'agglutinazione, una reazione immunitaria gravissima in cui i globuli rossi formano ammassi potenzialmente fatali. Questo argomento evidenzia l'importanza clinica e vitale della classificazione dei gruppi sanguigni e del fattore Rh.</p>
+        <p class="text-slate-600 leading-relaxed text-sm">
+          Infine, di grande impatto è stato lo studio della compatibilità ematica nelle trasfusioni. L'introduzione di sangue non compatibile scatena l'agglutinazione, una reazione immunitaria gravissima in cui i globuli rossi formano ammassi potenzialmente fatali. Questo argomento evidenzia l'importanza clinica e vitale della classificazione dei gruppi sanguigni e del fattore Rh.
+        </p>
       </div>
+
     </div>
   </main>
+
+  <footer class="bg-white text-slate-500 py-6 border-t border-slate-200 text-center text-sm mt-auto">
+    <p>&copy; 2026 - IIS Marconi Pieralisi - Esame di Stato</p>
+  </footer>
+
 </body>
 </html>

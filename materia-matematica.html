@@ -6,25 +6,89 @@
   <title>Matematica | Dettaglio Materia</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>tailwind.config = { theme: { extend: { colors: { techDark: '#0f172a', techLight: '#f8fafc', accent: '#0284c7' } } } }</script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body class="bg-techLight text-techDark font-sans min-h-screen flex flex-col">
   <header class="bg-white border-b border-slate-200 py-4 px-8 flex justify-between items-center">
-    <span class="font-bold">Matematica</span>
+    <span class="font-bold">Ada Ugo Praise Ezeala</span>
     <a href="materie.html" class="text-accent hover:underline">← Torna alle materie</a>
   </header>
+
   <main class="max-w-4xl mx-auto px-4 py-12 flex-grow space-y-8">
-    <img src="immagini/materia-matematica.gif" alt="Matematica" class="w-full h-64 object-cover rounded-xl shadow-sm">
+    <img src="immagini/materia-matematica.jpg" alt="Matematica" class="w-full h-64 object-cover rounded-xl shadow-sm">
     <h1 class="text-3xl font-bold">Matematica</h1>
-    <p class="text-slate-600 leading-relaxed">Lo studio della matematica nel quinto anno fornisce il framework logico-deduttivo essenziale per l'analisi rigorosa degli algoritmi complessi, dei modelli computazionali e dell'analisi dei dati.</p>
-    <div class="bg-white p-6 rounded-xl border border-slate-200">
+  
+    <section class="space-y-8">
+      <div class="bg-white p-8 rounded-xl border border-slate-200 space-y-4">
+        <h2 class="text-2xl font-bold text-accent">Introduzione: Il Fascino degli Integrali</h2>
+   <p class="text-slate-600 leading-relaxed">
+      Lo studio della matematica del quinto anno ci fornisce gli strumenti logici essenziali per comprendere l'informatica, gli algoritmi e l'analisi dei dati. Tra tutti gli argomenti trattati, gli <strong>integrali</strong> sono senza dubbio quelli che mi hanno più interressato.Trovo affascinante come permettano di trovare un ordine nel caos, calcolando l'area di figure dai contorni imprevedibili e sommando l'infinitamente piccolo per ottenere risultati concreti.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-white p-6 rounded-xl border border-slate-200 items-center">
+        <div class="space-y-3">
+          <h3 class="text-xl font-bold text-techDark">1. Integrali Indefiniti</h3>
+          <p class="text-slate-600 leading-relaxed text-sm">
+            L'integrale indefinito rappresenta l'operazione inversa della derivata. Data una funzione \( f(x) \), calcolare il suo integrale indefinito significa trovare l'insieme di tutte le funzioni \( F(x) \) (chiamate <strong>primitive</strong>) la cui derivata è uguale a \( f(x) \).
+          </p>
+          <div class="bg-slate-50 p-3 rounded-lg border border-slate-100 text-center font-mono text-base text-slate-800">
+            \[ \int f(x) \, dx = F(x) + c \]
+          </div>
+          <ul class="text-xs text-slate-500 space-y-1 pl-2 border-l-2 border-slate-200">
+            <li><strong>\( \int \)</strong>: Simbolo di integrale.</li>
+            <li><strong>\( f(x) \)</strong>: Funzione integranda.</li>
+            <li><strong>\( F(x) \)</strong>: Primitiva della funzione (\( F'(x) = f(x) \)).</li>
+            <li><strong>\( c \)</strong>: Costante d'integrazione.</li>
+          </ul>
+        </div>
+        <div class="w-full">
+          <img src="immagini/integrale-indefinito.webp" alt="Grafico Spiegazione Integrale Indefinito" class="w-full h-48 object-cover rounded-lg border border-slate-200 shadow-sm">
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-white p-6 rounded-xl border border-slate-200 items-center">
+        <div class="space-y-3">
+          <h3 class="text-xl font-bold text-techDark">2. Integrali Definiti</h3>
+          <p class="text-slate-600 leading-relaxed text-sm">
+            Mentre l'integrale indefinito restituisce una famiglia di funzioni, l'integrale definito restituisce un <strong>numero reale</strong>. Geometricamente, se la funzione è positiva in un intervallo \( [a, b] \), rappresenta l'<strong>area</strong> della regione di piano compresa tra il grafico della funzione, l'asse delle ascisse e le rette verticali \( x = a \) e \( x = b \).
+          </p>
+          <div class="bg-slate-50 p-3 rounded-lg border border-slate-100 text-center font-mono text-base text-slate-800">
+            \[ \int_{a}^{b} f(x) \, dx = [F(x)]_a^b = F(b) - F(a) \]
+          </div>
+          <ul class="text-xs text-slate-500 space-y-1 pl-2 border-l-2 border-slate-200">
+            <li><strong>\( a \) e \( b \)</strong>: Estremi di integrazione (inferiore e superiore).</li>
+            <li><strong>\( F(b) - F(a) \)</strong>: Differenza del valore della primitiva negli estremi.</li>
+          </ul>
+        </div>
+        <div class="w-full">
+          <img src="immagini/integrale-definito.gif" alt="Area sotto la curva - Integrale Definito" class="w-full h-48 object-cover rounded-lg border border-slate-200 shadow-sm">
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-white p-6 rounded-xl border border-slate-200 items-center">
+        <div class="space-y-3">
+          <h3 class="text-xl font-bold text-techDark">3. Integrali Impropri</h3>
+          <p class="text-slate-600 leading-relaxed text-sm">
+            Gli integrali impropri (o generalizzati) estendono il concetto di integrale definito a casi "estremi". Si utilizzano quando si vuole calcolare l'area di una regione che si estende all'infinito, ad esempio quando l'intervallo è illimitato o la funzione presenta un asintoto verticale. Per risolverli si utilizza il concetto di <strong>limite</strong>.
+          </p>
+          <div class="bg-slate-50 p-3 rounded-lg border border-slate-100 text-center font-mono text-base text-slate-800">
+            \[ \int_{a}^{+\infty} f(x) \, dx = \lim_{t \to +\infty} \int_{a}^{t} f(x) \, dx \]
+          </div>
+        </div>
+        <div class="w-full">
+          <img src="immagini/integrale-improprio.gif" alt="Integrazione a intervalli illimitati - Integrale Improprio" class="w-full h-48 object-cover rounded-lg border border-slate-200 shadow-sm">
+        </div>
+      </div>
+    </section>
+ <div class="bg-white p-6 rounded-xl border border-slate-200">
       <h2 class="text-xl font-bold mb-4 text-techDark">Argomenti principali del programma:</h2>
       <ul class="list-disc pl-5 space-y-2 text-slate-600">
         <li>Studio delle funzioni in due variabili</li>
         <li>Integrali indefiniti</li>
         <li>Integrali definiti</li>
-	<li>Integrali impropri</li>
+        <li>Integrali impropri</li>
         <li>Calcolo Combinatorio</li>
-        <li> Probabilità (discreta)</li>
+        <li>Probabilità (discreta)</li>
       </ul>
     </div>
   </main>

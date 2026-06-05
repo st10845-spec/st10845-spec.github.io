@@ -1,28 +1,196 @@
- <header class="sticky top-0 z-50 bg-white/90 backdrop-blur shadow-sm border-b border-slate-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-      <div class="text-xl font-bold tracking-tight text-techDark">
-        <a href="index.html" class="hover:text-accent transition">IIS Marconi Pieralisi</a>
-      </div>
-      <nav class="hidden md:flex space-x-8 text-sm font-medium">
-        <a href="index.html#home" class="text-accent transition">Home</a>
-        <a href="index.html#chi-sono" class="text-slate-600 hover:text-accent transition">Chi Sono</a>
-        <a href="index.html#passioni" class="text-slate-600 hover:text-accent transition">Passioni</a>
-        <a href="materie.html" class="text-slate-600 hover:text-accent transition">Materie</a>
-        <a href="educazione-civica.html" class="text-slate-600 hover:text-accent transition">Educazione Civica</a>
-        <a href="pcto.html" class="text-slate-600 hover:text-accent transition">FSL</a>
-        <a href="contatti.html" class="text-slate-600 hover:text-accent transition">Contatti</a>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TPSIT - La Concorrenza in Java</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            techDark: '#0f172a',
+            techLight: '#f8fafc',
+            accent: '#0284c7'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #0f172a; }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-xl font-bold text-slate-900 hover:text-accent transition">
+        Ada Ugo Praise Ezeala
+      </a>
+      
+      <nav class="hidden md:flex space-x-6 text-sm font-medium text-slate-600">
+        <a href="index.html" class="hover:text-accent transition">Home</a>
+        <a href="index.html#chi-sono" class="hover:text-accent transition">Chi Sono</a>
+        <a href="index.html#passioni" class="hover:text-accent transition">Passioni</a>
+        <a href="materie.html" class="hover:text-accent transition">Materie</a>
+        <a href="educazione-civica.html" class="hover:text-accent transition">Educazione Civica</a>
+        <a href="pcto.html" class="hover:text-accent transition">PCTO</a>
+        <a href="contatti.html" class="hover:text-accent transition">Contatti</a>
       </nav>
-      <button id="menu-btn" class="md:hidden p-2 text-slate-600 hover:text-accent focus:outline-none" aria-label="Apri menu">
+
+      <button id="menu-btn" class="md:hidden text-slate-600 hover:text-accent focus:outline-none">
         <i class="fa-solid fa-bars text-xl"></i>
       </button>
     </div>
-    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-4 space-y-2 shadow-lg">
-      <a href="index.html#home" class="block py-2 text-accent font-medium">Home</a>
-      <a href="index.html#chi-sono" class="block py-2 text-slate-600 hover:text-accent">Chi Sono</a>
-      <a href="index.html#passioni" class="block py-2 text-slate-600 hover:text-accent">Passioni</a>
-      <a href="materie.html" class="block py-2 text-slate-600 hover:text-accent">Materie</a>
-      <a href="educazione-civica.html" class="block py-2 text-slate-600 hover:text-accent">Educazione Civica</a>
-      <a href="pcto.html" class="block py-2 text-slate-600 hover:text-accent">PCTO</a>
-      <a href="contatti.html" class="block py-2 text-slate-600 hover:text-accent">Contatti</a>
-    </div>
+
+    <nav id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-200 px-4 py-3 space-y-3">
+      <a href="index.html" class="block text-sm text-slate-600 hover:text-accent">Home</a>
+      <a href="index.html#chi-sono" class="block text-sm text-slate-600 hover:text-accent">Chi Sono</a>
+      <a href="index.html#passioni" class="block text-sm text-slate-600 hover:text-accent">Passioni</a>
+      <a href="materie.html" class="block text-sm text-slate-600 hover:text-accent">Materie</a>
+      <a href="educazione-civica.html" class="block text-sm text-slate-600 hover:text-accent">Educazione Civica</a>
+      <a href="pcto.html" class="block text-sm text-slate-600 hover:text-accent">PCTO</a>
+      <a href="contatti.html" class="block text-sm text-slate-600 hover:text-accent">Contatti</a>
+    </nav>
   </header>
+
+  <div class="w-full bg-slate-100 border-b border-slate-200 sticky top-[53px] z-40 overflow-x-auto no-scrollbar">
+    <div class="max-w-6xl mx-auto px-4 flex items-center space-x-4 text-xs sm:text-sm font-medium h-12 whitespace-nowrap text-slate-600">
+      <a href="materie.html" class="hover:text-accent transition h-full flex items-center">Tutte</a>
+      <a href="materia-informatica.html" class="hover:text-accent transition h-full flex items-center">Informatica</a>
+      <a href="materia-sistemi-reti.html" class="hover:text-accent transition h-full flex items-center">Sistemi e Reti</a>
+      <a href="materia-tpsit.html" class="text-accent font-bold border-b-2 border-accent h-full flex items-center">TPSIT</a>
+      <a href="materia-gpoi.html" class="hover:text-accent transition h-full flex items-center">GPOI</a>
+      <a href="materia-matematica.html" class="hover:text-accent transition h-full flex items-center">Matematica</a>
+      <a href="materia-ia.html" class="hover:text-accent transition h-full flex items-center">Intelligenza Artificiale</a>
+      <a href="materia-italiano.html" class="hover:text-accent transition h-full flex items-center">Italiano</a>
+      <a href="materia-storia.html" class="hover:text-accent transition h-full flex items-center">Storia</a>
+      <a href="materia-inglese.html" class="hover:text-accent transition h-full flex items-center">Inglese</a>
+      <a href="materia-scienze-motorie.html" class="hover:text-accent transition h-full flex items-center">Scienze Motorie</a>
+    </div>
+  </div>
+
+  <div class="w-full max-w-4xl mx-auto px-4 mt-8">
+    <div class="w-full h-64 bg-slate-200 rounded-xl overflow-hidden border border-slate-200 shadow-sm relative">
+      <img src="immagini/materia-tpsit.jpg" alt="Copertina TPSIT" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent flex items-end p-8">
+        <h2 class="text-white text-2xl font-bold">Tecnologie e Progettazione di Sistemi Informatici e di Telecomunicazioni</h2>
+      </div>
+    </div>
+  </div>
+
+  <main class="flex-grow max-w-4xl mx-auto px-4 py-8 w-full">
+    
+    <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 mb-8">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+        <div class="md:col-span-8">
+          <h1 class="text-3xl font-bold text-techDark mb-4">La Concorrenza in Java</h1>
+          <p class="text-slate-600 leading-relaxed text-sm">
+            In questa disciplina, abbiamo approfondito il concept di concorrenza, una tecnica fondamentale per sviluppare software moderni ed efficienti. Attraverso il linguaggio Java, abbiamo studiato come eseguire più attività simultaneamente all'interno dello stesso programma, ottimizzando l'uso delle risorse della CPU.<br><br>
+            Il percorso ci ha permesso di comprendere la differenza tra processi e thread, imparando a gestirli sia tramite la classe <code>Thread</code> sia attraverso l'interfaccia <code>Runnable</code>, affrontando i problemi legati alla condivisione delle risorse. Tra le varie sfide affrontate in questo ambito, gli argomenti che ho trovato più stimolanti sono stati due classici problemi di concorrenza: il "Problema dei filosofi a cena" e il "Problema del barbiere sonnolento".
+          </p>
+        </div>
+        <div class="md:col-span-4">
+          <div class="aspect-video md:aspect-square bg-slate-100 rounded-lg overflow-hidden border border-slate-200 shadow-sm">
+            <img src="immagini/java-concurrency.png" alt="Java Concurrency" class="w-full h-full object-cover">
+          </div>
+          <p class="text-[10px] text-center text-slate-400 mt-2 italic">Rappresentazione dei Thread in Java</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 mb-8">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+        <div class="md:col-span-4 order-last md:order-first">
+          <div class="aspect-video md:aspect-square bg-slate-100 rounded-lg overflow-hidden border border-slate-200 shadow-sm">
+            <img src="immagini/filosofi-cena.png" alt="Problema dei Filosofi a Cena" class="w-full h-full object-contain">
+          </div>
+          <p class="text-[10px] text-center text-slate-400 mt-2 italic">Il problema dei filosofi a cena</p>
+        </div>
+        <div class="md:col-span-8">
+          <h2 class="text-xl font-bold text-techDark mb-4">I Filosofi a Cena</h2>
+          <div class="text-slate-600 leading-relaxed text-sm">
+            <p class="mb-4">
+              Il <strong>"Problema dei filosofi a cena"</strong> (<em>Dining Philosophers Problem</em>) è un classico esperimento mentale della computer science ideato da Edsger Dijkstra nel 1965. Serve a illustrare i <strong>problemi di sincronizzazione e gestione delle risorse</strong> quando più thread competono per risorse limitate.
+            </p>
+            
+            <ul class="list-disc pl-5 space-y-3">
+              <li>
+                <strong>Lo scenario:</strong> Cinque filosofi siedono attorno a un tavolo rotondo e alternano due sole attività: <strong>pensare e mangiare</strong>. Al centro c'è un piatto di spaghetti, ma per mangiare sono necessarie <strong>due bacchette</strong> (quella a destra e quella a sinistra di ciascun filosofo). Sul tavolo ci sono in tutto solo cinque bacchette.
+              </li>
+              <li>
+                <strong>Il vincolo:</strong> Ogni filosofo può prendere <strong>una sola bacchetta alla volta</strong> e non può iniziare a mangiare finché non le ha ottenute entrambe.
+              </li>
+              <li>
+                <strong>Il problema logico (Deadlock):</strong> Se tutti i filosofi si siedono contemporaneamente e afferrano la bacchetta alla propria sinistra, ognuno rimarrà con una sola bacchetta in mano. Tutti aspetteranno all'infinito che il vicino liberi l'altra bacchetta, portando l'intero sistema a un <strong>blocco totale e permanente</strong>.
+              </li>
+            </ul>
+          </div>        
+        </div>
+      </div>
+    </section>
+
+  
+<section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 mb-8">
+  <div class="w-full">
+    <h2 class="text-xl font-bold text-techDark mb-4">Il Barbiere Sonnolento</h2>
+    <div class="text-slate-600 leading-relaxed text-sm">
+      <p class="mb-4">
+        Il <strong>"Problema del barbiere sonnolento"</strong> (<em>Sleeping Barber Problem</em>) è un altro classico scenario della computer science utilizzato per testare le capacità di sincronizzazione tra thread multipli in presenza di risorse e posti limitati.
+      </p>
+      
+      <ul class="list-disc pl-5 space-y-3 mb-4">
+        <li>
+          <strong>Lo scenario:</strong> In un salone c'è un solo barbiere, una sedia per il taglio e un numero fisso di <strong>sedie in sala d'attesa</strong>. Se non ci sono clienti, il barbiere si siede sulla sua poltrona e <strong>si addormenta</strong>.
+        </li>
+        <li>
+          <strong>La dinamica dei clienti:</strong> Quando arriva un cliente, se il barbiere sta dormendo, lo <strong>sveglia</strong> per farsi tagliare i capelli. Se il barbiere sta già lavorando, il cliente si siede in sala d'attesa (se c'è posto). Se invece tutte le sedie sono occupate, il cliente <strong>abbandona il salone</strong>.
+        </li>
+      </ul>
+
+      <p class="mt-4 font-medium italic bg-slate-50 p-3 rounded-lg border-l-4 border-accent">
+        Questo problema mi ha aiutato a capire la <strong>comunicazione e il coordinamento tra thread</strong> (il barbiere e i clienti) utilizzando i metodi <code>wait()</code> e <code>notify()</code>. Rappresenta in modo brillante la gestione delle code d'attesa e la sincronizzazione basata sugli eventi: il barbiere dorme se non ci sono clienti, si sveglia quando ne arriva uno, e i clienti si mettono in attesa o se ne vanno se le sedie sono piene.
+      </p>
+    </div>
+  </div>
+  
+  <div class="w-full mt-6 pt-6 border-t border-slate-100 flex flex-col items-center">
+    <div class="max-w-2xl w-full bg-white rounded-lg border border-slate-200 shadow-sm p-2">
+      <img src="immagini/barbiere-sonnolento.png" alt="Problema del Barbiere Sonnolento" class="w-full h-auto object-contain mx-auto">
+    </div>
+    <p class="text-[10px] text-center text-slate-400 mt-2 italic">Rappresentazione del Barbiere Sonnolento</p>
+  </div>
+</section>
+    <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 mb-8">
+      <p class="text-slate-600 leading-relaxed text-sm text-center font-medium italic">
+        Risolvere questi scenari in Java mi ha fatto apprezzare l'importanza di progettare software non solo funzionanti, ma anche logicamente robusti, efficienti e privi di blocchi, dandomi una visione molto più pratica e concreta della programmazione concorrente.
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="bg-white text-slate-500 py-6 border-t border-slate-200 text-center text-sm mt-auto">
+    <div class="max-w-6xl mx-auto px-4">
+      <p>&copy; 2026 - IIS Marconi Pieralisi - Esame di Stato.</p>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  </script>
+
+</body>
+</html>

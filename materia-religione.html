@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Religione | Dettaglio Materia</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <script>
+    tailwind.config = { 
+      theme: { 
+        extend: { 
+          colors: { 
+            techDark: '#0f172a', 
+            techLight: '#f8fafc', 
+            accent: '#0284c7' 
+          } 
+        } 
+      }
+    }
+  </script>
+  
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+
+  <script src="header.js" defer></script>
+</head>
+<body class="bg-techLight text-techDark font-sans min-h-screen flex flex-col"
+      data-materia="Religione" 
+      data-copertina="immagini/materia-religione.webp">
+
+  <div class="w-full max-w-4xl mx-auto px-4 mt-8">
+    <div class="w-full h-64 bg-slate-200 rounded-xl overflow-hidden border border-slate-200 shadow-sm relative">
+      <img src="immagini/materia-religione.jpg" alt="Copertina Religione" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent flex items-end p-8">
+        <h2 class="text-white text-2xl font-bold">Religione</h2>
+      </div>
+    </div>
+  </div>
+
+  <main class="max-w-4xl mx-auto px-4 py-12 flex-grow space-y-8">
+    
+    <h1 class="text-3xl font-bold">Il valore della vita</h1>
+    <p class="text-slate-600 leading-relaxed">
+      Un tema estremamente interessante e attuale che abbiamo affrontato quest'anno durante le ore di Religione è quello dell'<strong>interruzione volontaria di gravidanza</strong>. Si trata di una questione complessa, che tocca profondamente la sfera morale, etica e personale di ciascun individuo. Dal mio punto di vista, prima che una persona decida di terminare una gravidanza, per qualunque motivo o situazione si trovi ad affrontare, <strong>è fondamentale fermarsi a riflettere e pensarci molto bene, in modo da compiere una scelta pienamente consapevole ed evitare futuri rimpianti</strong>. Decidere sulla vita è un passo che lascia un segno profondo, ed è per questo che il percorso decisionale richiede supporto, tempo e una grande forza interiore.
+    </p>
+
+    <div class="space-y-6">
+
+      <div class="relative border-l-4 border-dashed border-amber-400 pl-6 ml-4 my-8">
+        <span class="absolute -left-[16px] top-1 bg-amber-500 text-white rounded-full w-7 h-7 flex items-center justify-center shadow">
+          <i class="fa-solid fa-compass text-xs"></i>
+        </span>
+        
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+          <div class="md:col-span-2 space-y-3">
+            <h2 class="text-xl font-bold text-amber-600">La sacralità della vita per la Chiesa</h2>
+            <p class="text-slate-600 leading-relaxed text-sm">
+              La dottrina cattolica si fonda sul principio che la vita umana sia un dono di Dio, unico e irripetibile, che va tutelato e protetto <strong>fin dal momento del concepimento</strong>. Dal punto di vista teologico ed etico, l'embrione è considerato un essere umano a tutti gli effetti, dotato di dignità propria e del diritto inalienabile alla vita. Questo forte richiamo alla responsabilità mette in luce come ogni decisione debba basarsi sul profondo rispetto della vita nascente.
+            </p>
+          </div>
+          <div class="w-full h-full min-h-[160px] flex items-center">
+            <img src="immagini/religione-sacralita-vita.jpeg" alt="Simbolo della vita e dell'accoglienza" class="w-full h-40 object-cover rounded-lg border border-slate-100 shadow-sm">
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+        <h2 class="text-xl font-bold mb-2 text-slate-900">La cultura dell'accoglienza e della solidarietà</h2>
+        <p class="text-slate-600 leading-relaxed text-sm">
+          Oltre agli aspetti dogmatici, un punto centrale delle lezioni è stato l'invito a non giudicare le difficoltà delle donne, bensì a comprenderle. La comunità cristiana sottolinea l'importanza di creare reti di aiuto concreto — come i <strong>Centri di Aiuto alla Vita (CAV)</strong> — per sostenere le madri dal punto di vista psicologico, economico e materiale, offrendo alternative e speranza a chi si sente sola di fronte a una gravidanza inaspettata.
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+        <h2 class="text-xl font-bold mb-2 text-slate-900">Il valore della coscienza e della responsabilità</h2>
+        <p class="text-slate-600 leading-relaxed text-sm">
+          Questo argomento ci ha permesso di riflettere sul concetto di responsabilità laica e religiosa, e su come le leggi dello Stato (come la <strong>Legge 194</strong> in Italia) cerchino di bilanciare il diritto all'autodeterminazione della donna con la tutela della vita nascente, garantendo al tempo stesso il diritto all'<strong>obiezione di coscienza</strong> per il personale sanitario.
+        </p>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer class="bg-white text-slate-500 py-8 border-t border-slate-200 text-center text-sm mt-auto">
+    <p>&copy; 2026 - IIS Marconi Pieralisi - Esame di Stato</p>
+  </footer>
+
+</body>
+</html>
