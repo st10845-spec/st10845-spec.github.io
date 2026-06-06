@@ -14,7 +14,8 @@
           colors: {
             techDark: '#0f172a',
             techLight: '#f8fafc',
-            accent: '#0284c7'
+            accent: '#0284c7',
+            accentHover: '#0369a1'
           }
         }
       }
@@ -22,71 +23,98 @@
   </script>
   <style>
     html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #0f172a; }
-    .no-scrollbar::-webkit-scrollbar { display: none; }
-    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    body { font-family: 'Inter', sans-serif; }
   </style>
 </head>
-<body class="flex flex-col min-h-screen">
+<body class="bg-techLight text-techDark font-sans min-h-screen flex flex-col"
+      data-materia="TPSIT"
+      data-copertina="immagini/materia-tpsit.jpg">
 
-  <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-      <a href="index.html" class="text-xl font-bold text-slate-900 hover:text-accent transition">
-        Ada Ugo Praise Ezeala
-      </a>
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur shadow-sm border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="text-xl font-bold tracking-tight text-techDark">
+        <a href="index.html" class="hover:text-accent transition">Ada Ugo Praise Ezeala</a>
+      </div>
       
-      <nav class="hidden md:flex space-x-6 text-sm font-medium text-slate-600">
-        <a href="index.html" class="hover:text-accent transition">Home</a>
-        <a href="index.html#chi-sono" class="hover:text-accent transition">Chi Sono</a>
-        <a href="index.html#passioni" class="hover:text-accent transition">Passioni</a>
-        <a href="materie.html" class="hover:text-accent transition">Materie</a>
-        <a href="educazione-civica.html" class="hover:text-accent transition">Educazione Civica</a>
-        <a href="pcto.html" class="hover:text-accent transition">PCTO</a>
-        <a href="contatti.html" class="hover:text-accent transition">Contatti</a>
+      <nav class="hidden md:flex space-x-8 text-sm font-medium items-center">
+        <a href="index.html#home" class="text-slate-600 hover:text-accent transition">Home</a>
+        <a href="index.html#chi-sono" class="text-slate-600 hover:text-accent transition">Chi Sono</a>
+        <a href="index.html#passioni" class="text-slate-600 hover:text-accent transition">Passioni</a>
+        
+        <div class="relative inline-block text-left group">
+          <button id="dropdown-btn" class="text-accent font-semibold transition inline-flex items-center gap-1 focus:outline-none">
+            Materie <i class="fa-solid fa-chevron-down text-xs transition-transform group-hover:rotate-180"></i>
+          </button>
+          
+          <div class="absolute right-0 mt-2 w-64 rounded-xl bg-white shadow-lg ring-1 ring-black/5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 border border-slate-100 py-2 max-h-[80vh] overflow-y-auto">
+            <a href="materie.html" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 font-semibold border-b border-slate-100">Mostra tutte le materie</a>
+            
+            <a href="materia-informatica.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-sky-50 hover:text-accent">Informatica</a>
+            <a href="materia-sistemi-reti.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-sky-50 hover:text-accent">Sistemi e Reti</a>
+            <a href="materia-tpsit.html" class="block px-4 py-2 text-sm text-accent bg-sky-50/50 font-semibold">TPSIT</a>
+            <a href="materia-gpoi.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-sky-50 hover:text-accent">GPOI</a>
+            <a href="materia-ia.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-sky-50 hover:text-accent">Intelligenza Artificiale</a>
+            <a href="materia-italiano.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-sky-50 hover:text-accent">Italiano</a>
+            <a href="materia-storia.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-sky-50 hover:text-accent">Storia</a>
+            <a href="materia-inglese.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-sky-50 hover:text-accent">Inglese</a>
+            <a href="materia-matematica.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-sky-50 hover:text-accent">Matematica</a>
+            <a href="materia-scienze-motorie.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-sky-50 hover:text-accent">Scienze Motorie</a>
+            <a href="materia-religione.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-sky-50 hover:text-accent">Religione</a>
+          </div>
+        </div>
+
+        <a href="educazione-civica.html" class="text-slate-600 hover:text-accent transition">Educazione Civica</a>
+        <a href="pcto.html" class="text-slate-600 hover:text-accent transition">FSL</a>
+        <a href="contatti.html" class="text-slate-600 hover:text-accent transition">Contatti</a>
       </nav>
 
-      <button id="menu-btn" class="md:hidden text-slate-600 hover:text-accent focus:outline-none">
+      <button id="menu-btn" class="md:hidden p-2 text-slate-600 hover:text-accent focus:outline-none" aria-label="Apri menu">
         <i class="fa-solid fa-bars text-xl"></i>
       </button>
     </div>
 
-    <nav id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-200 px-4 py-3 space-y-3">
-      <a href="index.html" class="block text-sm text-slate-600 hover:text-accent">Home</a>
-      <a href="index.html#chi-sono" class="block text-sm text-slate-600 hover:text-accent">Chi Sono</a>
-      <a href="index.html#passioni" class="block text-sm text-slate-600 hover:text-accent">Passioni</a>
-      <a href="materie.html" class="block text-sm text-slate-600 hover:text-accent">Materie</a>
-      <a href="educazione-civica.html" class="block text-sm text-slate-600 hover:text-accent">Educazione Civica</a>
-      <a href="pcto.html" class="block text-sm text-slate-600 hover:text-accent">PCTO</a>
-      <a href="contatti.html" class="block text-sm text-slate-600 hover:text-accent">Contatti</a>
-    </nav>
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-4 space-y-2 shadow-lg max-h-[80vh] overflow-y-auto">
+      <a href="index.html#home" class="block py-2 text-slate-600 hover:text-accent">Home</a>
+      <a href="materie.html" class="block py-2 text-accent font-medium">Materie (Elenco completo)</a>
+      
+      <div class="pl-4 border-l-2 border-slate-200 space-y-1 grid grid-cols-2 gap-1">
+        <a href="materia-informatica.html" class="block py-1 text-xs text-slate-500">Informatica</a>
+        <a href="materia-sistemi-reti.html" class="block py-1 text-xs text-slate-500">Sistemi e Reti</a>
+        <a href="materia-tpsit.html" class="block py-1 text-xs text-accent font-medium">TPSIT</a>
+        <a href="materia-gpoi.html" class="block py-1 text-xs text-slate-500">GPOI</a>
+        <a href="materia-ia.html" class="block py-1 text-xs text-slate-500">IA</a>
+        <a href="materia-italiano.html" class="block py-1 text-xs text-slate-500">Italiano</a>
+        <a href="materia-storia.html" class="block py-1 text-xs text-slate-500">Storia</a>
+        <a href="materia-inglese.html" class="block py-1 text-xs text-slate-500">Inglese</a>
+        <a href="materia-matematica.html" class="block py-1 text-xs text-slate-500">Matematica</a>
+        <a href="materia-scienze-motorie.html" class="block py-1 text-xs text-slate-500">Sc. Motorie</a>
+        <a href="materia-religione.html" class="block py-1 text-xs text-slate-500">Religione</a>
+      </div>
+      
+      <a href="educazione-civica.html" class="block py-2 text-slate-600 hover:text-accent">Educazione Civica</a>
+      <a href="pcto.html" class="block py-2 text-slate-600 hover:text-accent">FSL</a>
+      <a href="contatti.html" class="block py-2 text-slate-600 hover:text-accent">Contatti</a>
+    </div>
   </header>
 
-  <div class="w-full bg-slate-100 border-b border-slate-200 sticky top-[53px] z-40 overflow-x-auto no-scrollbar">
-    <div class="max-w-6xl mx-auto px-4 flex items-center space-x-4 text-xs sm:text-sm font-medium h-12 whitespace-nowrap text-slate-600">
-      <a href="materie.html" class="hover:text-accent transition h-full flex items-center">Tutte</a>
-      <a href="materia-informatica.html" class="hover:text-accent transition h-full flex items-center">Informatica</a>
-      <a href="materia-sistemi-reti.html" class="hover:text-accent transition h-full flex items-center">Sistemi e Reti</a>
-      <a href="materia-tpsit.html" class="text-accent font-bold border-b-2 border-accent h-full flex items-center">TPSIT</a>
-      <a href="materia-gpoi.html" class="hover:text-accent transition h-full flex items-center">GPOI</a>
-      <a href="materia-matematica.html" class="hover:text-accent transition h-full flex items-center">Matematica</a>
-      <a href="materia-ia.html" class="hover:text-accent transition h-full flex items-center">Intelligenza Artificiale</a>
-      <a href="materia-italiano.html" class="hover:text-accent transition h-full flex items-center">Italiano</a>
-      <a href="materia-storia.html" class="hover:text-accent transition h-full flex items-center">Storia</a>
-      <a href="materia-inglese.html" class="hover:text-accent transition h-full flex items-center">Inglese</a>
-      <a href="materia-scienze-motorie.html" class="hover:text-accent transition h-full flex items-center">Scienze Motorie</a>
-    </div>
-  </div>
-
   <div class="w-full max-w-4xl mx-auto px-4 mt-8">
+    
+    <div class="mb-4">
+      <a href="materie.html" class="inline-flex items-center text-sm font-medium text-slate-500 hover:text-accent transition group">
+        <i class="fa-solid fa-arrow-left mr-2 transition-transform group-hover:-translate-x-1"></i> 
+        Torna all'elenco delle materie
+      </a>
+    </div>
+
     <div class="w-full h-64 bg-slate-200 rounded-xl overflow-hidden border border-slate-200 shadow-sm relative">
       <img src="immagini/materia-tpsit.jpg" alt="Copertina TPSIT" class="w-full h-full object-cover">
       <div class="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent flex items-end p-8">
-        <h2 class="text-white text-2xl font-bold">Tecnologie e Progettazione di Sistemi Informatici e di Telecomunicazioni</h2>
+        <h2 class="text-white text-2xl font-bold tracking-tight">Tecnologie e Progettazione di Sistemi Informatici e di Telecomunicazioni</h2>
       </div>
     </div>
   </div>
 
-  <main class="flex-grow max-w-4xl mx-auto px-4 py-8 w-full">
+  <main class="flex-grow max-w-4xl mx-auto px-4 py-12 w-full">
     
     <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 mb-8">
       <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
@@ -137,37 +165,37 @@
       </div>
     </section>
 
-  
-<section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 mb-8">
-  <div class="w-full">
-    <h2 class="text-xl font-bold text-techDark mb-4">Il Barbiere Sonnolento</h2>
-    <div class="text-slate-600 leading-relaxed text-sm">
-      <p class="mb-4">
-        Il <strong>"Problema del barbiere sonnolento"</strong> (<em>Sleeping Barber Problem</em>) è un altro classico scenario della computer science utilizzato per testare le capacità di sincronizzazione tra thread multipli in presenza di risorse e posti limitati.
-      </p>
-      
-      <ul class="list-disc pl-5 space-y-3 mb-4">
-        <li>
-          <strong>Lo scenario:</strong> In un salone c'è un solo barbiere, una sedia per il taglio e un numero fisso di <strong>sedie in sala d'attesa</strong>. Se non ci sono clienti, il barbiere si siede sulla sua poltrona e <strong>si addormenta</strong>.
-        </li>
-        <li>
-          <strong>La dinamica dei clienti:</strong> Quando arriva un cliente, se il barbiere sta dormendo, lo <strong>sveglia</strong> per farsi tagliare i capelli. Se il barbiere sta già lavorando, il cliente si siede in sala d'attesa (se c'è posto). Se invece tutte le sedie sono occupate, il cliente <strong>abbandona il salone</strong>.
-        </li>
-      </ul>
+    <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 mb-8">
+      <div class="w-full">
+        <h2 class="text-xl font-bold text-techDark mb-4">Il Barbiere Sonnolento</h2>
+        <div class="text-slate-600 leading-relaxed text-sm">
+          <p class="mb-4">
+            Il <strong>"Problema del barbiere sonnolento"</strong> (<em>Sleeping Barber Problem</em>) è un altro classico scenario della computer science utilizzato per testare le capacità di sincronizzazione tra thread multipli in presenza di risorse e posti limitati.
+          </p>
+          
+          <ul class="list-disc pl-5 space-y-3 mb-4">
+            <li>
+              <strong>Lo scenario:</strong> In un salone c'è un solo barbiere, una sedia per il taglio e un numero fisso di <strong>sedie in sala d'attesa</strong>. Se non ci sono clienti, il barbiere si siede sulla sua poltrona e <strong>si addormenta</strong>.
+            </li>
+            <li>
+              <strong>La dinamica dei clienti:</strong> Quando arriva un cliente, se il barbiere sta dormendo, lo <strong>sveglia</strong> per farsi tagliare i capelli. Se il barbiere sta già lavorando, il cliente si siede in sala d'attesa (se c'è posto). Se invece tutte le sedie sono occupate, il cliente <strong>abbandona il salone</strong>.
+            </li>
+          </ul>
 
-      <p class="mt-4 font-medium italic bg-slate-50 p-3 rounded-lg border-l-4 border-accent">
-        Questo problema mi ha aiutato a capire la <strong>comunicazione e il coordinamento tra thread</strong> (il barbiere e i clienti) utilizzando i metodi <code>wait()</code> e <code>notify()</code>. Rappresenta in modo brillante la gestione delle code d'attesa e la sincronizzazione basata sugli eventi: il barbiere dorme se non ci sono clienti, si sveglia quando ne arriva uno, e i clienti si mettono in attesa o se ne vanno se le sedie sono piene.
-      </p>
-    </div>
-  </div>
-  
-  <div class="w-full mt-6 pt-6 border-t border-slate-100 flex flex-col items-center">
-    <div class="max-w-2xl w-full bg-white rounded-lg border border-slate-200 shadow-sm p-2">
-      <img src="immagini/barbiere-sonnolento.png" alt="Problema del Barbiere Sonnolento" class="w-full h-auto object-contain mx-auto">
-    </div>
-    <p class="text-[10px] text-center text-slate-400 mt-2 italic">Rappresentazione del Barbiere Sonnolento</p>
-  </div>
-</section>
+          <p class="mt-4 font-medium italic bg-slate-50 p-3 rounded-lg border-l-4 border-accent">
+            Questo problema mi ha aiutato a capire la <strong>comunicazione e il coordinamento tra thread</strong> (il barbiere e i clienti) utilizzando i metodi <code>wait()</code> e <code>notify()</code>. Rappresenta in modo brillante la gestione delle code d'attesa e la sincronizzazione basata sugli eventi: il barbiere dorme se non ci sono clienti, si sveglia quando ne arriva uno, e i clienti si mettono in attesa o se ne vanno se le sedie sono piene.
+          </p>
+        </div>
+      </div>
+      
+      <div class="w-full mt-6 pt-6 border-t border-slate-100 flex flex-col items-center">
+        <div class="max-w-2xl w-full bg-white rounded-lg border border-slate-200 shadow-sm p-2">
+          <img src="immagini/barbiere-sonnolento.png" alt="Problema del Barbiere Sonnolento" class="w-full h-auto object-contain mx-auto">
+        </div>
+        <p class="text-[10px] text-center text-slate-400 mt-2 italic">Rappresentazione del Barbiere Sonnolento</p>
+      </div>
+    </section>
+
     <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 mb-8">
       <p class="text-slate-600 leading-relaxed text-sm text-center font-medium italic">
         Risolvere questi scenari in Java mi ha fatto apprezzare l'importanza di progettare software non solo funzionanti, ma anche logicamente robusti, efficienti e privi di blocchi, dandomi una visione molto più pratica e concreta della programmazione concorrente.
@@ -176,7 +204,7 @@
 
   </main>
 
-  <footer class="bg-white text-slate-500 py-6 border-t border-slate-200 text-center text-sm mt-auto">
+  <footer class="bg-white text-slate-500 py-8 border-t border-slate-200 text-center text-sm mt-auto">
     <div class="max-w-6xl mx-auto px-4">
       <p>&copy; 2026 - IIS Marconi Pieralisi - Esame di Stato.</p>
     </div>

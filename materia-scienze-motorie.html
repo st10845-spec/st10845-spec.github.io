@@ -4,43 +4,145 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Scienze Motorie | Dettaglio Materia</title>
+  
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config = { theme: { extend: { colors: { techDark: '#0f172a', techLight: '#f8fafc', accent: '#0284c7' } } } }</script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            techDark: '#0f172a',
+            techLight: '#f8fafc',
+            accent: '#0284c7',
+            accentHover: '#0369a1'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; }
+  </style>
 </head>
-<body class="bg-techLight text-techDark font-sans min-h-screen flex flex-col">
+<body class="bg-techLight text-techDark font-sans min-h-screen flex flex-col"
+      data-materia="Scienze Motorie" 
+      data-copertina="immagini/materia-scienze-motorie.jpeg">
 
-  <header class="bg-white border-b border-slate-200 py-4 px-8 flex justify-between items-center">
-    <span class="font-bold">Ada Ugo Praise Ezeala</span>
-    <a href="materie.html" class="text-accent hover:underline">← Torna alle materie</a>
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur shadow-sm border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="text-xl font-bold tracking-tight text-techDark">
+        <a href="index.html" class="hover:text-accent transition">Ada Ugo Praise Ezeala</a>
+      </div>
+      
+      <nav class="hidden md:flex space-x-8 text-sm font-medium items-center">
+        <a href="index.html#home" class="text-slate-600 hover:text-accent transition">Home</a>
+        <a href="index.html#chi-sono" class="text-slate-600 hover:text-accent transition">Chi Sono</a>
+        <a href="index.html#passioni" class="text-slate-600 hover:text-accent transition">Passioni</a>
+        
+        <div class="relative inline-block text-left group">
+          <button id="dropdown-btn" class="text-accent font-semibold transition inline-flex items-center gap-1 focus:outline-none">
+            Materie <i class="fa-solid fa-chevron-down text-xs transition-transform group-hover:rotate-180"></i>
+          </button>
+          
+          <div class="absolute right-0 mt-2 w-64 rounded-xl bg-white shadow-lg ring-1 ring-black/5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 border border-slate-100 py-2 max-h-[80vh] overflow-y-auto">
+            <a href="materie.html" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 font-semibold border-b border-slate-100">Mostra tutte le materie</a>
+            
+            <a href="materia-informatica.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-sky-50 hover:text-accent">Informatica</a>
+            <a href="materia-sistemi-reti.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-sky-50 hover:text-accent">Sistemi e Reti</a>
+            <a href="materia-tpsit.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-sky-50 hover:text-accent">TPSIT</a>
+            <a href="materia-gpoi.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-sky-50 hover:text-accent">GPOI</a>
+            <a href="materia-ia.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-sky-50 hover:text-accent">Intelligenza Artificiale</a>
+            <a href="materia-italiano.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-sky-50 hover:text-accent">Italiano</a>
+            <a href="materia-storia.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-sky-50 hover:text-accent">Storia</a>
+            <a href="materia-inglese.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-sky-50 hover:text-accent">Inglese</a>
+            <a href="materia-matematica.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-sky-50 hover:text-accent">Matematica</a>
+            <a href="materia-scienze-motorie.html" class="block px-4 py-2 text-sm text-accent bg-sky-50/50 font-semibold">Scienze Motorie</a>
+            <a href="materia-religione.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-sky-50 hover:text-accent">Religione</a>
+          </div>
+        </div>
+
+        <a href="educazione-civica.html" class="text-slate-600 hover:text-accent transition">Educazione Civica</a>
+        <a href="pcto.html" class="text-slate-600 hover:text-accent transition">FSL</a>
+        <a href="contatti.html" class="text-slate-600 hover:text-accent transition">Contatti</a>
+      </nav>
+
+      <button id="menu-btn" class="md:hidden p-2 text-slate-600 hover:text-accent focus:outline-none" aria-label="Apri menu">
+        <i class="fa-solid fa-bars text-xl"></i>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-4 space-y-2 shadow-lg max-h-[80vh] overflow-y-auto">
+      <a href="index.html#home" class="block py-2 text-slate-600 hover:text-accent">Home</a>
+      <a href="materie.html" class="block py-2 text-accent font-medium">Materie (Elenco completo)</a>
+      
+      <div class="pl-4 border-l-2 border-slate-200 space-y-1 grid grid-cols-2 gap-1">
+        <a href="materia-informatica.html" class="block py-1 text-xs text-slate-500">Informatica</a>
+        <a href="materia-sistemi-reti.html" class="block py-1 text-xs text-slate-500">Sistemi e Reti</a>
+        <a href="materia-tpsit.html" class="block py-1 text-xs text-slate-500">TPSIT</a>
+        <a href="materia-gpoi.html" class="block py-1 text-xs text-slate-500">GPOI</a>
+        <a href="materia-ia.html" class="block py-1 text-xs text-slate-500">IA</a>
+        <a href="materia-italiano.html" class="block py-1 text-xs text-slate-500">Italiano</a>
+        <a href="materia-storia.html" class="block py-1 text-xs text-slate-500">Storia</a>
+        <a href="materia-inglese.html" class="block py-1 text-xs text-slate-500">Inglese</a>
+        <a href="materia-matematica.html" class="block py-1 text-xs text-slate-500">Matematica</a>
+        <a href="materia-scienze-motorie.html" class="block py-1 text-xs text-accent font-medium">Sc. Motorie</a>
+        <a href="materia-religione.html" class="block py-1 text-xs text-slate-500">Religione</a>
+      </div>
+      
+      <a href="educazione-civica.html" class="block py-2 text-slate-600 hover:text-accent">Educazione Civica</a>
+      <a href="pcto.html" class="block py-2 text-slate-600 hover:text-accent">FSL</a>
+      <a href="contatti.html" class="block py-2 text-slate-600 hover:text-accent">Contatti</a>
+    </div>
   </header>
 
-  <main class="max-w-4xl mx-auto px-4 py-12 flex-grow space-y-8">
-    <img src="immagini/materia-scienze-motorie.jpeg" alt="Scienze Motorie" class="w-full h-64 object-cover rounded-xl shadow-sm">
+  <div class="w-full max-w-4xl mx-auto px-4 mt-8">
     
-    <h1 class="text-3xl font-bold">Scienze Motorie</h1>
-    <p class="text-slate-600 leading-relaxed">
-      Il percorso di Scienze Motorie svolto quest'anno è stato lo stimolo per far nascere in me un profondo e inaspettato interesse verso l'anatomia e la fisiologia umana. Gli argomenti trattati in classe mi hanno spinto a voler approfondire i meccanismi complessi e precisi che regolano la vita e il funzionamento del nostro organismo.
-    </p>
+    <div class="mb-4">
+      <a href="materie.html" class="inline-flex items-center text-sm font-medium text-slate-500 hover:text-accent transition group">
+        <i class="fa-solid fa-arrow-left mr-2 transition-transform group-hover:-translate-x-1"></i> 
+        Torna all'elenco delle materie
+      </a>
+    </div>
+
+    <div class="w-full h-64 bg-slate-200 rounded-xl overflow-hidden border border-slate-200 shadow-sm relative">
+      <img src="immagini/materia-scienze-motorie.jpeg" alt="Copertina Scienze Motorie" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent flex items-end p-8">
+        <h2 class="text-white text-3xl font-bold tracking-tight">Scienze Motorie</h2>
+      </div>
+    </div>
+  </div>
+
+  <main class="flex-grow max-w-4xl mx-auto px-4 py-12 w-full space-y-8">
+    
+    <div class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm">
+      <span class="text-xs font-bold uppercase tracking-wider text-accent">Anatomia e Fisiologia</span>
+      <p class="text-slate-600 leading-relaxed text-sm mt-3">
+        Il percorso di Scienze Motorie svolto quest'anno è stato lo stimolo per far nascere in me un profondo e inaspettato interesse verso l'anatomia e la fisiologia umana. Gli argomenti trattati in classe mi hanno spinto a voler approfondire i meccanismi complessi e precisi che regolano la vita e il funzionamento del nostro organismo.
+      </p>
+    </div>
 
     <div class="space-y-6">
       
-      <div class="bg-white p-6 rounded-xl border border-slate-200">
-        <h2 class="text-xl font-bold text-slate-900 mb-2">Il cuore e il sistema cardiocircolatorio</h2>
+      <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+        <h2 class="text-xl font-bold text-techDark mb-3">Il cuore e il sistema cardiocircolatorio</h2>
         <p class="text-slate-600 leading-relaxed text-sm">
-          L'attenzione si è concentrata principalmente sul cuore e sul sistema cardiocircolatorio, una macchina biologica straordinaria. Lo studio del ciclo cardiaco, del percorso del flusso sanguigno e del ruolo fondamentale delle valvole mi ha permesso di comprendere la precisione millimetrica che si cela dietro a ogni singolo battito cardiaco.
+          L'attention si è concentrata principalmente sul cuore e sul sistema cardiocircolatorio, una macchina biologica straordinaria. Lo studio del ciclo cardiaco, del percorso del flusso sanguigno e del ruolo fondamentale delle valvole mi ha permesso di comprendere la precisione millimetrica che si cela dietro a ogni singolo battito cardiaco.
         </p>
       </div>
 
-      <div class="bg-white p-6 rounded-xl border border-slate-200">
-        <h2 class="text-xl font-bold text-slate-900 mb-2">L'anatomia cardiaca e la doppia circolazione</h2>
+      <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+        <h2 class="text-xl font-bold text-techDark mb-3">L'anatomia cardiaca e la doppia circolazione</h2>
         <p class="text-slate-600 leading-relaxed text-sm">
           Dal punto di vista strutturale, il cuore è diviso dal setto in due metà (destra e sinistra), ciascuna formata da un atrio e un ventricolo. Questa anatomia supporta una doppia circolazione: la parte destra riceve il sangue deossigenato dal corpo e lo indirizza ai polmoni, mentre la parte sinistra accoglie il sangue ossigenato di ritorno dai polmoni e lo pompa nell'intero organismo. Le valvole cardiache assicurano l'unidirezionalità di questo flusso.
         </p>
       </div>
 
-      <div class="bg-white p-6 rounded-xl border border-slate-200 grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+      <div class="bg-white p-6 rounded-xl border border-slate-200 grid grid-cols-1 md:grid-cols-3 gap-6 items-center shadow-sm">
         <div class="md:col-span-2 space-y-3">
-          <h2 class="text-xl font-bold text-slate-900">La rete di trasporto: I Vasi Sanguigni</h2>
+          <h2 class="text-xl font-bold text-techDark">La rete di trasporto: I Vasi Sanguigni</h2>
           <p class="text-slate-600 leading-relaxed text-sm">
             Il sangue si muove nel corpo attraverso una fitta rete stradale divisa in tre tipologie di vasi, ciascuna specializzata per sostenere anche lo sforzo fisico e sportivo:
           </p>
@@ -50,14 +152,14 @@
             <li><strong>Capillari:</strong> Vasi microscopici con pareti sottilissime dove avviene lo scambio effettivo: cedono ossigeno e nutrimento alle cellule muscolari e ne prelevano l'anidride carbonica.</li>
           </ul>
         </div>
-        <div class="w-full h-full min-h-[160px] flex items-center">
-          <img src="immagini/anatomia-vasi-sanguigni.jpg" alt="Struttura di Arterie, Vene e Capillari" class="w-full h-40 object-cover rounded-lg border border-slate-100 shadow-sm">
+        <div class="w-full h-full min-h-[160px] flex items-center justify-center">
+          <img src="immagini/anatomia-vasi-sanguigni.jpg" alt="Struttura di Arterie, Vene e Capillari" class="w-full h-40 object-cover rounded-lg border border-slate-200 shadow-sm">
         </div>
       </div>
 
-      <div class="bg-white p-6 rounded-xl border border-slate-200 space-y-6">
+      <div class="bg-white p-6 rounded-xl border border-slate-200 space-y-6 shadow-sm">
         <div>
-          <h2 class="text-xl font-bold text-slate-900 mb-2">La composizione del sangue e le sue funzioni</h2>
+          <h2 class="text-xl font-bold text-techDark mb-2">La composizione del sangue e le sue funzioni</h2>
           <p class="text-slate-600 leading-relaxed text-sm">
             L'analisi si è poi estesa alla composizione del sangue, un tessuto fluido composto da plasma e da elementi cellulari fondamentali per l'equilibrio dell'organismo e per le prestazioni atletiche:
           </p>
@@ -65,36 +167,36 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
           
-          <div class="bg-slate-50 border-2 border-rose-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col">
-            <div class="h-36 bg-rose-100 overflow-hidden border-b border-rose-200">
+          <div class="bg-slate-50 border border-rose-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col">
+            <div class="h-36 bg-rose-100/50 overflow-hidden border-b border-rose-200">
               <img src="immagini/globuli-rossi.jpg" alt="Globuli Rossi" class="w-full h-full object-cover">
             </div>
             <div class="p-4 flex-grow flex flex-col justify-between space-y-2">
-              <h3 class="font-bold text-rose-700 text-base text-center border-b border-rose-100 pb-1">Globuli Rossi</h3>
+              <h3 class="font-bold text-rose-700 text-sm text-center border-b border-rose-100 pb-1">Globuli Rossi</h3>
               <p class="text-slate-600 text-xs leading-relaxed">
                 Sono le cellule più numerose, ricche di <strong>emoglobina</strong>. Legano e trasportano l'<strong>ossigeno</strong> dai polmoni ai muscoli sotto sforzo, determinando la nostra capacità di <strong>resistenza alla fatica</strong>.
               </p>
             </div>
           </div>
 
-          <div class="bg-slate-50 border-2 border-sky-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col">
-            <div class="h-36 bg-sky-100 overflow-hidden border-b border-sky-200">
+          <div class="bg-slate-50 border border-sky-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col">
+            <div class="h-36 bg-sky-100/50 overflow-hidden border-b border-sky-200">
               <img src="immagini/globuli-bianchi.jpeg" alt="Globuli Bianchi" class="w-full h-full object-cover">
             </div>
             <div class="p-4 flex-grow flex flex-col justify-between space-y-2">
-              <h3 class="font-bold text-sky-700 text-base text-center border-b border-sky-100 pb-1">Globuli Bianchi</h3>
+              <h3 class="font-bold text-sky-700 text-sm text-center border-b border-sky-100 pb-1">Globuli Bianchi</h3>
               <p class="text-slate-600 text-xs leading-relaxed">
                 Costituiscono la nostra <strong>difesa immunitaria</strong>. Combattono le infezioni distruggendo <strong>virus e batteri</strong>; l'attività fisica regolare ne stimola e ne migliora l'efficienza generale.
               </p>
             </div>
           </div>
 
-          <div class="bg-slate-50 border-2 border-amber-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col">
-            <div class="h-36 bg-amber-100 overflow-hidden border-b border-amber-200">
+          <div class="bg-slate-50 border border-amber-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col">
+            <div class="h-36 bg-amber-100/50 overflow-hidden border-b border-amber-200">
               <img src="immagini/piastrine.jpg" alt="Piastrine" class="w-full h-full object-cover">
             </div>
             <div class="p-4 flex-grow flex flex-col justify-between space-y-2">
-              <h3 class="font-bold text-amber-700 text-base text-center border-b border-amber-100 pb-1">Piastrine</h3>
+              <h3 class="font-bold text-amber-700 text-sm text-center border-b border-amber-100 pb-1">Piastrine</h3>
               <p class="text-slate-600 text-xs leading-relaxed">
                 Frammenti di cellule vitali per la <strong>coagulazione</strong>. In caso di ferite o escoriazioni durante il movimento, si accumulano per <strong>bloccare l'emorragia</strong> e avviare la cicatrizzazione.
               </p>
@@ -104,8 +206,8 @@
         </div>
       </div>
 
-      <div class="bg-white p-6 rounded-xl border border-slate-200">
-        <h2 class="text-xl font-bold text-slate-900 mb-2">Trasfusioni, compatibilità e agglutinazione</h2>
+      <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+        <h2 class="text-xl font-bold text-techDark mb-3">Trasfusioni, compatibilità e agglutinazione</h2>
         <p class="text-slate-600 leading-relaxed text-sm">
           Infine, di grande impatto è stato lo studio della compatibilità ematica nelle trasfusioni. L'introduzione di sangue non compatibile scatena l'agglutinazione, una reazione immunitaria gravissima in cui i globuli rossi formano ammassi potenzialmente fatali. Questo argomento evidenzia l'importanza clinica e vitale della classificazione dei gruppi sanguigni e del fattore Rh.
         </p>
@@ -114,9 +216,21 @@
     </div>
   </main>
 
-  <footer class="bg-white text-slate-500 py-6 border-t border-slate-200 text-center text-sm mt-auto">
-    <p>&copy; 2026 - IIS Marconi Pieralisi - Esame di Stato</p>
+  <footer class="bg-white text-slate-500 py-8 border-t border-slate-200 text-center text-sm mt-auto">
+    <div class="max-w-6xl mx-auto px-4">
+      <p>&copy; 2026 - IIS Marconi Pieralisi - Esame di Stato</p>
+    </div>
   </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  </script>
 
 </body>
 </html>

@@ -3,19 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Educazione Civica | Il Tribunale di Ancona</title>
+  <title>Educazione Civica | Informazione e Democrazia</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
   
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            techDark: '#0f172a',
-            techLight: '#f8fafc',
-            accent: '#0284c7'
+            istituzionale: '#1e3a8a', /* Blu Notte / Classico */
+            testoScuro: '#0f172a',
+            sfondoGrigio: '#f8fafc'
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['Lora', 'serif']
           }
         }
       }
@@ -24,101 +29,119 @@
   
   <style>
     html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #0f172a; }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #ffffff; color: #0f172a; }
+    .font-seria { font-family: 'Lora', serif; }
   </style>
-
-  <script src="header.js" defer></script>
 </head>
-<body class="flex flex-col min-h-screen"
-      data-materia="Educazione Civica" 
-      data-copertina="immagini/tribunale-ancona.jpg">
+<body class="min-h-screen flex flex-col">
 
-  <main class="flex-grow max-w-4xl mx-auto px-4 py-12 w-full">
+  <header id="main-header" data-materia="Educazione Civica"></header>
+
+  <main class="max-w-4xl mx-auto px-6 py-16 w-full flex-grow">
     
-    <div class="mb-10 text-center md:text-left">
-      <span class="text-xs font-bold uppercase tracking-wider text-accent border border-accent/20 bg-accent/5 px-3 py-1 rounded-full">Percorso Trasversale</span>
-      <h1 class="text-3xl font-bold text-techDark mt-3">
-        Il giorno in cui il diritto è diventato realtà: la mia esperienza al Tribunale di Ancona
+    <div class="text-center md:text-left mb-16 border-b border-slate-200 pb-8">
+      <span class="text-xs font-bold uppercase tracking-widest text-istituzionale bg-blue-50 px-3 py-1 rounded">EDUCAZIONE CIVICA</span>
+      <h1 class="text-3xl md:text-4xl font-extrabold text-testoScuro mt-4 leading-tight">
+        L'Evoluzione del Consenso: Dalla propaganda fascista alla tutela dei dati digitali
       </h1>
+      <p class="text-slate-500 mt-2 font-seria italic text-lg">
+        Analisi storica e giuridica della libertà di stampa e della cybersicurezza.
+      </p>
     </div>
 
-    <div class="space-y-8">
+    <div class="space-y-16">
       
-      <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 md:p-8">
-        <div class="flex items-start gap-4">
-          <div class="hidden sm:flex p-3 bg-sky-50 rounded-lg text-accent">
-            <i class="fa-solid fa-building-columns text-2xl"></i>
-          </div>
-          <div>
-            <h2 class="text-xl font-bold text-techDark mb-3">La teoria che prende forma</h2>
-            <p class="text-slate-600 leading-relaxed text-sm md:text-base">
-              All’interno del percorso di Educazione Civica, ho avuto l'opportunità di vivere un'esperienza che ha letteralmente dato forma e voce alle pagine dei nostri libri di testo: la visita di classe al Tribunale di Ancona. Spesso consideriamo la legge come un insieme astratto di regole o formule burocratiche da memorizzare, ma varcare la soglia di quel palazzo mi ha permesso di capire quanto il mondo legale sia dinamico, concreto e profondamente umano. Vedere giudici, avvocati e magistrati confrontarsi dal vivo mi ha trasmesso una nuova consapevolezza: la legalità non è solo un concetto teorico, ma una responsabilità collettiva che impatta direttamente sulla vita e sulla libertà di tutti noi.
-            </p>
+      <section class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+        <div class="md:col-span-7">
+          <h2 class="text-xl font-bold text-istituzionale mb-3 flex items-center gap-2">
+            <i class="fa-solid fa-gavel text-sm"></i> L'Articolo 21 e la fragilità della libertà
+          </h2>
+          <p class="text-slate-600 leading-relaxed text-sm md:text-base">
+            Siamo abituati a pensare alla libertà di stampa come a una conquista definitiva, scolpita nell'articolo 21 della nostra Costituzione. Eppure, la storia del Novecento ci insegna che l'informazione è un terreno di battaglia fragile. Se un tempo il potere passava attraverso il sequestro dei giornali e la propaganda, oggi le minacce alla nostra libertà hanno cambiato volto, nascondendosi tra le righe di un codice informatico o nei rischi di un data breach. Il filo rosso che unisce la censura fascista alla moderna cybersicurezza è lo stesso: il controllo del consenso attraverso il controllo dei dati e della percezione.
+          </p>
+        </div>
+        <div class="md:col-span-5">
+          <div class="aspect-[4/3] bg-slate-100 rounded-lg overflow-hidden shadow-sm border border-slate-200">
+            <img src="immagini/liberta-stampa.jpg" alt="Dettaglio Costituzione o Stampa" class="w-full h-full object-cover">
           </div>
         </div>
       </section>
 
-      <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 md:p-8 border-l-4 border-l-accent">
-        <div class="flex items-start gap-4">
-          <div class="hidden sm:flex p-3 bg-amber-50 rounded-lg text-amber-600">
-            <i class="fa-solid fa-scale-unbalanced text-2xl"></i>
+      <section class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+        <div class="md:col-span-5 md:order-last">
+          <div class="aspect-[4/3] bg-slate-100 rounded-lg overflow-hidden shadow-sm border border-slate-200">
+            <img src="immagini/mussolini-luce.webp" alt="Archivio Storico" class="w-full h-full object-cover">
           </div>
-          <div>
-            <h2 class="text-xl font-bold text-techDark mb-3">L'udienza: un incredibile scambio di identità</h2>
-            <p class="text-slate-600 leading-relaxed text-sm md:text-base">
-              Durante la mattinata abbiamo assistito da vicino allo svolgimento di diverse udienze, ma c’è stato un caso specifico che mi ha spinto a riflettere profondamente: un incredibile scambio di identità. Una persona era stata confusa con un ricercato a causa di una perfetta omonimia, un errore apparentemente banale dovuto a un controllo superficiale, ma dalle conseguenze potenzialmente drammatiche. Gli unici elementi a favore dell'imputato erano la testimonianza di chi aveva visto il vero ricercato e un dettaglio burocratico fondamentale: una data di nascita diversa. Questo caso mi ha fatto toccare con mano quanto sia sottile il filo della giustizia e quanto un piccolo errore possa stravolgere la vita di un cittadino innocente.
-            </p>
-          </div>
+        </div>
+        <div class="md:col-span-7">
+          <h2 class="text-xl font-bold text-testoScuro mb-3">La manipolazione della realtà nello Stato totalitario</h2>
+          <p class="text-slate-600 leading-relaxed text-sm md:text-base font-seria">
+            Come teorizzato da Walter Lippmann, poiché il mondo reale è troppo complesso per essere conosciuto direttamente, noi lo "vediamo" necessariamente attraverso il filtro dei media. Se questo filtro viene manipolato, i cittadini finiscono per vivere in una sorta di realtà virtuale creata da chi detiene il potere. Durante il regime fascista, questo filtro fu letteralmente sequestrato dalle "Leggi Fascistissime" del 1925. 
+          </p>
+          <p class="text-slate-600 leading-relaxed text-sm md:text-base mt-4">
+            Mussolini, ex giornalista, istituì le 'veline': ordini precisi su quali notizie pubblicare e quali ignorare, imponendo il divieto di cronaca nera e l'obbligo di esaltare la figura del Duce attraverso i cinegiornali dell'Istituto Luce. Anche la Chiesa Cattolica, come evidenziato dagli studi di Storia e Futuro, prestò una precoce attenzione al cinema con Papa Leone XIII, comprendendo che l'immagine poteva filtrare la realtà religiosa per mantenere salda la propria influenza.
+          </p>
         </div>
       </section>
 
-      <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 md:p-8">
-        <div class="flex items-start gap-4">
-          <div class="hidden sm:flex p-3 bg-emerald-50 rounded-lg text-emerald-600">
-            <i class="fa-solid fa-shield-halved text-2xl"></i>
-          </div>
-          <div>
-            <h2 class="text-xl font-bold text-techDark mb-3">Il valore delle garanzie costituzionali</h2>
-            <p class="text-slate-600 leading-relaxed text-sm md:text-base">
-              Proprio questa vicenda mi ha fatto comprendere l’importance cruciale del diritto alla difesa, della presunzione di innocenza e, soprattutto, del valore inestimabile delle prove e delle garanzie costituzionali. Ho capito che i dettagli, in un’aula di tribunale, non sono semplici formalità, ma lo scudo che protegge l'individuo dagli errori giudiziari. Torno da questa esperienza con uno sguardo molto più maturo e consapevole: la macchina della giustizia è complessa perché complessa è la natura umana, e questa visita mi ha insegnato che tutelare i diritti di ciascuno è il pilastro fondamentale su cui si regge l'intera nostra società.
-            </p>
+      <section class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+        <div class="md:col-span-7">
+          <h2 class="text-xl font-bold text-istituzionale mb-3 flex items-center gap-2">
+            <i class="fa-solid fa-shield-halved text-sm"></i> I dati personali come pilastro democratico
+          </h2>
+          <p class="text-slate-600 leading-relaxed text-sm md:text-base">
+            Oggi il rischio si è spostato nel cyberspazio, dove un data breach non rappresenta solo un problema tecnico, ma una vera e propria ferita democratica. Se nel secolo scorso si decideva dall'alto cosa potessimo leggere, oggi il rischio è che gruppi di pressione possano influenzarci conoscendo a fondo i nostri gusti, orientamenti politici e debolezze personali.
+          </p>
+          <p class="text-slate-600 leading-relaxed text-sm md:text-base mt-4">
+            L'aumento esponenziale degli attacchi informatici nel mondo contemporaneo finisce per colpire le infrastrutture stesse dell'informazione. Quando un sistema viene hackerato o manipolato, la verità si trova in pericolo tanto quanto lo era sotto la censura fascista. Senza un'adeguata sicurezza digitale, la libertà di espressione rischia di diventare un guscio vuoto, perché un cittadino i cui dati sono monitorati e orientati non è più realmente libero di scegliere.
+          </p>
+        </div>
+        <div class="md:col-span-5">
+          <div class="aspect-[4/3] bg-slate-100 rounded-lg overflow-hidden shadow-sm border border-slate-200">
+            <img src="immagini/cyber-security.webp" alt="Sicurezza Digitale" class="w-full h-full object-cover">
           </div>
         </div>
       </section>
+      
+      <hr class="border-slate-200">
 
-      <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 md:p-8">
-        <h2 class="text-xl font-bold text-techDark mb-8 flex items-center gap-2">
-          <i class="fa-solid fa-camera text-accent"></i>
-          Immagini dell'esperienza
-        </h2>
+      <section class="bg-sfondoGrigio rounded-xl p-8 border border-slate-200">
+        <h2 class="text-2xl font-bold text-testoScuro mb-6 text-center">Riflessione Critica: L'Evoluzione del Controllo</h2>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10">
-          
-          <div class="group relative overflow-hidden rounded-xl border border-slate-100 bg-slate-50 aspect-[4/3] flex flex-col justify-between p-3 shadow-sm">
-            <img src="immagini/foto1.jpg" alt="Palazzo di Giustizia" class="absolute inset-0 w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'">
-            <div class="mt-auto relative z-10 bg-slate-900/85 backdrop-blur-sm text-white text-sm px-4 py-2.5 rounded-lg w-full font-medium shadow-md">
-              Il Palazzo di Giustizia di Ancona
-            </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-white p-6 rounded-lg border border-slate-100 shadow-sm">
+            <h3 class="text-lg font-bold text-amber-800 mb-3 flex items-center gap-2 font-seria">
+              Il Passato: La centralizzazione della piazza
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed font-seria italic">
+              "Se una volta il dittatore parlava a tutti in piazza con un unico messaggio, l'obiettivo era unificare il pensiero attraverso una narrazione visibile, centrale e uguale per tutti. Il controllo si basava sulla censura esplicita e sulla propaganda di massa per creare un'opinione pubblica forzatamente unanime."
+            </p>
           </div>
 
-          <div class="group relative overflow-hidden rounded-xl border border-slate-100 bg-slate-50 aspect-[4/3] flex flex-col justify-between p-3 shadow-sm">
-            <img src="immagini/foto2.jpg" alt="L'aula delle udienze penali" class="absolute inset-0 w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'">
-            <div class="mt-auto relative z-10 bg-slate-900/85 backdrop-blur-sm text-white text-sm px-4 py-2.5 rounded-lg w-full font-medium shadow-md">
-              L'aula delle udienze penali
-            </div>
+          <div class="bg-white p-6 rounded-lg border border-slate-100 shadow-sm">
+            <h3 class="text-lg font-bold text-istituzionale mb-3 flex items-center gap-2 font-seria">
+              Il Presente: La frammentazione dello schermo
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed font-seria italic">
+              "Oggi il pericolo risiede nella profilazione psicologica e nel micro-targeting attraverso gli algoritmi. Ci vengono mostrate notizie create su misura per far leva sulle nostre debolezze e paure individuali. Se mille persone vedono mille realities diverse sui loro telefoni, l'opinione pubblica si frammenta, facendo mancare un terreno comune di verità."
+            </p>
           </div>
+        </div>
 
+        <div class="mt-8 pt-6 border-t border-slate-200 text-center">
+          <p class="text-testoScuro font-semibold text-sm md:text-base leading-relaxed">
+            In definitiva, la libertà oggi non si difende solo leggendo i giornali, ma proteggendo la nostra privacy: se perdiamo il controllo dei nostri dati, perdiamo la capacità democratica di decidere chi vogliamo essere.
+          </p>
         </div>
       </section>
 
     </div>
   </main>
 
-  <footer class="bg-white text-slate-500 py-6 border-t border-slate-200 text-center text-sm mt-auto">
-    <div class="max-w-6xl mx-auto px-4">
-      <p>&copy; 2026 - IIS Marconi Pieralisi - Esame di Stato.</p>
-    </div>
+  <footer class="bg-slate-50 text-slate-400 py-8 border-t border-slate-200 text-center text-xs tracking-wider">
+    <p>&copy; 2026 - IIS Marconi Pieralisi - Percorso di Educazione Civica</p>
   </footer>
 
+  <script src="header.js" defer></script>
 </body>
 </html>

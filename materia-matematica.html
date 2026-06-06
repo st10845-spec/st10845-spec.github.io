@@ -4,28 +4,129 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Matematica | Dettaglio Materia</title>
+  
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config = { theme: { extend: { colors: { techDark: '#0f172a', techLight: '#f8fafc', accent: '#0284c7' } } } }</script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            techDark: '#0f172a',
+            techLight: '#f8fafc',
+            accent: '#0284c7',
+            accentHover: '#0369a1'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; }
+  </style>
 </head>
-<body class="bg-techLight text-techDark font-sans min-h-screen flex flex-col">
-  <header class="bg-white border-b border-slate-200 py-4 px-8 flex justify-between items-center">
-    <span class="font-bold">Ada Ugo Praise Ezeala</span>
-    <a href="materie.html" class="text-accent hover:underline">← Torna alle materie</a>
+<body class="bg-techLight text-techDark font-sans min-h-screen flex flex-col"
+      data-materia="Matematica" 
+      data-copertina="immagini/materia-matematica.jpg">
+
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur shadow-sm border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="text-xl font-bold tracking-tight text-techDark">
+        <a href="index.html" class="hover:text-accent transition">Ada Ugo Praise Ezeala</a>
+      </div>
+      
+      <nav class="hidden md:flex space-x-8 text-sm font-medium items-center">
+        <a href="index.html#home" class="text-slate-600 hover:text-accent transition">Home</a>
+        <a href="index.html#chi-sono" class="text-slate-600 hover:text-accent transition">Chi Sono</a>
+        <a href="index.html#passioni" class="text-slate-600 hover:text-accent transition">Passioni</a>
+        
+        <div class="relative inline-block text-left group">
+          <button id="dropdown-btn" class="text-accent font-semibold transition inline-flex items-center gap-1 focus:outline-none">
+            Materie <i class="fa-solid fa-chevron-down text-xs transition-transform group-hover:rotate-180"></i>
+          </button>
+          
+          <div class="absolute right-0 mt-2 w-64 rounded-xl bg-white shadow-lg ring-1 ring-black/5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 border border-slate-100 py-2 max-h-[80vh] overflow-y-auto">
+            <a href="materie.html" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 font-semibold border-b border-slate-100">Mostra tutte le materie</a>
+            
+            <a href="materia-informatica.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-sky-50 hover:text-accent">Informatica</a>
+            <a href="materia-sistemi-reti.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-sky-50 hover:text-accent">Sistemi e Reti</a>
+            <a href="materia-tpsit.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-sky-50 hover:text-accent">TPSIT</a>
+            <a href="materia-gpoi.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-sky-50 hover:text-accent">GPOI</a>
+            <a href="materia-ia.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-sky-50 hover:text-accent">Intelligenza Artificiale</a>
+            <a href="materia-italiano.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-sky-50 hover:text-accent">Italiano</a>
+            <a href="materia-storia.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-sky-50 hover:text-accent">Storia</a>
+            <a href="materia-inglese.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-sky-50 hover:text-accent">Inglese</a>
+            <a href="materia-matematica.html" class="block px-4 py-2 text-sm text-accent bg-sky-50/50 font-semibold">Matematica</a>
+            <a href="materia-scienze-motorie.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-sky-50 hover:text-accent">Scienze Motorie</a>
+            <a href="materia-religione.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-sky-50 hover:text-accent">Religione</a>
+          </div>
+        </div>
+
+        <a href="educazione-civica.html" class="text-slate-600 hover:text-accent transition">Educazione Civica</a>
+        <a href="pcto.html" class="text-slate-600 hover:text-accent transition">FSL</a>
+        <a href="contatti.html" class="text-slate-600 hover:text-accent transition">Contatti</a>
+      </nav>
+
+      <button id="menu-btn" class="md:hidden p-2 text-slate-600 hover:text-accent focus:outline-none" aria-label="Apri menu">
+        <i class="fa-solid fa-bars text-xl"></i>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-4 space-y-2 shadow-lg max-h-[80vh] overflow-y-auto">
+      <a href="index.html#home" class="block py-2 text-slate-600 hover:text-accent">Home</a>
+      <a href="materie.html" class="block py-2 text-accent font-medium">Materie (Elenco completo)</a>
+      
+      <div class="pl-4 border-l-2 border-slate-200 space-y-1 grid grid-cols-2 gap-1">
+        <a href="materia-informatica.html" class="block py-1 text-xs text-slate-500">Informatica</a>
+        <a href="materia-sistemi-reti.html" class="block py-1 text-xs text-slate-500">Sistemi e Reti</a>
+        <a href="materia-tpsit.html" class="block py-1 text-xs text-slate-500">TPSIT</a>
+        <a href="materia-gpoi.html" class="block py-1 text-xs text-slate-500">GPOI</a>
+        <a href="materia-ia.html" class="block py-1 text-xs text-slate-500">IA</a>
+        <a href="materia-italiano.html" class="block py-1 text-xs text-slate-500">Italiano</a>
+        <a href="materia-storia.html" class="block py-1 text-xs text-slate-500">Storia</a>
+        <a href="materia-inglese.html" class="block py-1 text-xs text-slate-500">Inglese</a>
+        <a href="materia-matematica.html" class="block py-1 text-xs text-accent font-medium">Matematica</a>
+        <a href="materia-scienze-motorie.html" class="block py-1 text-xs text-slate-500">Sc. Motorie</a>
+        <a href="materia-religione.html" class="block py-1 text-xs text-slate-500">Religione</a>
+      </div>
+      
+      <a href="educazione-civica.html" class="block py-2 text-slate-600 hover:text-accent">Educazione Civica</a>
+      <a href="pcto.html" class="block py-2 text-slate-600 hover:text-accent">FSL</a>
+      <a href="contatti.html" class="block py-2 text-slate-600 hover:text-accent">Contatti</a>
+    </div>
   </header>
 
-  <main class="max-w-4xl mx-auto px-4 py-12 flex-grow space-y-8">
-    <img src="immagini/materia-matematica.jpg" alt="Matematica" class="w-full h-64 object-cover rounded-xl shadow-sm">
-    <h1 class="text-3xl font-bold">Matematica</h1>
-  
-    <section class="space-y-8">
-      <div class="bg-white p-8 rounded-xl border border-slate-200 space-y-4">
-        <h2 class="text-2xl font-bold text-accent">Introduzione: Il Fascino degli Integrali</h2>
-   <p class="text-slate-600 leading-relaxed">
-      Lo studio della matematica del quinto anno ci fornisce gli strumenti logici essenziali per comprendere l'informatica, gli algoritmi e l'analisi dei dati. Tra tutti gli argomenti trattati, gli <strong>integrali</strong> sono senza dubbio quelli che mi hanno più interressato.Trovo affascinante come permettano di trovare un ordine nel caos, calcolando l'area di figure dai contorni imprevedibili e sommando l'infinitamente piccolo per ottenere risultati concreti.</p>
-      </div>
+  <div class="w-full max-w-4xl mx-auto px-4 mt-8">
+    
+    <div class="mb-4">
+      <a href="materie.html" class="inline-flex items-center text-sm font-medium text-slate-500 hover:text-accent transition group">
+        <i class="fa-solid fa-arrow-left mr-2 transition-transform group-hover:-translate-x-1"></i> 
+        Torna all'elenco delle materie
+      </a>
+    </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-white p-6 rounded-xl border border-slate-200 items-center">
+    <div class="w-full h-64 bg-slate-200 rounded-xl overflow-hidden border border-slate-200 shadow-sm relative">
+      <img src="immagini/materia-matematica.jpg" alt="Copertina Matematica" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent flex items-end p-8">
+        <h2 class="text-white text-3xl font-bold tracking-tight">Matematica</h2>
+      </div>
+    </div>
+  </div>
+
+  <main class="flex-grow max-w-4xl mx-auto px-4 py-12 w-full space-y-8">
+    
+    <div class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm">
+      <h2 class="text-2xl font-bold text-accent mb-4">Introduzione: Gli integrali</h2>
+      <p class="text-slate-600 leading-relaxed text-sm">
+        Lo studio della matematica del quinto anno ci fornisce gli strumenti logici essenziali per comprendere l'informatica, gli algoritmi e l'analisi dei dati. Tra tutti gli argomenti trattati, gli <strong>integrali</strong> sono senza dubbio quelli che mi hanno più interessato. Trovo affascinante come permettano di trovare un ordine nel caos, calcolando l'area di figure dai contorni imprevedibili e sommando l'infinitamente piccolo per ottenere risultati concreti.
+      </p>
+    </div>
+
+    <section class="space-y-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-white p-6 rounded-xl border border-slate-200 items-center shadow-sm">
         <div class="space-y-3">
           <h3 class="text-xl font-bold text-techDark">1. Integrali Indefiniti</h3>
           <p class="text-slate-600 leading-relaxed text-sm">
@@ -46,7 +147,7 @@
         </div>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-white p-6 rounded-xl border border-slate-200 items-center">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-white p-6 rounded-xl border border-slate-200 items-center shadow-sm">
         <div class="space-y-3">
           <h3 class="text-xl font-bold text-techDark">2. Integrali Definiti</h3>
           <p class="text-slate-600 leading-relaxed text-sm">
@@ -65,7 +166,7 @@
         </div>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-white p-6 rounded-xl border border-slate-200 items-center">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-white p-6 rounded-xl border border-slate-200 items-center shadow-sm">
         <div class="space-y-3">
           <h3 class="text-xl font-bold text-techDark">3. Integrali Impropri</h3>
           <p class="text-slate-600 leading-relaxed text-sm">
@@ -80,9 +181,10 @@
         </div>
       </div>
     </section>
- <div class="bg-white p-6 rounded-xl border border-slate-200">
+
+    <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
       <h2 class="text-xl font-bold mb-4 text-techDark">Argomenti principali del programma:</h2>
-      <ul class="list-disc pl-5 space-y-2 text-slate-600">
+      <ul class="list-disc pl-5 space-y-2 text-slate-600 text-sm">
         <li>Studio delle funzioni in due variabili</li>
         <li>Integrali indefiniti</li>
         <li>Integrali definiti</li>
@@ -92,5 +194,22 @@
       </ul>
     </div>
   </main>
+
+  <footer class="bg-white text-slate-500 py-8 border-t border-slate-200 text-center text-sm mt-auto">
+    <div class="max-w-6xl mx-auto px-4">
+      <p>&copy; 2026 - IIS Marconi Pieralisi - Esame di Stato</p>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  </script>
+
 </body>
 </html>

@@ -16,31 +16,103 @@
           colors: { 
             techDark: '#0f172a', 
             techLight: '#f8fafc', 
-            accent: '#0284c7' 
+            accent: '#0284c7',
+            accentHover: '#0369a1'
           } 
         } 
-      }
+      } 
     }
   </script>
   
   <style>
     html { scroll-behavior: smooth; }
     body { font-family: 'Inter', sans-serif; }
-    .no-scrollbar::-webkit-scrollbar { display: none; }
-    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
   </style>
-
-  <script src="header.js" defer></script>
 </head>
 <body class="bg-techLight text-techDark font-sans min-h-screen flex flex-col"
       data-materia="Intelligenza Artificiale" 
       data-copertina="immagini/materia-ia.webp">
 
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur shadow-sm border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="text-xl font-bold tracking-tight text-techDark">
+        <a href="index.html" class="hover:text-accent transition">Ada Ugo Praise Ezeala</a>
+      </div>
+      
+      <nav class="hidden md:flex space-x-8 text-sm font-medium items-center">
+        <a href="index.html#home" class="text-slate-600 hover:text-accent transition">Home</a>
+        <a href="index.html#chi-sono" class="text-slate-600 hover:text-accent transition">Chi Sono</a>
+        <a href="index.html#passioni" class="text-slate-600 hover:text-accent transition">Passioni</a>
+        
+        <div class="relative inline-block text-left group">
+          <button id="dropdown-btn" class="text-accent font-semibold transition inline-flex items-center gap-1 focus:outline-none">
+            Materie <i class="fa-solid fa-chevron-down text-xs transition-transform group-hover:rotate-180"></i>
+          </button>
+          
+          <div class="absolute right-0 mt-2 w-64 rounded-xl bg-white shadow-lg ring-1 ring-black/5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 border border-slate-100 py-2 max-h-[80vh] overflow-y-auto">
+            <a href="materie.html" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 font-semibold border-b border-slate-100">Mostra tutte le materie</a>
+            
+            <a href="materia-informatica.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-sky-50 hover:text-accent">Informatica</a>
+            <a href="materia-sistemi-reti.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-sky-50 hover:text-accent">Sistemi e Reti</a>
+            <a href="materia-tpsit.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-sky-50 hover:text-accent">TPSIT</a>
+            <a href="materia-gpoi.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-sky-50 hover:text-accent">GPOI</a>
+            <a href="materia-ia.html" class="block px-4 py-2 text-sm text-accent bg-sky-50/50 font-semibold">Intelligenza Artificiale</a>
+            <a href="materia-italiano.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-sky-50 hover:text-accent">Italiano</a>
+            <a href="materia-storia.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-sky-50 hover:text-accent">Storia</a>
+            <a href="materia-inglese.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-sky-50 hover:text-accent">Inglese</a>
+            <a href="materia-matematica.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-sky-50 hover:text-accent">Matematica</a>
+            <a href="materia-scienze-motorie.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-sky-50 hover:text-accent">Scienze Motorie</a>
+            <a href="materia-religione.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-sky-50 hover:text-accent">Religione</a>
+          </div>
+        </div>
+
+        <a href="educazione-civica.html" class="text-slate-600 hover:text-accent transition">Educazione Civica</a>
+        <a href="pcto.html" class="text-slate-600 hover:text-accent transition">FSL</a>
+        <a href="contatti.html" class="text-slate-600 hover:text-accent transition">Contatti</a>
+      </nav>
+
+      <button id="menu-btn" class="md:hidden p-2 text-slate-600 hover:text-accent focus:outline-none" aria-label="Apri menu">
+        <i class="fa-solid fa-bars text-xl"></i>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-4 space-y-2 shadow-lg max-h-[80vh] overflow-y-auto">
+      <a href="index.html#home" class="block py-2 text-slate-600 hover:text-accent">Home</a>
+      <a href="materie.html" class="block py-2 text-accent font-medium">Materie (Elenco completo)</a>
+      
+      <div class="pl-4 border-l-2 border-slate-200 space-y-1 grid grid-cols-2 gap-1">
+        <a href="materia-informatica.html" class="block py-1 text-xs text-slate-500">Informatica</a>
+        <a href="materia-sistemi-reti.html" class="block py-1 text-xs text-slate-500">Sistemi e Reti</a>
+        <a href="materia-tpsit.html" class="block py-1 text-xs text-slate-500">TPSIT</a>
+        <a href="materia-gpoi.html" class="block py-1 text-xs text-slate-500">GPOI</a>
+        <a href="materia-ia.html" class="block py-1 text-xs text-accent font-medium">IA</a>
+        <a href="materia-italiano.html" class="block py-1 text-xs text-slate-500">Italiano</a>
+        <a href="materia-storia.html" class="block py-1 text-xs text-slate-500">Storia</a>
+        <a href="materia-inglese.html" class="block py-1 text-xs text-slate-500">Inglese</a>
+        <a href="materia-matematica.html" class="block py-1 text-xs text-slate-500">Matematica</a>
+        <a href="materia-scienze-motorie.html" class="block py-1 text-xs text-slate-500">Sc. Motorie</a>
+        <a href="materia-religione.html" class="block py-1 text-xs text-slate-500">Religione</a>
+      </div>
+      
+      <a href="educazione-civica.html" class="block py-2 text-slate-600 hover:text-accent">Educazione Civica</a>
+      <a href="pcto.html" class="block py-2 text-slate-600 hover:text-accent">FSL</a>
+      <a href="contatti.html" class="block py-2 text-slate-600 hover:text-accent">Contatti</a>
+    </div>
+  </header>
+
   <div class="w-full max-w-4xl mx-auto px-4 mt-8">
+    
+    <div class="mb-4">
+      <a href="materie.html" class="inline-flex items-center text-sm font-medium text-slate-500 hover:text-accent transition group">
+        <i class="fa-solid fa-arrow-left mr-2 transition-transform group-hover:-translate-x-1"></i> 
+        Torna all'elenco delle materie
+      </a>
+    </div>
+
     <div class="w-full h-64 bg-slate-200 rounded-xl overflow-hidden border border-slate-200 shadow-sm relative">
       <img src="immagini/materia-ia.webp" alt="Copertina Intelligenza Artificiale" class="w-full h-full object-cover">
       <div class="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent flex items-end p-8">
-        <h2 class="text-white text-2xl font-bold">Intelligenza Artificiale</h2>
+        <h2 class="text-white text-3xl font-bold tracking-tight">Intelligenza Artificiale</h2>
       </div>
     </div>
   </div>
@@ -48,7 +120,7 @@
   <main class="max-w-4xl mx-auto px-4 py-12 flex-grow space-y-8">
     
     <h1 class="text-3xl font-bold">Il legame tra Biologia e Modelli Matematici</h1>
-    <p class="text-slate-600 leading-relaxed">
+    <p class="text-slate-600 leading-relaxed text-sm">
       Nel mio percorso di studi sulle nuove tecnologie, c'è un argomento che mi ha affascinato più di tutti: il legame tra la biologia del sistema nervoso e le reti neurali artificiali. È sorprendente vedere come la scienza sia riuscita a prendere qualcosa di così complesso e vivo come un neurone biologico e a trasformarlo in un modello matematico astratto, gettando le basi per i sistemi intelligenti che usiamo oggi.
     </p>
 
@@ -69,7 +141,7 @@
       <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
         <h2 class="text-xl font-bold text-slate-900">Dai primi modelli logici al Percettrone (1943-1957)</h2>
         <p class="text-slate-600 leading-relaxed text-sm">
-          Il primo passo verso questa traduzione avvenne nel 1943, when Warren McCulloch e Walter Pitts formularono un modello matematico in cui i segnali in ingresso venivano moltiplicati per dei pesi e sommati nel nucleo; l'output finale veniva poi determinato da una funzione di attivazione a gradino, che emulava il comportamento del "tutto o nulla" del neurone biologico. Su queste fondamenta teoriche, nel 1957 Frank Rosenblatt compì una svolta epocale realizzando il <strong>"Percettrone"</strong>: ispirandosi alla corteccia visiva, creò la prima vera implementazione fisica e algoritmica capace di modificare i propri pesi in modo iterativo quando commetteva un errore. Il Percettrone dimostrò così che un circuito artificiale poteva apprendere autonomamente a riconoscere stimoli visivi, ponendo le basi per il moderno machine learning.
+          Il primo passo verso questa traduzione avvenne nel 1943, quando Warren McCulloch e Walter Pitts formularono un modello matematico in cui i segnali in ingresso venivano moltiplicati per dei pesi e sommati nel nucleo; l'output finale veniva poi determinato da una funzione di attivazione a gradino, che emulava il comportamento del "tutto o nulla" del neurone biologico. Su queste fondamenta teoriche, nel 1957 Frank Rosenblatt compì una svolta epocale realizzando il <strong>"Percettrone"</strong>: ispirandosi alla corteccia visiva, creò la prima vera implementazione fisica e algoritmica capace di modificare i propri pesi in modo iterativo quando commetteva un errore. Il Percettrone dimostrò così che un circuito artificiale poteva apprendere autonomamente a riconoscere stimoli visivi, ponendo le basi per il moderno machine learning.
         </p>
         
         <div class="my-4 p-4 bg-slate-50 rounded-lg text-center font-mono border border-slate-100 shadow-sm">
@@ -89,7 +161,7 @@
         </div>
       </div>
 
-<div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
+      <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
         <h2 class="text-xl font-bold text-slate-900">L'architettura del Percettrone Multistrato (MLP)</h2>
         <p class="text-slate-600 leading-relaxed text-sm">
           La risposta al problema dello XOR arrivò strutturando i neuroni artificiali in reti più complesse composte da tre tipologie di livelli (Layer):
@@ -100,7 +172,7 @@
           <li><strong>Output Layer (Livello di Uscita):</strong> Fornisce la risposta finale del sistema (es. una classificazione o una predizione numerica).</li>
         </ul>
         <p class="text-slate-600 leading-relaxed text-sm">
-          In questa struttura, le funzioni di attivazione non lineari (come la <strong>ReLU</strong> o la <strong>Sigmoide</strong>) sostituiscono la vecchia funzione a gradino, permettendo alla rete di curvare lo spazio matematico e mappare relazioni non lineari.
+          In questa struttura, le funzioni di attivazione non lineari (como la <strong>ReLU</strong> o la <strong>Sigmoide</strong>) sostituiscono la vecchia funzione a gradino, permettendo alla rete di curvare lo spazio matematico e mappare relazioni non lineari.
         </p>
         
         <div class="w-full flex justify-center pt-4">
@@ -111,7 +183,7 @@
       <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-3">
         <h2 class="text-xl font-bold text-slate-900">L'evoluzione moderna: la Backpropagation</h2>
         <p class="text-slate-600 leading-relaxed text-sm">
-          Nelle reti neurali multilivello contemporanee, i limiti dei primi modelli sono stati superati grazie all'algoritmo di <strong>Backpropagation</strong> (retropropagazione dell'errore). Per far sì che una rete complessa impari correttamente, l'errore commesso nella fase di output (quantificato da una funzione di costo) viene mappato a ritroso su tutti i parametri e i pesi responsabili di quella deviazione.
+          Nelle reti neurali multilivello contemporanee, i limites dei primi modelli sono stati superati grazie all'algoritmo di <strong>Backpropagation</strong> (retropropagazione dell'errore). Per far sì che una rete complessa impari correttamente, l'errore commesso nella fase di output (quantificato da una funzione di costo) viene mappato a ritroso su tutti i parametri e i pesi responsabili di quella deviazione.
         </p>
         <p class="text-slate-600 leading-relaxed text-sm">
           Attraverso l'algoritmo di discesa del gradiente, che sfrutta gli strumenti matematici delle <strong>derivate parziali</strong> e la regola della catena (<strong>chain rule</strong>), il sistema calcola l'impatto di ogni singola connessione sull'errore finale. I pesi vengono così aggiornati in modo millimetrico, dal fondo verso l'inizio della rete, ottimizzando le prestazioni del modello. Questo meccanismo rappresenta la perfetta sintesi di come la logica rigorosa della matematica possa dare vita all'Intelligenza Artificiale, traendo una continua e proficua ispirazione dalle strutture della natura.
@@ -121,7 +193,7 @@
       <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-2">
         <h2 class="text-xl font-bold text-slate-900">Un cambio di paradigma: Software Tradizionale vs Machine Learning</h2>
         <p class="text-slate-600 leading-relaxed text-sm">
-          Per un informatico, l'aspetto più rivoluzionario di questo percorso biologico-matematico risiede nel cambio di paradigma della programmazione. Nella programmazione tradizionale , lo sviluppatore scrive le regole algoritmiche logiche e fornisce i dati di input per ottenere un risultato. Nel Machine Learning, invertiamo completamente il processo: diamo in pasto all'algoritmo i dati di addestramento e i risultati attesi (label), e l'architettura neurale, attraverso i continui cicli di <em>feed-forward</em> e <em>backpropagation</em>, genera autonomamente le regole ottimali e mappa i suoi pesi interni. L'IA non viene programmata riga per riga, viene addestrata.
+          Per un informatico, l'aspetto più rivoluzionario di questo percorso biologico-matematico risiede nel cambio di paradigma della programmazione. Nella programmazione tradizionale, lo sviluppatore scrive le regole algoritmiche logiche e fornisce i dati di input per ottenere un risultato. Nel Machine Learning, invertiamo completamente il processo: diamo in pasto all'algoritmo i dati di addestramento e i risultati attesi (label), e l'architettura neurale, attraverso i continui cicli di <em>feed-forward</em> e <em>backpropagation</em>, genera autonomamente le regole ottimali e mappa i suoi pesi interni. L'IA non viene programmata riga per riga, viene addestrata.
         </p>
       </div>
 
@@ -132,5 +204,12 @@
     <p>&copy; 2026 - IIS Marconi Pieralisi - Esame di Stato</p>
   </footer>
 
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (menuBtn && mobileMenu) { 
+      menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden')); 
+    }
+  </script>
 </body>
 </html>
